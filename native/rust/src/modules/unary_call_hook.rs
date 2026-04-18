@@ -113,7 +113,7 @@ pub fn init() {
                 env.get_method_id(
                     env.get_object_class(common::native_lib_instance()).unwrap(),
                         "onNativeUnaryCall", 
-                        "(Ljava/lang/String;[B)Lme/eternal/purrfectsnap/nativelib/NativeRequestData;"
+                        "(Ljava/lang/String;[B)Lcock/crest/purrfectsnap/lite/nativelib/NativeRequestData;"
                 ).expect("Failed to get onNativeUnaryCall method id")
             ).expect("unary call method already set");
         });

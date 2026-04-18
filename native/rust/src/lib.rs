@@ -60,7 +60,7 @@ pub extern "system" fn JNI_OnLoad(_vm: JavaVM, _: *mut c_void) -> jint {
 
     let mut env = _vm.get_env().expect("Failed to get JNIEnv");
 
-    let native_lib_class = env.find_class("me/eternal/purrfectsnap/nativelib/NativeLib").expect("NativeLib class not found");
+    let native_lib_class = env.find_class("cock/crest/purrfectsnap/lite/nativelib/NativeLib").expect("NativeLib class not found");
 
     env.register_native_methods(
         native_lib_class,
@@ -77,7 +77,7 @@ pub extern "system" fn JNI_OnLoad(_vm: JavaVM, _: *mut c_void) -> jint {
             },
             NativeMethod {
                 name: "loadConfig".into(),
-                sig: "(Lme/eternal/purrfectsnap/nativelib/NativeConfig;)V".into(),
+                sig: "(Lcock/crest/purrfectsnap/lite/nativelib/NativeConfig;)V".into(),
                 fn_ptr: config::load_config as *mut c_void,
             },
             NativeMethod {
@@ -97,12 +97,12 @@ pub extern "system" fn JNI_OnLoad(_vm: JavaVM, _: *mut c_void) -> jint {
             },
             NativeMethod {
                 name: "evaluateEndpointNative".into(),
-                sig: "(Ljava/lang/String;Ljava/lang/String;ZLme/eternal/purrfectsnap/nativelib/NativeDecision;)V".into(),
+                sig: "(Ljava/lang/String;Ljava/lang/String;ZLcock/crest/purrfectsnap/lite/nativelib/NativeDecision;)V".into(),
                 fn_ptr: evaluateEndpoint as *mut c_void,
             },
             NativeMethod {
                 name: "evaluateNetworkRequestNative".into(),
-                sig: "(Ljava/lang/String;Lme/eternal/purrfectsnap/nativelib/NativeDecision;)V".into(),
+                sig: "(Ljava/lang/String;Lcock/crest/purrfectsnap/lite/nativelib/NativeDecision;)V".into(),
                 fn_ptr: evaluateNetworkRequest as *mut c_void,
             },
             NativeMethod {
@@ -112,12 +112,12 @@ pub extern "system" fn JNI_OnLoad(_vm: JavaVM, _: *mut c_void) -> jint {
             },
             NativeMethod {
                 name: "evaluateAuthContextNative".into(),
-                sig: "(Ljava/lang/String;ZLme/eternal/purrfectsnap/nativelib/NativeDecision;)V".into(),
+                sig: "(Ljava/lang/String;ZLcock/crest/purrfectsnap/lite/nativelib/NativeDecision;)V".into(),
                 fn_ptr: evaluateAuthContext as *mut c_void,
             },
             NativeMethod {
                 name: "evaluateApiInvocationNative".into(),
-                sig: "(Ljava/lang/String;Ljava/lang/String;Lme/eternal/purrfectsnap/nativelib/NativeDecision;)V".into(),
+                sig: "(Ljava/lang/String;Ljava/lang/String;Lcock/crest/purrfectsnap/lite/nativelib/NativeDecision;)V".into(),
                 fn_ptr: evaluateApiInvocation as *mut c_void,
             },
             NativeMethod {

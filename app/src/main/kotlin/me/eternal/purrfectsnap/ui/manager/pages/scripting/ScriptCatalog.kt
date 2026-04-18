@@ -183,7 +183,7 @@ fun ScriptCatalog(root: ScriptingRootSection) {
                     Button(
                         onClick = {
                             context.androidContext.openLink(
-                                "https://github.com/particle-box/PurrfectSnap/blob/dev/app/src/main/kotlin/me/eternal/purrfectsnap/ui/manager/pages/scripting/ScriptRepos.md",
+                                "https://github.com/particle-box/PurrfectSnap/tree/dev/app/src/main/kotlin",
                                 context.translation["toast_open_link_failed"]
                             )
                         },

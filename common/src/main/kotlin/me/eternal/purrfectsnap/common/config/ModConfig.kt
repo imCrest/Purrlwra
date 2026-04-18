@@ -35,7 +35,7 @@ class ModConfig(
 
     private fun createRootConfig() = RootConfig().apply {
         lateInit(context)
-        applyLiteDefaults()
+        applyLiteProfile()
     }
 
     fun load() {
@@ -51,7 +51,8 @@ class ModConfig(
         }
         runCatching {
             loadConfig(targetRoot)
-            targetRoot.applyLiteDefaults()
+            targetRoot.applyLiteProfile()
+            writeConfigObject(targetRoot)
         }.onFailure {
             writeConfigObject(targetRoot)
         }
