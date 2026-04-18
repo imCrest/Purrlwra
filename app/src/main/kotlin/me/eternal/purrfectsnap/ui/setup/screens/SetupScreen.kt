@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cock.crest.purrfectsnap.lite.RemoteSideContext
 import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.SetupGlassBlock
 
 abstract class SetupScreen {
     lateinit var context: RemoteSideContext
@@ -80,45 +81,24 @@ abstract class SetupScreen {
         modifier: Modifier = Modifier,
         content: @Composable ColumnScope.() -> Unit
     ) {
-        Surface(
-            modifier = modifier,
-            shape = RoundedCornerShape(28.dp),
-            color = Color.White.copy(alpha = 0.04f),
-            tonalElevation = 0.dp,
-            shadowElevation = 10.dp,
-            border = BorderStroke(
-                1.dp,
-                Brush.linearGradient(
-                    listOf(
-                        PurrfectPalette.glowPrimary.copy(alpha = 0.42f),
-                        PurrfectPalette.glowSecondary.copy(alpha = 0.32f)
-                    )
-                )
-            )
-        ) {
-            androidx.compose.foundation.layout.Column(
+        SetupGlassBlock(modifier = modifier) {
+            Box(
                 modifier = Modifier
-                    .background(PurrfectPalette.cardOverlay)
-                    .padding(horizontal = 20.dp, vertical = 18.dp),
-                verticalArrangement = Arrangement.spacedBy(14.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(4.dp)
-                        .background(
-                            Brush.horizontalGradient(
-                                listOf(
-                                    PurrfectPalette.glowSecondary.copy(alpha = 0.4f),
-                                    PurrfectPalette.glowPrimary.copy(alpha = 0.4f)
-                                )
-                            ),
-                            shape = RoundedCornerShape(50)
-                        )
-                )
-                content()
-            }
+                    .fillMaxWidth()
+                    .height(4.dp)
+                    .background(
+                        Brush.horizontalGradient(
+                            listOf(
+                                Color.Transparent,
+                                PurrfectPalette.glowSecondary.copy(alpha = 0.34f),
+                                PurrfectPalette.glowPrimary.copy(alpha = 0.42f),
+                                Color.Transparent
+                            )
+                        ),
+                        shape = RoundedCornerShape(50)
+                    )
+            )
+            content()
         }
     }
 

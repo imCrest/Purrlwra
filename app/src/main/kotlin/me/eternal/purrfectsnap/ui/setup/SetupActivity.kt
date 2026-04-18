@@ -75,6 +75,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
@@ -558,29 +559,39 @@ private fun SetupAuroraBackground() {
             .background(PurrfectPalette.backgroundGradient)
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
-            val primaryGlow = PurrfectPalette.glowPrimary.copy(alpha = 0.36f)
-            val secondaryGlow = PurrfectPalette.glowSecondary.copy(alpha = 0.28f)
-            drawRect(
-                brush = Brush.linearGradient(
-                    colors = listOf(
-                        Color.White.copy(alpha = 0.06f),
-                        Color.Transparent
-                    ),
-                    start = Offset(x = size.width * 0.15f, y = 0f),
-                    end = Offset(x = size.width * 0.75f, y = size.height * 0.6f)
-                ),
-                size = this.size
+            drawCircle(
+                color = PurrfectPalette.glowPrimary.copy(alpha = 0.08f),
+                radius = size.minDimension * 0.36f,
+                center = Offset(size.width * 0.5f, size.height * 0.18f)
             )
-            drawRect(
-                brush = Brush.linearGradient(
-                    colors = listOf(
-                        PurrfectPalette.glowPrimary.copy(alpha = 0.12f),
-                        Color.Transparent
-                    ),
-                    start = Offset(x = 0f, y = size.height * 0.72f),
-                    end = Offset(x = size.width, y = size.height)
-                ),
-                size = this.size
+            drawRoundRect(
+                color = Color(0xFF15232A).copy(alpha = 0.92f),
+                topLeft = Offset(size.width * 0.32f, size.height * 0.02f + driftY),
+                size = Size(size.width * 0.34f, size.height * 0.16f),
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(120f, 120f)
+            )
+            drawRoundRect(
+                color = Color(0xFF353B49).copy(alpha = 0.86f),
+                topLeft = Offset(size.width * 0.02f, size.height * 0.34f - driftX * 0.12f),
+                size = Size(size.width * 0.16f, size.width * 0.16f),
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(70f, 70f)
+            )
+            drawRoundRect(
+                color = Color(0xFF283336).copy(alpha = 0.82f),
+                topLeft = Offset(size.width * 0.73f, size.height * 0.38f + driftY * 0.08f),
+                size = Size(size.width * 0.23f, size.height * 0.18f),
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(100f, 100f)
+            )
+            drawRoundRect(
+                color = Color(0xFF18252B).copy(alpha = 0.86f),
+                topLeft = Offset(size.width * 0.01f, size.height * 0.76f),
+                size = Size(size.width * 0.19f, size.height * 0.12f),
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(90f, 90f)
+            )
+            drawCircle(
+                color = Color(0xFF4A5062).copy(alpha = 0.72f),
+                radius = size.width * 0.09f,
+                center = Offset(size.width * 0.56f, size.height * 0.8f)
             )
         }
     }
@@ -616,7 +627,7 @@ private fun SetupTopBar() {
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "PurrfectSnap",
+                text = "PurrfectSnap Lite",
                 color = PurrfectPalette.textPrimary,
                 fontWeight = FontWeight.ExtraBold,
                 fontSize = 18.sp
@@ -886,8 +897,8 @@ private fun NextButton(
     val alpha by animateFloatAsState(targetValue = if (enabled) 1f else 0.6f, label = "NextButtonAlpha")
     val gradient = Brush.horizontalGradient(
         listOf(
-            PurrfectPalette.glowSecondary,
-            PurrfectPalette.glowPrimary
+            Color(0xFFBFE9FA),
+            Color(0xFF89CFE9)
         )
     )
     val interactionSource = remember { MutableInteractionSource() }
@@ -923,14 +934,14 @@ private fun NextButton(
                     } else {
                         translation["setup.activity.continue_button"]
                     },
-                    color = Color.White,
+                    color = Color(0xFF0B1B24),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp
                 )
                 Icon(
                     imageVector = if (isFinalStep) Icons.Filled.Check else Icons.AutoMirrored.Filled.ArrowForwardIos,
                     contentDescription = null,
-                    tint = Color.White
+                    tint = Color(0xFF0B1B24)
                 )
             }
         }

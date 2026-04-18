@@ -53,6 +53,8 @@ import androidx.lifecycle.Lifecycle
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.SetupHeroScene
+import cock.crest.purrfectsnap.lite.ui.setup.SetupSceneHero
 import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
 import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
 import cock.crest.purrfectsnap.lite.ui.util.OnLifecycleEvent
@@ -94,8 +96,8 @@ class PermissionsScreen : SetupScreen() {
         )
         Surface(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(20.dp),
-            color = Color(0xFF0F1220),
+            shape = RoundedCornerShape(24.dp),
+            color = Color(0xFF10181E),
             border = BorderStroke(1.dp, accent.copy(alpha = 0.45f)),
             tonalElevation = if (granted) 8.dp else 0.dp,
             shadowElevation = 8.dp
@@ -271,9 +273,6 @@ class PermissionsScreen : SetupScreen() {
             permissions.forEach { perm ->
                 grantedPermissions[perm.translationKey] = perm.isPermissionGranted()
             }
-            if (permissions.all { perm -> grantedPermissions[perm.translationKey] == true }) {
-                goNext()
-            }
         }
 
         OnLifecycleEvent { _, event ->
@@ -286,15 +285,21 @@ class PermissionsScreen : SetupScreen() {
         }
 
         LaunchedEffect(Unit) {
+            allowNext(true)
             updateState()
         }
 
         SetupCard {
+            SetupSceneHero(
+                scene = SetupHeroScene.PERMISSION,
+                title = context.translation["setup.permissions.dialog"],
+                subtitle = "Grant only what you need. Lite lets you continue even if you skip these for now."
+            )
             StepTitle(
                 title = context.translation["setup.permissions.dialog"],
-                subtitle = null
+                subtitle = "Notifications, overlay access, and battery exceptions stay optional in this setup."
             )
-            Spacer(modifier = Modifier.height(6.dp))
+            Spacer(modifier = Modifier.height(2.dp))
             Column(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
@@ -312,6 +317,12 @@ class PermissionsScreen : SetupScreen() {
                     }
                 }
             }
+            Text(
+                text = "You can revisit any of these later from Android settings without reinstalling Lite.",
+                color = PurrfectPalette.textSecondary,
+                fontSize = 13.sp,
+                lineHeight = 18.sp
+            )
         }
     }
 }

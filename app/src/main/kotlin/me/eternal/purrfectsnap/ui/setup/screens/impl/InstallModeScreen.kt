@@ -27,8 +27,6 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -47,9 +45,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.interaction.MutableInteractionSource
-import kotlinx.coroutines.delay
-import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
 import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.SetupHeroScene
+import cock.crest.purrfectsnap.lite.ui.setup.SetupInfoSection
+import cock.crest.purrfectsnap.lite.ui.setup.SetupSceneHero
 import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
 import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 
@@ -75,8 +74,6 @@ class InstallModeScreen(
     override fun Content() {
         var choice by remember { mutableStateOf(selectedMode) }
         var skipSelected by remember { mutableStateOf(skipAutoSetup) }
-        var showGuides by remember { mutableStateOf(true) }
-        var timeout by remember { mutableIntStateOf(15) }
 
         LaunchedEffect(choice, skipSelected) {
             selectedMode = choice
@@ -87,120 +84,42 @@ class InstallModeScreen(
             }
         }
 
-        LaunchedEffect(showGuides) {
-            if (showGuides) {
-                timeout = 15
-                while (timeout > 0) {
-                    delay(1000)
-                    timeout--
-                }
-            }
-        }
-
-        if (showGuides) {
-            val confirmLabel = if (timeout > 0) {
-                context.translation.format("setup.install_mode.confirm_timeout", "seconds" to timeout.toString())
-            } else {
-                context.translation["setup.install_mode.confirm"]
-            }
-            AestheticDialog(
-                onDismissRequest = { if (timeout == 0) showGuides = false },
-                title = context.translation["setup.install_mode.notice_title"],
-                text = "",
-                icon = Icons.Filled.Warning,
-                confirmButtonText = confirmLabel,
-                onConfirm = { if (timeout == 0) showGuides = false },
-                confirmEnabled = timeout == 0,
-                showCloseButton = false,
-                customContent = {
-                    val bodyStyle = MaterialTheme.typography.bodyMedium.copy(
-                        color = PurrfectPalette.textSecondary,
-                        lineHeight = 18.sp
-                    )
-                    Surface(
-                        shape = RoundedCornerShape(14.dp),
-                        color = PurrfectPalette.cardOverlayColor,
-                        tonalElevation = 0.dp,
-                        shadowElevation = 0.dp,
-                        border = BorderStroke(
-                            1.dp,
-                            Brush.linearGradient(
-                                listOf(
-                                    PurrfectPalette.glowPrimary.copy(alpha = 0.55f),
-                                    PurrfectPalette.glowSecondary.copy(alpha = 0.35f)
-                                )
-                            )
-                        )
-                    ) {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .heightIn(max = 360.dp)
-                                .verticalScroll(rememberScrollState())
-                                .padding(horizontal = 14.dp, vertical = 12.dp),
-                            horizontalAlignment = Alignment.CenterHorizontally,
-                            verticalArrangement = Arrangement.spacedBy(10.dp)
-                        ) {
-                            Text(
-                                text = context.translation["setup.install_mode.notice_intro"],
-                                style = bodyStyle,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            Text(
-                                text = context.translation["setup.install_mode.notice_non_root_title"],
-                                fontWeight = FontWeight.SemiBold,
-                                color = Color.White,
-                                modifier = Modifier.fillMaxWidth(),
-                                textAlign = TextAlign.Start
-                            )
-                            Text(
-                                text = context.translation["setup.install_mode.notice_non_root_body"],
-                                style = bodyStyle,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            Text(
-                                text = context.translation["setup.install_mode.notice_root_title"],
-                                fontWeight = FontWeight.SemiBold,
-                                color = Color.White,
-                                modifier = Modifier.fillMaxWidth(),
-                                textAlign = TextAlign.Start
-                            )
-                            Text(
-                                text = context.translation["setup.install_mode.notice_root_body"],
-                                style = bodyStyle,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            Text(
-                                text = context.translation["setup.install_mode.notice_issues_hint"],
-                                style = bodyStyle,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            Text(
-                                text = buildAnnotatedString {
-                                    withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = Color.White)) {
-                                        append(context.translation["setup.install_mode.notice_note_prefix"])
-                                    }
-                                    append(context.translation["setup.install_mode.notice_note_body"])
-                                },
-                                style = bodyStyle,
-                                textAlign = TextAlign.Start,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                        }
-                    }
-                }
-            )
-        }
-
         SetupCard {
+            SetupSceneHero(
+                scene = SetupHeroScene.WARNING,
+                title = context.translation["setup.install_mode.notice_title"],
+                subtitle = context.translation["setup.install_mode.notice_intro"]
+            )
             StepTitle(
                 title = context.translation["setup.install_mode.step_title"],
                 subtitle = context.translation["setup.install_mode.step_subtitle"],
                 modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
+            SetupInfoSection(
+                title = context.translation["setup.install_mode.notice_root_title"],
+                lines = listOf(
+                    context.translation["setup.install_mode.notice_root_body"]
+                ),
+                icon = Icons.Filled.VerifiedUser
+            )
+            SetupInfoSection(
+                title = context.translation["setup.install_mode.notice_non_root_title"],
+                lines = listOf(
+                    context.translation["setup.install_mode.notice_non_root_body"]
+                ),
+                icon = Icons.Filled.Shield
+            )
+            SetupInfoSection(
+                title = context.translation["setup.install_mode.notice_issues_hint"],
+                lines = listOf(
+                    buildAnnotatedString {
+                        withStyle(SpanStyle(fontWeight = FontWeight.Bold, color = Color.White)) {
+                            append(context.translation["setup.install_mode.notice_note_prefix"])
+                        }
+                        append(context.translation["setup.install_mode.notice_note_body"])
+                    }.toString()
+                ),
+                icon = Icons.Filled.Warning
             )
             Column(
                 modifier = Modifier.fillMaxWidth(),

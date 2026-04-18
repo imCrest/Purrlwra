@@ -69,6 +69,10 @@ import kotlinx.coroutines.withContext
 import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
 import cock.crest.purrfectsnap.lite.setup.patch.AutoPatchServer
 import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.SetupHeroScene
+import cock.crest.purrfectsnap.lite.ui.setup.SetupSceneHero
+import cock.crest.purrfectsnap.lite.ui.setup.SetupGradientActionButton as LiteSetupGradientActionButton
+import cock.crest.purrfectsnap.lite.ui.setup.SetupLogsPanel as LiteSetupLogsPanel
 import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
 import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 import okhttp3.OkHttpClient
@@ -288,11 +292,10 @@ class RootInstallSnapchatScreen : SetupScreen() {
         }
 
         SetupCard {
-            StepTitle(
+            SetupSceneHero(
+                scene = SetupHeroScene.PATCH,
                 title = translation["setup.root_install.title"],
-                subtitle = null,
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                textAlign = TextAlign.Center
+                subtitle = "Download the clean installer path for Lite with the same centered progress experience."
             )
             Surface(
                 modifier = Modifier.fillMaxWidth(),
@@ -356,11 +359,17 @@ class RootInstallSnapchatScreen : SetupScreen() {
                         }
                     }
 
-                    LogsPanel(
+                    LiteSetupLogsPanel(
                         logs = logs,
                         pulse = logPulse,
-                        accent = accent,
-                        translation = translation,
+                        title = translation["setup.root_install.logs_title"],
+                        copyLabel = translation["setup.root_install.copy_button"],
+                        linePrefix = { line ->
+                            translation.format(
+                                "setup.root_install.log_line_prefix",
+                                "line" to line
+                            )
+                        },
                         onCopy = {
                             clipboard.setText(AnnotatedString(logs.joinToString("\n")))
                             pushLog(translation["setup.root_install.logs_copied"])
@@ -406,7 +415,7 @@ class RootInstallSnapchatScreen : SetupScreen() {
                             }
                         } else {
                             if (downloadedApk == null) {
-                                GradientActionButton(
+                                LiteSetupGradientActionButton(
                                     label = translation["setup.root_install.download_button"],
                                     icon = Icons.Filled.Download,
                                     onClick = { startDownloadAndInstall() },
@@ -414,7 +423,7 @@ class RootInstallSnapchatScreen : SetupScreen() {
                                 )
                             }
                             if (downloadedApk != null) {
-                                GradientActionButton(
+                                LiteSetupGradientActionButton(
                                     label = translation["setup.root_install.install_button"],
                                     icon = Icons.Filled.Verified,
                                     onClick = { installDownloadedApk() },

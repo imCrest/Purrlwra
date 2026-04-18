@@ -76,6 +76,10 @@ import cock.crest.purrfectsnap.lite.setup.patch.AutoPatchServer
 import cock.crest.purrfectsnap.lite.setup.patch.LSPatch
 import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
 import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.SetupHeroScene
+import cock.crest.purrfectsnap.lite.ui.setup.SetupSceneHero
+import cock.crest.purrfectsnap.lite.ui.setup.SetupGradientActionButton as LiteSetupGradientActionButton
+import cock.crest.purrfectsnap.lite.ui.setup.SetupLogsPanel as LiteSetupLogsPanel
 import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
 import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 import okhttp3.OkHttpClient
@@ -373,11 +377,10 @@ class PatchSnapchatScreen : SetupScreen() {
         }
 
         SetupCard {
-            StepTitle(
+            SetupSceneHero(
+                scene = SetupHeroScene.PATCH,
                 title = translation["setup.patch.title"],
-                subtitle = null,
-                modifier = Modifier.align(Alignment.CenterHorizontally),
-                textAlign = TextAlign.Center
+                subtitle = "Create and install the Lite overlay with a calmer, centered progress flow."
             )
             JingmatrixBadge(accent, translation)
             Surface(
@@ -443,11 +446,17 @@ class PatchSnapchatScreen : SetupScreen() {
                         }
                     }
 
-                    LogsPanel(
+                    LiteSetupLogsPanel(
                         logs = logs,
                         pulse = logPulse,
-                        accent = accent,
-                        translation = translation,
+                        title = translation["setup.patch.logs_title"],
+                        copyLabel = translation["setup.patch.copy_button"],
+                        linePrefix = { line ->
+                            translation.format(
+                                "setup.patch.log_line_prefix",
+                                "line" to line
+                            )
+                        },
                         onCopy = {
                             clipboard.setText(AnnotatedString(logs.joinToString("\n")))
                             pushLog(translation["setup.patch.logs_copied"])
@@ -493,7 +502,7 @@ class PatchSnapchatScreen : SetupScreen() {
                             }
                         } else {
                             if (patchedApk == null) {
-                                GradientActionButton(
+                                LiteSetupGradientActionButton(
                                     label = translation["setup.patch.start_button"],
                                     icon = Icons.Filled.Download,
                                     onClick = { startPatch() },
@@ -501,7 +510,7 @@ class PatchSnapchatScreen : SetupScreen() {
                                 )
                             }
                             if (patchedApk != null) {
-                                GradientActionButton(
+                                LiteSetupGradientActionButton(
                                     label = translation["setup.patch.install_button"],
                                     icon = Icons.Filled.Verified,
                                     onClick = { installPatchedApk() },

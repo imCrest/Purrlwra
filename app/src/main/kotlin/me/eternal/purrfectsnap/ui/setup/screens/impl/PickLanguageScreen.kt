@@ -46,6 +46,8 @@ import androidx.compose.ui.window.Dialog
 import java.util.Locale
 import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
 import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.SetupHeroScene
+import cock.crest.purrfectsnap.lite.ui.setup.SetupSceneHero
 import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
 import cock.crest.purrfectsnap.lite.ui.util.Motion
 import cock.crest.purrfectsnap.lite.ui.util.ObservableMutableState
@@ -105,9 +107,14 @@ class PickLanguageScreen : SetupScreen() {
         }
 
         SetupCard {
+            SetupSceneHero(
+                scene = SetupHeroScene.INTRO,
+                title = "PurrfectSnap Lite",
+                subtitle = "Lean setup, calmer visuals, and a smaller Lite-first onboarding flow."
+            )
             StepTitle(
                 title = context.translation["setup.dialogs.select_language"],
-                subtitle = null,
+                subtitle = context.translation["setup.pick_language.change_anytime_hint"],
                 modifier = Modifier.align(Alignment.CenterHorizontally),
                 textAlign = TextAlign.Center
             )
@@ -182,7 +189,6 @@ class PickLanguageScreen : SetupScreen() {
             ) {
                 Text(text = context.translation["setup.pick_language.browse_languages"])
             }
-            DialogText(text = context.translation["setup.pick_language.change_anytime_hint"])
         }
 
         if (isDialog) {

@@ -8,6 +8,7 @@ import cock.crest.purrfectsnap.lite.core.ModContext
 import cock.crest.purrfectsnap.lite.core.features.impl.*
 import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
 import cock.crest.purrfectsnap.lite.core.features.impl.experiments.*
+import cock.crest.purrfectsnap.lite.core.features.impl.global.SnapchatPlus
 import cock.crest.purrfectsnap.lite.core.features.impl.messaging.*
 import cock.crest.purrfectsnap.lite.core.features.impl.spying.HalfSwipeNotifier
 import cock.crest.purrfectsnap.lite.core.features.impl.spying.MessageLogger
