@@ -1,9 +1,29 @@
-import java.io.ByteArrayOutputStream
+import org.gradle.api.DefaultTask
+import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.provider.Property
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.OutputFile
+import org.gradle.api.tasks.TaskAction
 
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.compose.compiler)
     id("kotlin-parcelize")
+}
+
+abstract class GenerateCommonBuildInfoTask : DefaultTask() {
+    @get:Input
+    abstract val sourceText: Property<String>
+
+    @get:OutputFile
+    abstract val outputFile: RegularFileProperty
+
+    @TaskAction
+    fun generate() {
+        val file = outputFile.get().asFile
+        file.parentFile.mkdirs()
+        file.writeText(sourceText.get())
+    }
 }
 
 android {
@@ -45,36 +65,26 @@ val commonGitHash = providers.environmentVariable("GITHUB_SHA")
     .get()
 val commonSifEndpoint = properties["debug_sif_endpoint"]?.toString()
     ?: "https://github.com/SnapEnhance/resources/raw/refs/heads/main/sif"
+val commonBuildInfoSource = """
+    package $commonBuildInfoPackage
 
-val generateCommonBuildInfo = tasks.register("generateCommonBuildInfo") {
-    val outputFile = layout.buildDirectory.file("generated/source/buildInfo/kotlin/$commonPackagePath/common/CommonBuildInfo.kt")
-
-    inputs.property("versionName", commonVersionName)
-    inputs.property("versionCode", commonVersionCode)
-    inputs.property("applicationId", commonApplicationId)
-    inputs.property("buildHash", commonBuildHash)
-    inputs.property("gitHash", commonGitHash)
-    inputs.property("sifEndpoint", commonSifEndpoint)
-    outputs.file(outputFile)
-
-    doLast {
-        val file = outputFile.get().asFile
-        file.parentFile.mkdirs()
-        file.writeText(
-            """
-            package $commonBuildInfoPackage
-
-            object CommonBuildInfo {
-                const val VERSION_NAME = "$commonVersionName"
-                const val VERSION_CODE = $commonVersionCode
-                const val APPLICATION_ID = "$commonApplicationId"
-                const val BUILD_HASH = "$commonBuildHash"
-                const val GIT_HASH = "$commonGitHash"
-                const val SIF_ENDPOINT = "$commonSifEndpoint"
-            }
-            """.trimIndent()
-        )
+    object CommonBuildInfo {
+        const val VERSION_NAME = "$commonVersionName"
+        const val VERSION_CODE = $commonVersionCode
+        const val APPLICATION_ID = "$commonApplicationId"
+        const val BUILD_HASH = "$commonBuildHash"
+        const val GIT_HASH = "$commonGitHash"
+        const val SIF_ENDPOINT = "$commonSifEndpoint"
     }
+""".trimIndent()
+
+val generateCommonBuildInfo = tasks.register<GenerateCommonBuildInfoTask>("generateCommonBuildInfo") {
+    sourceText.set(commonBuildInfoSource)
+    outputFile.set(
+        layout.buildDirectory.file(
+            "generated/source/buildInfo/kotlin/$commonPackagePath/common/CommonBuildInfo.kt"
+        )
+    )
 }
 
 tasks.matching { it.name.startsWith("pre") && it.name.endsWith("Build") }.configureEach {

@@ -3,6 +3,16 @@ import java.util.Locale
 import java.util.Properties
 import java.util.zip.CRC32
 import org.apache.tools.ant.filters.FixCrLfFilter
+import org.gradle.api.DefaultTask
+import org.gradle.api.file.DirectoryProperty
+import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.provider.Property
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.InputDirectory
+import org.gradle.api.tasks.OutputFile
+import org.gradle.api.tasks.PathSensitive
+import org.gradle.api.tasks.PathSensitivity
+import org.gradle.api.tasks.TaskAction
 import org.gradle.api.tasks.Exec
 import org.gradle.api.tasks.Sync
 
@@ -23,11 +33,69 @@ plugins {
     alias(libs.plugins.androidLibrary)
 }
 
+abstract class GenerateNativeBuildInfoTask : DefaultTask() {
+    @get:Input
+    abstract val sourceText: Property<String>
+
+    @get:OutputFile
+    abstract val outputFile: RegularFileProperty
+
+    @TaskAction
+    fun generate() {
+        val file = outputFile.get().asFile
+        file.parentFile.mkdirs()
+        file.writeText(sourceText.get())
+    }
+}
+
+abstract class GenerateChecksumsSourceTask : DefaultTask() {
+    @get:InputDirectory
+    @get:PathSensitive(PathSensitivity.RELATIVE)
+    abstract val checksumsDir: DirectoryProperty
+
+    @get:Input
+    abstract val packageName: Property<String>
+
+    @get:OutputFile
+    abstract val outputFile: RegularFileProperty
+
+    @TaskAction
+    fun generate() {
+        val checksums = checksumsDir.get().asFile.listFiles()
+            ?.filter { it.isFile }
+            ?.sortedBy { it.name }
+            ?.associate { it.name to it.readText().toLong() }
+            ?: emptyMap()
+
+        val content = """
+            package ${packageName.get()}
+
+            object Checksums {
+                val checksums = mapOf(
+                    ${checksums.entries.joinToString(",\n") { (abi, checksum) -> "\"$abi\" to ${checksum}L" }}
+                )
+            }
+        """.trimIndent()
+
+        val file = outputFile.get().asFile
+        file.parentFile.mkdirs()
+        file.writeText(content)
+    }
+}
+
 val nativeBuildHash = rootProject.ext.get("buildHash").toString()
 val nativeLibFileName = "lib${nativeBuildHash}.so"
 val nativeApplicationId = rootProject.ext["applicationId"].toString()
 val nativePackagePath = nativeApplicationId.replace('.', '/')
 val nativeBuildInfoPackage = "$nativeApplicationId.nativelib"
+val nativeBuildInfoSource = """
+    package $nativeBuildInfoPackage
+
+    object NativeBuildInfo {
+        const val NATIVE_NAME = "$nativeBuildHash"
+        const val MODULE_PACKAGE_NAME = "$nativeApplicationId"
+    }
+""".trimIndent()
 
 val localProperties = Properties().apply {
     val file = rootProject.file("local.properties")
@@ -315,32 +383,11 @@ val syncTasks = cargoTargets.mapIndexed { index, target ->
 // (it is populated by syncTasks' doLast)
 layout.buildDirectory.dir("checksums").get().asFile.mkdirs()
 
-val generateChecksumsFile = tasks.register("generateChecksumsFile") {
+val generateChecksumsFile = tasks.register<GenerateChecksumsSourceTask>("generateChecksumsFile") {
     dependsOn(syncTasks)
-    val generatedDir = layout.buildDirectory.dir("generated/source/checksums/kotlin")
-    val checksumsFile = generatedDir.get().asFile.resolve("Checksums.kt")
-    val checksumsDir = layout.buildDirectory.dir("checksums").get().asFile
-    inputs.dir(checksumsDir)
-    outputs.file(checksumsFile)
-
-    doLast {
-        val checksums = checksumsDir.listFiles()?.associate {
-            it.name to it.readText().toLong()
-        } ?: emptyMap()
-
-        checksumsFile.parentFile.mkdirs()
-        checksumsFile.writeText(
-            """
-            package cock.crest.purrfectsnap.lite.nativelib
-
-            object Checksums {
-                val checksums = mapOf(
-                    ${checksums.entries.joinToString(",\n") { (abi, checksum) -> "\"$abi\" to ${checksum}L" }}
-                )
-            }
-            """.trimIndent()
-        )
-    }
+    checksumsDir.set(layout.buildDirectory.dir("checksums"))
+    packageName.set(nativeBuildInfoPackage)
+    outputFile.set(layout.buildDirectory.file("generated/source/checksums/kotlin/Checksums.kt"))
 }
 
 android {
@@ -367,27 +414,13 @@ android {
     }
 }
 
-val generateNativeBuildInfo = tasks.register("generateNativeBuildInfo") {
-    val outputFile = layout.buildDirectory.file("generated/source/buildInfo/kotlin/$nativePackagePath/nativelib/NativeBuildInfo.kt")
-
-    inputs.property("nativeName", nativeBuildHash)
-    inputs.property("modulePackageName", nativeApplicationId)
-    outputs.file(outputFile)
-
-    doLast {
-        val file = outputFile.get().asFile
-        file.parentFile.mkdirs()
-        file.writeText(
-            """
-            package $nativeBuildInfoPackage
-
-            object NativeBuildInfo {
-                const val NATIVE_NAME = "$nativeBuildHash"
-                const val MODULE_PACKAGE_NAME = "$nativeApplicationId"
-            }
-            """.trimIndent()
+val generateNativeBuildInfo = tasks.register<GenerateNativeBuildInfoTask>("generateNativeBuildInfo") {
+    sourceText.set(nativeBuildInfoSource)
+    outputFile.set(
+        layout.buildDirectory.file(
+            "generated/source/buildInfo/kotlin/$nativePackagePath/nativelib/NativeBuildInfo.kt"
         )
-    }
+    )
 }
 
 tasks.matching { it.name.startsWith("pre") && it.name.endsWith("Build") }.configureEach {
