@@ -146,26 +146,26 @@ class HomeRootSection : Routes.Route() {
         val cardMargin = 10.dp
         val pageBackgroundGradient = Brush.verticalGradient(
             listOf(
-                Color(0xFF261F58),
-                Color(0xFF302A6D),
-                Color(0xFF241F52)
+                Color(0xFF09141C),
+                Color(0xFF102430),
+                Color(0xFF081017)
             )
         )
     }
 
     internal val changelogClient by lazy { OkHttpClient() }
-    internal val changelogStableUrl = "https://raw.githubusercontent.com/particle-box/PurrfectSnap/dev/changelogs-stable.txt"
-    internal val changelogPrereleaseUrl = "https://raw.githubusercontent.com/particle-box/PurrfectSnap/dev/changelogs-prerelease.txt"
-    internal val announcementsUrl = "https://raw.githubusercontent.com/particle-box/PurrfectSnap/dev/announcements.txt"
+    internal val changelogStableUrl = "https://raw.githubusercontent.com/sujxlsahu/PurrfectSnap/dev/changelogs-stable.txt"
+    internal val changelogPrereleaseUrl = "https://raw.githubusercontent.com/sujxlsahu/PurrfectSnap/dev/changelogs-prerelease.txt"
+    internal val announcementsUrl = "https://raw.githubusercontent.com/sujxlsahu/PurrfectSnap/dev/announcements.txt"
 
     internal val heroGradientColors = listOf(
-        Color(0xFF5C4B99),
-        Color(0xFF322B5E),
-        Color(0xFF1B1836)
+        Color(0xFF17384B),
+        Color(0xFF102430),
+        Color(0xFF09141C)
     )
     internal val quickActionsGradientColors = listOf(
-        Color(0xFF241C3E),
-        Color(0xFF151127)
+        Color(0xFF102430),
+        Color(0xFF0A151D)
     )
     private lateinit var activityLauncherHelper: ActivityLauncherHelper
     data class QaCard(val id: String, val name: String, val icon: ImageVector, val action: (Routes) -> Unit)
@@ -450,14 +450,14 @@ class HomeRootSection : Routes.Route() {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        text = "PurrfectSnap",
+                        text = "PurrfectSnap Lite",
                         color = Color.White,
                         fontSize = 34.sp,
                         fontWeight = FontWeight.ExtraBold,
                         fontFamily = avenirNext
                     )
                     Text(
-                        text = "By ΞTΞRNAL",
+                        text = "curated by sujxlsahu",
                         color = Color.White.copy(alpha = 0.75f),
                         fontSize = 14.sp,
                         fontFamily = avenirNext

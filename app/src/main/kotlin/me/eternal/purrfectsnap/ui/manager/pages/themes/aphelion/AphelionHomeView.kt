@@ -407,7 +407,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                         }
                         OutlinedButton(
                             modifier = Modifier.weight(1f).height(44.dp),
-                            onClick = { haptic.performHapticFeedback(HapticFeedbackType.LongPress); androidContext.openLink("https://github.com/particle-box/PurrfectSnap", context.translation["toast_open_link_failed"]) },
+                            onClick = { haptic.performHapticFeedback(HapticFeedbackType.LongPress); androidContext.openLink("https://github.com/sujxlsahu/PurrfectSnap", context.translation["toast_open_link_failed"]) },
                             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.35f)),
                             colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
                             contentPadding = PaddingValues(horizontal = 12.dp)
@@ -486,7 +486,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
             if (latest.workflowId != null) {
                 if (abiName != null) {
                     val artifactName = "purrfectsnap-${if (abiName == "arm64") "armv8" else "armv7"}-debug"
-                    UpdateDownloader.downloadAndInstall(context, "https://nightly.link/particle-box/PurrfectSnap/actions/runs/${latest.workflowId}/$artifactName.zip", "$artifactName.zip", coroutineScope)
+                    UpdateDownloader.downloadAndInstall(context, "https://nightly.link/sujxlsahu/PurrfectSnap/actions/runs/${latest.workflowId}/$artifactName.zip", "$artifactName.zip", coroutineScope)
                 }
             } else {
                 abiName?.let { arch -> latest.assetDownloads[arch] }?.let { url ->

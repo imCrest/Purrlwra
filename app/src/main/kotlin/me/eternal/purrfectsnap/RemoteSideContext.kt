@@ -346,7 +346,7 @@ class RemoteSideContext(
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
         val inputData = Data.Builder()
-            .putString("announcements_url", "https://raw.githubusercontent.com/particle-box/PurrfectSnap/dev/announcements.txt")
+            .putString("announcements_url", "https://raw.githubusercontent.com/sujxlsahu/PurrfectSnap/dev/announcements.txt")
             .putString("channel_name", "Announcements")
             .putString("channel_description", "Notifications for PurrfectSnap announcements")
             .putString("notification_title", "New announcement available")

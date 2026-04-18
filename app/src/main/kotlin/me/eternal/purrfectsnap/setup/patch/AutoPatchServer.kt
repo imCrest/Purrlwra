@@ -30,7 +30,7 @@ class AutoPatchServer(
 
     fun fetchLatestSnapchatApk(): LatestApk? {
         val request = Request.Builder()
-            .url("https://api.github.com/repos/particle-box/download-snap/releases/latest")
+            .url("https://api.github.com/repos/sujxlsahu/download-snap/releases/latest")
             .build()
 
         okHttpClient.newCall(request).execute().use { response ->

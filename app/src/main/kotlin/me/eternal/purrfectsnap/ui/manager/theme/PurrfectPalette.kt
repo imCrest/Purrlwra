@@ -10,30 +10,30 @@ import androidx.compose.ui.graphics.Color
 object PurrfectPalette {
     val backgroundGradient = Brush.verticalGradient(
         listOf(
-            Color(0xFF261F58),
-            Color(0xFF302A6D),
-            Color(0xFF241F52)
+            Color(0xFF09141C),
+            Color(0xFF102430),
+            Color(0xFF081017)
         )
     )
 
     val panelGradient = Brush.linearGradient(
         listOf(
-            Color(0xFF5C4B99),
-            Color(0xFF322B5E),
-            Color(0xFF1B1836)
+            Color(0xFF163344),
+            Color(0xFF0E1E2A),
+            Color(0xFF0A131A)
         )
     )
 
-    val glowPrimary = Color(0xFF8C7BFF)
-    val glowSecondary = Color(0xFF5FD8FF)
+    val glowPrimary = Color(0xFF43D5C5)
+    val glowSecondary = Color(0xFFFFC96C)
     val iconTint = Color.White
     val textPrimary = Color.White
-    val textSecondary = Color(0xFFD9D3FF)
-    val cardOverlayColor = Color(0xFF2A2452).copy(alpha = 0.95f)
+    val textSecondary = Color(0xFFD2E8E4)
+    val cardOverlayColor = Color(0xFF11212C).copy(alpha = 0.95f)
     val cardOverlay = Brush.linearGradient(
         listOf(
-            Color(0xFF2A2452).copy(alpha = 0.95f),
-            Color(0xFF1A143A).copy(alpha = 0.92f)
+            Color(0xFF11212C).copy(alpha = 0.95f),
+            Color(0xFF09141C).copy(alpha = 0.92f)
         )
     )
 }

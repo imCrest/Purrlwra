@@ -36,7 +36,7 @@ object Updater {
     }
 
     private fun fetchLatestRelease(channel: Channel) = runCatching {
-        val endpoint = Request.Builder().url("https://api.github.com/repos/particle-box/PurrfectSnap/releases").build()
+        val endpoint = Request.Builder().url("https://api.github.com/repos/sujxlsahu/PurrfectSnap/releases").build()
         val response = OkHttpClient().newCall(endpoint).execute()
 
         if (!response.isSuccessful) throw Throwable("Failed to fetch releases: ${response.code}")
@@ -87,7 +87,7 @@ object Updater {
     }.getOrNull()
 
     private fun fetchLatestDebugCI() = runCatching {
-        val actionRuns = OkHttpClient().newCall(Request.Builder().url("https://api.github.com/repos/particle-box/PurrfectSnap/actions/runs?event=workflow_dispatch&branch=dev").build()).execute().use {
+        val actionRuns = OkHttpClient().newCall(Request.Builder().url("https://api.github.com/repos/sujxlsahu/PurrfectSnap/actions/runs?event=workflow_dispatch&branch=dev").build()).execute().use {
             if (!it.isSuccessful) throw Throwable("Failed to fetch CI runs: ${it.code}")
             JsonParser.parseString(it.body?.string()).asJsonObject
         }

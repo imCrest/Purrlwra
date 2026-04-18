@@ -16,7 +16,7 @@
 ## Available Script Repositories
 
 #### 📦 SE-Scripts
-- **URL**: `https://github.com/particle-box/SE-Scripts`
+- **URL**: `https://github.com/sujxlsahu/SE-Scripts`
 - **Maintainer**: ΞTΞRNAL
 
 #### 📦 SE-Scripts-Bold
