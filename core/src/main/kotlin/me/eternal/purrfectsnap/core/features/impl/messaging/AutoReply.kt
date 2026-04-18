@@ -1,17 +1,17 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.data.MessageState
-import me.eternal.purrfectsnap.core.event.events.impl.BuildMessageEvent
-import me.eternal.purrfectsnap.core.event.events.impl.ConversationUpdateEvent
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
-import me.eternal.purrfectsnap.core.features.impl.spying.HalfSwipeNotifier
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.data.MessageState
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BuildMessageEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.ConversationUpdateEvent
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.HalfSwipeNotifier
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -25,8 +25,8 @@ import com.google.gson.reflect.TypeToken
 import com.google.gson.JsonParser
 import com.google.gson.JsonObject
 import com.google.gson.JsonArray
-import me.eternal.purrfectsnap.core.wrapper.impl.MessageContent
-import me.eternal.purrfectsnap.core.wrapper.impl.getMessageText
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.MessageContent
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.getMessageText
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -77,7 +77,7 @@ class AutoReply : MessagingRuleFeature("Auto Reply", MessagingRuleType.AUTO_REPL
         if (messageContent?.content == null) return null
         
         try {
-            val protoReader = me.eternal.purrfectsnap.common.util.protobuf.ProtoReader(messageContent.content!!)
+            val protoReader = cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader(messageContent.content!!)
             
             if (protoReader.contains(7)) {
                 return ContentType.STORY_REPLY
@@ -838,7 +838,7 @@ class AutoReply : MessagingRuleFeature("Auto Reply", MessagingRuleType.AUTO_REPL
         else -> content
     }
 
-    private suspend fun buildSystemPrompt(senderId: String, contentType: ContentType?, config: me.eternal.purrfectsnap.common.config.impl.MessagingTweaks.AutoReplyConfig, isHalfSwipe: Boolean = false): String {
+    private suspend fun buildSystemPrompt(senderId: String, contentType: ContentType?, config: cock.crest.purrfectsnap.lite.common.config.impl.MessagingTweaks.AutoReplyConfig, isHalfSwipe: Boolean = false): String {
         val responseLanguage = config.aiConfig.aiResponseLanguage.get()
         val provider = config.aiConfig.aiProvider.get()
         val strict = provider != "deepseek"

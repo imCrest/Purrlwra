@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.features.impl.spying
+package cock.crest.purrfectsnap.lite.core.features.impl.spying
 
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.core.features.Feature
 import kotlin.time.Duration.Companion.milliseconds
 
 class HalfSwipeNotifier : Feature("Half Swipe Notifier") {

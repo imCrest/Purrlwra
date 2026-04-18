@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
 
 class HideStreakRestore : Feature("HideStreakRestore") {
     override fun init() {

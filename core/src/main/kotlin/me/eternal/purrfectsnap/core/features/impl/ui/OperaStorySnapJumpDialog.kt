@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
-import me.eternal.purrfectsnap.common.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.common.ui.PurrfectOverlayPalette
 import kotlin.math.roundToInt
 
 /**

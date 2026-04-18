@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.social
+package cock.crest.purrfectsnap.lite.ui.manager.pages.social
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -23,14 +23,14 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.MessagingGroupInfo
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.storage.getFriends
-import me.eternal.purrfectsnap.storage.getGroups
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.coil.BitmojiImage
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingGroupInfo
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.storage.getFriends
+import cock.crest.purrfectsnap.lite.storage.getGroups
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.coil.BitmojiImage
 
 class AddFriendDialog(
     private val context: RemoteSideContext,
@@ -294,12 +294,12 @@ class AddFriendDialog(
             }
         }
 
-        me.eternal.purrfectsnap.ui.util.Dialog(
+        cock.crest.purrfectsnap.lite.ui.util.Dialog(
             onDismissRequest = {
                 timeoutJob?.cancel()
                 dismiss()
             },
-            properties = me.eternal.purrfectsnap.ui.util.DialogProperties(usePlatformDefaultWidth = false)
+            properties = cock.crest.purrfectsnap.lite.ui.util.DialogProperties(usePlatformDefaultWidth = false)
         ) {
             val dialogShape = RoundedCornerShape(24.dp)
             Surface(

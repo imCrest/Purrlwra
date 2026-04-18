@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -9,15 +9,15 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.core.event.events.impl.BindViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.spying.StealthMode
-import me.eternal.purrfectsnap.core.ui.addForegroundDrawable
-import me.eternal.purrfectsnap.core.ui.randomTag
-import me.eternal.purrfectsnap.core.ui.removeForegroundDrawable
-import me.eternal.purrfectsnap.core.util.EvictingMap
-import me.eternal.purrfectsnap.core.util.ktx.getDimens
-import me.eternal.purrfectsnap.core.util.ktx.getIdentifier
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BindViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.StealthMode
+import cock.crest.purrfectsnap.lite.core.ui.addForegroundDrawable
+import cock.crest.purrfectsnap.lite.core.ui.randomTag
+import cock.crest.purrfectsnap.lite.core.ui.removeForegroundDrawable
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.core.util.ktx.getDimens
+import cock.crest.purrfectsnap.lite.core.util.ktx.getIdentifier
 
 class StealthModeIndicator : Feature("StealthModeIndicator") {
     private val stealthMode by lazy { context.feature(StealthMode::class) }

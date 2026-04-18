@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.app.Activity
 import android.content.ComponentName
@@ -26,16 +26,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.unit.dp
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ui.AppMaterialTheme
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.core.event.events.impl.ActivityResultEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.addForegroundDrawable
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.ui.removeForegroundDrawable
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ui.AppMaterialTheme
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.core.event.events.impl.ActivityResultEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.addForegroundDrawable
+import cock.crest.purrfectsnap.lite.core.ui.children
+import cock.crest.purrfectsnap.lite.core.ui.removeForegroundDrawable
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 import kotlin.random.Random
 
 class AppLock : Feature("AppLock") {
@@ -56,7 +56,7 @@ class AppLock : Feature("AppLock") {
     private fun requestUnlock() {
         isUnlockRequested = true
         context.mainActivity!!.startActivityForResult(Intent().apply {
-            component = ComponentName(Constants.MODULE_PACKAGE_NAME, "me.eternal.purrfectsnap.bridge.BiometricPromptActivity")
+            component = ComponentName(Constants.MODULE_PACKAGE_NAME, "cock.crest.purrfectsnap.lite.bridge.BiometricPromptActivity")
         }, requestCode)
     }
 

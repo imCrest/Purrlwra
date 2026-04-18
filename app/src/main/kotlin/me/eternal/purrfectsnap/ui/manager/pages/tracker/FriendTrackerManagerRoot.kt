@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.tracker
+package cock.crest.purrfectsnap.lite.ui.manager.pages.tracker
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -40,20 +40,20 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
-import me.eternal.purrfectsnap.common.ui.rememberAsyncUpdateDispatcher
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.storage.*
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.util.coil.BitmojiImage
-import me.eternal.purrfectsnap.ui.util.openFile
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
-import me.eternal.purrfectsnap.ui.util.pagerTabIndicatorOffset
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableStateList
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.storage.*
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.util.coil.BitmojiImage
+import cock.crest.purrfectsnap.lite.ui.util.openFile
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.ui.util.pagerTabIndicatorOffset
 
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -230,13 +230,13 @@ class FriendTrackerManagerRoot : Routes.Route() {
             )
         }
 
-        fun handleImport(type: me.eternal.purrfectsnap.common.data.ExportType) {
+        fun handleImport(type: cock.crest.purrfectsnap.lite.common.data.ExportType) {
             routes.activityLauncher.openFile("application/json") { uri ->
                 runCatching {
                     val content = context.androidContext.contentResolver.openInputStream(android.net.Uri.parse(uri))?.use {
                         it.readBytes().toString(Charsets.UTF_8)
                     } ?: return@runCatching
-                    val exportedData = context.gson.fromJson(content, me.eternal.purrfectsnap.common.data.ExportedTrackerData::class.java)
+                    val exportedData = context.gson.fromJson(content, cock.crest.purrfectsnap.lite.common.data.ExportedTrackerData::class.java)
                     if (exportedData.type != type) {
                         showInvalidImportTypeDialog = true
                         return@runCatching
@@ -273,12 +273,12 @@ class FriendTrackerManagerRoot : Routes.Route() {
                 confirmButtonText = translation["bulk_import_button"],
                 onConfirm = {
                     showImportDialog = false
-                    handleImport(me.eternal.purrfectsnap.common.data.ExportType.BULK)
+                    handleImport(cock.crest.purrfectsnap.lite.common.data.ExportType.BULK)
                 },
                 dismissButtonText = translation["individual_import_button"],
                 onDismiss = {
                     showImportDialog = false
-                    handleImport(me.eternal.purrfectsnap.common.data.ExportType.SINGLE)
+                    handleImport(cock.crest.purrfectsnap.lite.common.data.ExportType.SINGLE)
                 },
                 opaque = true,
                 showCloseButton = false
@@ -575,13 +575,13 @@ class FriendTrackerManagerRoot : Routes.Route() {
         var showImportDialog by remember { mutableStateOf(false) }
         var showInvalidImportTypeDialog by remember { mutableStateOf(false) }
 
-        fun handleImport(type: me.eternal.purrfectsnap.common.data.ExportType) {
+        fun handleImport(type: cock.crest.purrfectsnap.lite.common.data.ExportType) {
             routes.activityLauncher.openFile("application/json") { uri ->
                 runCatching {
                     val content = context.androidContext.contentResolver.openInputStream(android.net.Uri.parse(uri))?.use {
                         it.readBytes().toString(Charsets.UTF_8)
                     } ?: return@runCatching
-                    val exportedData = context.gson.fromJson(content, me.eternal.purrfectsnap.common.data.ExportedTrackerData::class.java)
+                    val exportedData = context.gson.fromJson(content, cock.crest.purrfectsnap.lite.common.data.ExportedTrackerData::class.java)
                     if (exportedData.type != type) {
                         showInvalidImportTypeDialog = true
                         return@runCatching
@@ -785,8 +785,8 @@ class FriendTrackerManagerRoot : Routes.Route() {
                 onChoiceSelected = { index ->
                     showImportDialog = false
                     when (index) {
-                        0 -> handleImport(me.eternal.purrfectsnap.common.data.ExportType.BULK)
-                        1 -> handleImport(me.eternal.purrfectsnap.common.data.ExportType.SINGLE)
+                        0 -> handleImport(cock.crest.purrfectsnap.lite.common.data.ExportType.BULK)
+                        1 -> handleImport(cock.crest.purrfectsnap.lite.common.data.ExportType.SINGLE)
                     }
                 }
             )
@@ -813,9 +813,9 @@ class FriendTrackerManagerRoot : Routes.Route() {
 @Composable
 private fun SelectRuleDialog(
     onDismissRequest: () -> Unit,
-    rules: List<me.eternal.purrfectsnap.common.data.TrackerRule>,
-    onRuleSelected: (me.eternal.purrfectsnap.common.data.TrackerRule) -> Unit,
-    translation: me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
+    rules: List<cock.crest.purrfectsnap.lite.common.data.TrackerRule>,
+    onRuleSelected: (cock.crest.purrfectsnap.lite.common.data.TrackerRule) -> Unit,
+    translation: cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
 ) {
     Dialog(onDismissRequest = onDismissRequest) {
         Card(

@@ -122,7 +122,7 @@ dependencyResolutionManagement {
 
 
 
-rootProject.name = "PurrfectSnap"
+rootProject.name = "PurrfectSnap Lite"
 include(":common")
 include(":core")
 include(":valdi")

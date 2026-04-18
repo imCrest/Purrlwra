@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.action.impl
+package cock.crest.purrfectsnap.lite.core.action.impl
 
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteDatabase.OpenParams
@@ -42,11 +42,11 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupProperties
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.common.util.ktx.getLongOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
-import me.eternal.purrfectsnap.core.action.AbstractAction
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLongOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.core.action.AbstractAction
 import okhttp3.OkHttpClient
 import java.io.File
 import java.io.FileOutputStream

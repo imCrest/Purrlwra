@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.net.Uri
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.core.event.events.impl.NetworkApiRequestEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NetworkApiRequestEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 
 class OldBitmojiSelfie : Feature("OldBitmojiSelfie") {
     override fun init() {

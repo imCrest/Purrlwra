@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.logger
+package cock.crest.purrfectsnap.lite.common.logger
 
 import android.app.Notification
 import android.app.NotificationChannel

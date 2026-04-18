@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.ConfigFlag
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.ConfigFlag
 
 class Scripting : ConfigContainer() {
     val developerMode = boolean("developer_mode", false) { requireRestart() }

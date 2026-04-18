@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.scripting.impl
+package cock.crest.purrfectsnap.lite.core.scripting.impl
 
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.common.scripting.ktx.scriptableObject
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
-import me.eternal.purrfectsnap.core.wrapper.impl.Snapchatter
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.scriptableObject
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Snapchatter
 import org.mozilla.javascript.Scriptable
 import org.mozilla.javascript.annotations.JSFunction
 

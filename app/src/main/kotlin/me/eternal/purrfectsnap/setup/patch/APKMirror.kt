@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.setup.patch
+package cock.crest.purrfectsnap.lite.setup.patch
 
 import okhttp3.OkHttpClient
 import okhttp3.Request

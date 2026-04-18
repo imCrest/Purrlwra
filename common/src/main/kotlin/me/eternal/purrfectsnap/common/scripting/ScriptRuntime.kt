@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.common.scripting
+package cock.crest.purrfectsnap.lite.common.scripting
 
 import android.content.Context
 import android.os.ParcelFileDescriptor
-import me.eternal.purrfectsnap.bridge.scripting.IScripting
-import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.config.impl.RootConfig
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.scripting.type.readModuleInfo
+import cock.crest.purrfectsnap.lite.bridge.scripting.IScripting
+import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.config.impl.RootConfig
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.scripting.type.readModuleInfo
 import org.mozilla.javascript.ScriptableObject
 import java.io.InputStream
 

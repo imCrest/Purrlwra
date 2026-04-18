@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.core.features.impl.global
+package cock.crest.purrfectsnap.lite.core.features.impl.global
 
 import android.os.Build
 import android.os.FileObserver
 import com.google.gson.JsonParser
-import me.eternal.purrfectsnap.core.event.events.impl.SendMessageWithContentEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.mapper.impl.DefaultMediaItemMapper
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SendMessageWithContentEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.mapper.impl.DefaultMediaItemMapper
 import java.io.File
 
 class BypassVideoLengthRestriction :

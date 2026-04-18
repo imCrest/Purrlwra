@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.security
+package cock.crest.purrfectsnap.lite.security
 
 import android.os.Process
 import kotlin.system.exitProcess

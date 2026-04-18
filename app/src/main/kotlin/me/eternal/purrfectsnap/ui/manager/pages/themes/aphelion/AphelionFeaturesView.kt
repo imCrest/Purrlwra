@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import androidx.compose.runtime.*
 import androidx.navigation.NavBackStackEntry
 import androidx.navigation.compose.currentBackStackEntryAsState
-import me.eternal.purrfectsnap.ui.manager.pages.features.FeaturesRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.features.FeaturesRootSection.Companion.FEATURE_CONTAINER_ROUTE
-import me.eternal.purrfectsnap.ui.manager.pages.features.FeaturesRootSection.Companion.SEARCH_FEATURE_ROUTE
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.PropertyPair
-import me.eternal.purrfectsnap.common.config.toPropertyPair
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.FeaturesRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.FeaturesRootSection.Companion.FEATURE_CONTAINER_ROUTE
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.FeaturesRootSection.Companion.SEARCH_FEATURE_ROUTE
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.PropertyPair
+import cock.crest.purrfectsnap.lite.common.config.toPropertyPair
 
 @Composable
 fun FeaturesRootSection.AphelionFeaturesScreen(nav: NavBackStackEntry) {

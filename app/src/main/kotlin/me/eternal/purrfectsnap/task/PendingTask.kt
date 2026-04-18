@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.task
+package cock.crest.purrfectsnap.lite.task
 
 
 enum class TaskType(

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.ui
+package cock.crest.purrfectsnap.lite.common.ui
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit

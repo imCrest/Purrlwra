@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.social
+package cock.crest.purrfectsnap.lite.ui.manager.pages.social
 
 import android.content.Intent
 import androidx.compose.animation.AnimatedVisibility
@@ -40,27 +40,27 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.bridge.snapclient.MessagingBridge
-import me.eternal.purrfectsnap.bridge.snapclient.SessionStartListener
-import me.eternal.purrfectsnap.bridge.snapclient.types.Message
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ReceiversConfig
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.SocialScope
-import me.eternal.purrfectsnap.common.messaging.MessagingConstraints
-import me.eternal.purrfectsnap.common.messaging.MessagingTask
-import me.eternal.purrfectsnap.common.messaging.MessagingTaskConstraint
-import me.eternal.purrfectsnap.common.messaging.MessagingTaskType
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.common.util.snap.SnapWidgetBroadcastReceiverHelper
-import me.eternal.purrfectsnap.storage.getFriendInfo
-import me.eternal.purrfectsnap.storage.getGroupInfo
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.Dialog
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.bridge.snapclient.MessagingBridge
+import cock.crest.purrfectsnap.lite.bridge.snapclient.SessionStartListener
+import cock.crest.purrfectsnap.lite.bridge.snapclient.types.Message
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ReceiversConfig
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.SocialScope
+import cock.crest.purrfectsnap.lite.common.messaging.MessagingConstraints
+import cock.crest.purrfectsnap.lite.common.messaging.MessagingTask
+import cock.crest.purrfectsnap.lite.common.messaging.MessagingTaskConstraint
+import cock.crest.purrfectsnap.lite.common.messaging.MessagingTaskType
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.common.util.snap.SnapWidgetBroadcastReceiverHelper
+import cock.crest.purrfectsnap.lite.storage.getFriendInfo
+import cock.crest.purrfectsnap.lite.storage.getGroupInfo
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.Dialog
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
 
 class MessagingPreview: Routes.Route() {
     override val translation by lazy { context.translation.getCategory("manager.sections.social.messaging_preview") }

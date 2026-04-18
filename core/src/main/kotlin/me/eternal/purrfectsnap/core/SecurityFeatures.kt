@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core
+package cock.crest.purrfectsnap.lite.core
 
 import android.system.Os
 import android.view.ViewGroup
@@ -35,22 +35,22 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.bridge.toWrapper
-import me.eternal.purrfectsnap.common.config.MOD_DETECTION_VERSION_CHECK
-import me.eternal.purrfectsnap.common.config.VersionRequirement
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.ui.CustomComposable
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
-import me.eternal.purrfectsnap.mapper.impl.PlatformClientAttestationMapper
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.bridge.toWrapper
+import cock.crest.purrfectsnap.lite.common.config.MOD_DETECTION_VERSION_CHECK
+import cock.crest.purrfectsnap.lite.common.config.VersionRequirement
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.ui.CustomComposable
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.mapper.impl.PlatformClientAttestationMapper
 import java.io.IOException
 import java.lang.reflect.Method
 

@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.setEnumField
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.setEnumField
 
 class DisableReplayInFF : Feature("DisableReplayInFF") {
     override fun init() {

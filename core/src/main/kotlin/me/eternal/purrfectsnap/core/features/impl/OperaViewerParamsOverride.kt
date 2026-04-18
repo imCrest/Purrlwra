@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.core.features.impl
+package cock.crest.purrfectsnap.lite.core.features.impl
 
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.ParamMap
-import me.eternal.purrfectsnap.mapper.impl.OperaViewerParamsMapper
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.ParamMap
+import cock.crest.purrfectsnap.lite.mapper.impl.OperaViewerParamsMapper
 import java.util.concurrent.ConcurrentHashMap
 
 class OperaViewerParamsOverride : Feature("OperaViewerParamsOverride") {

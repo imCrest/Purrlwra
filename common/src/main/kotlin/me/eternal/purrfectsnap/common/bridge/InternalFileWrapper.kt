@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.common.bridge
+package cock.crest.purrfectsnap.lite.common.bridge
 
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.util.LazyBridgeValue
-import me.eternal.purrfectsnap.common.util.lazyBridge
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.util.LazyBridgeValue
+import cock.crest.purrfectsnap.lite.common.util.lazyBridge
 
 open class InternalFileWrapper(
     fileHandleManager: LazyBridgeValue<FileHandleManager>,

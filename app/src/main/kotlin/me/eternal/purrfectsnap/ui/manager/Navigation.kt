@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager
+package cock.crest.purrfectsnap.lite.ui.manager
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateDpAsState
@@ -102,9 +102,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.navigation
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.manager.theme.aphelion.ThemeRevealState
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion.ThemeRevealState
 import kotlin.math.round
 import kotlin.math.PI
 import kotlin.math.sin
@@ -131,7 +131,7 @@ class Navigation(
         val currentRoute = remember(navBackStackEntry) { routes.getCurrentRoute(navBackStackEntry) }
         if (currentRoute?.routeInfo?.hasOwnTopBar == true) return
 
-        val shrinkThreshold = me.eternal.purrfectsnap.ui.util.Motion.HEADER_MORPH_THRESHOLD
+        val shrinkThreshold = cock.crest.purrfectsnap.lite.ui.util.Motion.HEADER_MORPH_THRESHOLD
         val isAphelion = context.config.root.global.uiSettings.managerTheme.get() == "APHELION"
         val focusFactor = if (isAphelion) (globalScrollOffset / shrinkThreshold).coerceIn(0f, 1f) else 0f
         val headerHeight = lerp(64.dp, 48.dp, focusFactor)
@@ -204,11 +204,11 @@ class Navigation(
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = remember(navBackStackEntry) { routes.getCurrentRoute(navBackStackEntry) }
         val availableRoutes = remember {
-            listOf(routes.tasks, routes.features, routes.home, routes.social, routes.scripting, routes.friendTracker)
+            listOf(routes.tasks, routes.features, routes.home)
         }
         val availableRouteMap = remember(availableRoutes) { availableRoutes.associateBy { it.routeInfo.id } }
 
-        val shrinkThreshold = me.eternal.purrfectsnap.ui.util.Motion.HEADER_MORPH_THRESHOLD
+        val shrinkThreshold = cock.crest.purrfectsnap.lite.ui.util.Motion.HEADER_MORPH_THRESHOLD
         val isAphelion = context.config.root.global.uiSettings.managerTheme.get() == "APHELION"
         val focusFactor = if (isAphelion) (globalScrollOffset / shrinkThreshold).coerceIn(0f, 1f) else 0f
         val barHeight = lerp(82.dp, 64.dp, focusFactor)
@@ -216,7 +216,7 @@ class Navigation(
         val iconTranslationY = (10 * focusFactor).dp
 
         val prefs = remember { context.sharedPreferences }
-        val defaultOrder = remember { listOf("tasks", "features", "home", "social", "scripts") }
+        val defaultOrder = remember { listOf("tasks", "features", "home") }
         fun loadSelected(): List<String> {
             val raw = prefs.getString("manager_nav_tabs", null)?.split(',')?.map { it.trim() }?.filter { it.isNotEmpty() } ?: emptyList()
             val cleaned = raw.filter { availableRouteMap.containsKey(it) }
@@ -685,7 +685,7 @@ class Navigation(
                                                 Icon(route.routeInfo.icon, contentDescription = null, tint = Color.White)
                                                 Spacer(Modifier.width(12.dp))
                                                 Text(text = label, modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis, color = Color.White)
-                                                val defaultEligible = remember { setOf("tasks","features","home","social","scripts") }
+                                                val defaultEligible = remember { setOf("tasks","features","home") }
                                                 RadioButton(
                                                     selected = defaultTabId == id,
                                                     onClick = { if (id in defaultEligible) saveDefault(id) },

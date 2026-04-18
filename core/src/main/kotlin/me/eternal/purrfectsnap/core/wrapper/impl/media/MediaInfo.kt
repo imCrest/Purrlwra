@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.media
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.media
 
 import android.os.Parcelable
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 import java.lang.reflect.Field
 
 

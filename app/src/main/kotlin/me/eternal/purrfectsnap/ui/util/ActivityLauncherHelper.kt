@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.util
+package cock.crest.purrfectsnap.lite.ui.util
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -6,7 +6,7 @@ import android.content.Intent
 import androidx.activity.ComponentActivity
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 
 typealias ActivityLauncherCallback = (resultCode: Int, intent: Intent?) -> Unit
 

@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core.features.impl.tweaks
+package cock.crest.purrfectsnap.lite.core.features.impl.tweaks
 
 import android.util.SparseIntArray
 import androidx.core.util.size
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.mapper.impl.FoldingLayoutMapper
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.mapper.impl.FoldingLayoutMapper
 
 
 class PreventMessageListAutoScroll : Feature("PreventMessageListAutoScroll") {

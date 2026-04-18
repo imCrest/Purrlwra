@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.ui
+package cock.crest.purrfectsnap.lite.common.ui
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

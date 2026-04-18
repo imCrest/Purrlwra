@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.social
+package cock.crest.purrfectsnap.lite.ui.manager.pages.social
 
 import android.content.Intent
 import androidx.compose.foundation.Image
@@ -25,16 +25,16 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.compose.ui.text.style.TextOverflow
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberAsyncImagePainter
-import me.eternal.purrfectsnap.bridge.DownloadCallback
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.data.StoryData
-import me.eternal.purrfectsnap.common.data.download.*
-import me.eternal.purrfectsnap.common.util.ktx.longHashCode
-import me.eternal.purrfectsnap.download.DownloadProcessor
-import me.eternal.purrfectsnap.storage.getFriendInfo
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.util.Dialog
-import me.eternal.purrfectsnap.ui.util.coil.ImageRequestHelper
+import cock.crest.purrfectsnap.lite.bridge.DownloadCallback
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.data.StoryData
+import cock.crest.purrfectsnap.lite.common.data.download.*
+import cock.crest.purrfectsnap.lite.common.util.ktx.longHashCode
+import cock.crest.purrfectsnap.lite.download.DownloadProcessor
+import cock.crest.purrfectsnap.lite.storage.getFriendInfo
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.util.Dialog
+import cock.crest.purrfectsnap.lite.ui.util.coil.ImageRequestHelper
 import java.io.File
 import java.text.DateFormat
 import java.util.Date
@@ -151,7 +151,7 @@ class LoggedStories : Routes.Route() {
                                                 setDataAndType(
                                                     FileProvider.getUriForFile(
                                                         context.androidContext,
-                                                        "me.eternal.purrfectsnap.fileprovider",
+                                                        "cock.crest.purrfectsnap.lite.fileprovider",
                                                         targetFile
                                                     ),
                                                     FileType.fromFile(targetFile).mimeType

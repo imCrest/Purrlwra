@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.location
+package cock.crest.purrfectsnap.lite.ui.manager.pages.location
 
 import android.os.Parcel
 import androidx.compose.foundation.BorderStroke
@@ -30,20 +30,20 @@ import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.bridge.location.FriendLocation
-import me.eternal.purrfectsnap.bridge.location.LocationCoordinates
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
-import me.eternal.purrfectsnap.common.ui.rememberAsyncUpdateDispatcher
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.storage.addOrUpdateLocationCoordinate
-import me.eternal.purrfectsnap.storage.getLocationCoordinates
-import me.eternal.purrfectsnap.storage.removeLocationCoordinate
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.AlertDialogs
-import me.eternal.purrfectsnap.ui.util.DialogProperties
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
-import me.eternal.purrfectsnap.ui.util.coil.BitmojiImage
+import cock.crest.purrfectsnap.lite.bridge.location.FriendLocation
+import cock.crest.purrfectsnap.lite.bridge.location.LocationCoordinates
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableStateList
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.storage.addOrUpdateLocationCoordinate
+import cock.crest.purrfectsnap.lite.storage.getLocationCoordinates
+import cock.crest.purrfectsnap.lite.storage.removeLocationCoordinate
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.AlertDialogs
+import cock.crest.purrfectsnap.lite.ui.util.DialogProperties
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.ui.util.coil.BitmojiImage
 import org.osmdroid.util.GeoPoint
 import org.osmdroid.views.MapView
 import org.osmdroid.views.overlay.Marker
@@ -274,7 +274,7 @@ class BetterLocationRoot : Routes.Route() {
         }
 
         if (showTeleportDialog) {
-            me.eternal.purrfectsnap.ui.util.Dialog(
+            cock.crest.purrfectsnap.lite.ui.util.Dialog(
                 properties = DialogProperties(usePlatformDefaultWidth = false),
                 onDismissRequest = { showTeleportDialog = false },
                 content = {
@@ -296,7 +296,7 @@ class BetterLocationRoot : Routes.Route() {
          }
 
          if (showProviderDialog) {
-             me.eternal.purrfectsnap.ui.util.Dialog(onDismissRequest = {
+             cock.crest.purrfectsnap.lite.ui.util.Dialog(onDismissRequest = {
                  showProviderDialog = false
                  context.config.writeConfig()
                  currentProvider = context.config.root.global.betterLocation.locationSearchProvider.getNullable() ?: "osm"
@@ -305,7 +305,7 @@ class BetterLocationRoot : Routes.Route() {
              }
          }
          if (showApiKeyDialog) {
-             me.eternal.purrfectsnap.ui.util.Dialog(onDismissRequest = { 
+             cock.crest.purrfectsnap.lite.ui.util.Dialog(onDismissRequest = { 
                  showApiKeyDialog = false
                  context.config.writeConfig()
                  currentApiKey = context.config.root.global.betterLocation.googleMapsApiKey.getNullable() ?: ""
@@ -342,7 +342,7 @@ class BetterLocationRoot : Routes.Route() {
             }
 
             if (addSavedCoordinateDialog) {
-                me.eternal.purrfectsnap.ui.util.Dialog(
+                cock.crest.purrfectsnap.lite.ui.util.Dialog(
                     onDismissRequest = { addSavedCoordinateDialog = false },
                     content = {
                         AddCoordinatesDialog(
@@ -365,7 +365,7 @@ class BetterLocationRoot : Routes.Route() {
             }
 
             if (showMap) {
-                me.eternal.purrfectsnap.ui.util.Dialog(
+                cock.crest.purrfectsnap.lite.ui.util.Dialog(
                     onDismissRequest = { showMap = false },
                     content = {
                         Surface(
@@ -587,7 +587,7 @@ class BetterLocationRoot : Routes.Route() {
                     }
 
                     if (showDeleteDialog) {
-                        me.eternal.purrfectsnap.ui.util.Dialog(
+                        cock.crest.purrfectsnap.lite.ui.util.Dialog(
                             onDismissRequest = { showDeleteDialog = false },
                             content = {
                                 alertDialogs.ConfirmDialog(
@@ -607,7 +607,7 @@ class BetterLocationRoot : Routes.Route() {
                     }
 
                     if (showEditDialog) {
-                        me.eternal.purrfectsnap.ui.util.Dialog(
+                        cock.crest.purrfectsnap.lite.ui.util.Dialog(
                             onDismissRequest = { showEditDialog = false },
                             content = {
                                 AddCoordinatesDialog(

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.features
+package cock.crest.purrfectsnap.lite.ui.manager.pages.features
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -49,10 +49,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.saveFile
-import me.eternal.purrfectsnap.storage.getLocationCoordinates
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.saveFile
+import cock.crest.purrfectsnap.lite.storage.getLocationCoordinates
 import org.json.JSONArray
 import org.json.JSONObject
 

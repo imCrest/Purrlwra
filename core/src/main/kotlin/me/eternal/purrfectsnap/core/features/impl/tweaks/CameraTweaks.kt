@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.tweaks
+package cock.crest.purrfectsnap.lite.core.features.impl.tweaks
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -14,10 +14,10 @@ import android.media.Image
 import android.media.ImageReader
 import android.os.Build
 import android.util.Range
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
 import java.io.ByteArrayOutputStream
 import java.nio.ByteBuffer
 

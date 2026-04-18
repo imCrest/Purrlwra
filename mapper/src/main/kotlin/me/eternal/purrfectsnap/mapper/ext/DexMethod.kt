@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.mapper.ext
+package cock.crest.purrfectsnap.lite.mapper.ext
 
 import com.android.tools.smali.dexlib2.iface.MethodImplementation
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c

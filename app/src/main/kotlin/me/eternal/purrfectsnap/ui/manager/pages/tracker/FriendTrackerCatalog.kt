@@ -1,5 +1,5 @@
 @file:OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
-package me.eternal.purrfectsnap.ui.manager.pages.tracker
+package cock.crest.purrfectsnap.lite.ui.manager.pages.tracker
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -44,12 +44,12 @@ import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.storage.getRepositories
-import me.eternal.purrfectsnap.storage.getTrackerRuleByName
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.AestheticEmptyState
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.storage.getRepositories
+import cock.crest.purrfectsnap.lite.storage.getTrackerRuleByName
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticEmptyState
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 import okhttp3.OkHttpClient
 import okhttp3.Request
 

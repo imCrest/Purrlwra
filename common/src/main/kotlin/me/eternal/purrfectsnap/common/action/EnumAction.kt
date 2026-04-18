@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.action
+package cock.crest.purrfectsnap.lite.common.action
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Chat

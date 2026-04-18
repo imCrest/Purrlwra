@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.scripting.impl
+package cock.crest.purrfectsnap.lite.core.scripting.impl
 
-import me.eternal.purrfectsnap.common.scripting.impl.ConfigInterface
-import me.eternal.purrfectsnap.common.scripting.impl.ConfigTransactionType
+import cock.crest.purrfectsnap.lite.common.scripting.impl.ConfigInterface
+import cock.crest.purrfectsnap.lite.common.scripting.impl.ConfigTransactionType
 
 class CoreScriptConfig: ConfigInterface() {
     override fun get(key: String, defaultValue: Any?): String? {

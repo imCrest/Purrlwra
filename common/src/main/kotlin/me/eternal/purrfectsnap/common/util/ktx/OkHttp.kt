@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.util.ktx
+package cock.crest.purrfectsnap.lite.common.util.ktx
 
 import kotlinx.coroutines.CompletionHandler
 import kotlinx.coroutines.suspendCancellableCoroutine

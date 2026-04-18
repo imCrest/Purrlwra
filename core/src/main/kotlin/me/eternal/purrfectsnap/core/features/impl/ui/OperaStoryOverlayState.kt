@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.Layer
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.ParamMap
-import me.eternal.purrfectsnap.mapper.impl.OperaPageViewControllerMapper
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.Layer
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.ParamMap
+import cock.crest.purrfectsnap.lite.mapper.impl.OperaPageViewControllerMapper
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 import java.util.ArrayList
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf

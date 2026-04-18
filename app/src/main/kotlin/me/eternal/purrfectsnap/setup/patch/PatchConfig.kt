@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.setup.patch
+package cock.crest.purrfectsnap.lite.setup.patch
 
 data class PatchConfig(
     val useManager: Boolean = false,

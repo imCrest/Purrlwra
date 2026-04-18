@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
@@ -35,16 +35,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.times
-import me.eternal.purrfectsnap.common.scripting.JSModule
-import me.eternal.purrfectsnap.common.scripting.ui.EnumScriptInterface
-import me.eternal.purrfectsnap.common.scripting.ui.InterfaceManager
-import me.eternal.purrfectsnap.common.scripting.ui.ScriptInterface
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme
+import cock.crest.purrfectsnap.lite.common.scripting.JSModule
+import cock.crest.purrfectsnap.lite.common.scripting.ui.EnumScriptInterface
+import cock.crest.purrfectsnap.lite.common.scripting.ui.InterfaceManager
+import cock.crest.purrfectsnap.lite.common.scripting.ui.ScriptInterface
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme
 
 
 data class ComposableMenu(

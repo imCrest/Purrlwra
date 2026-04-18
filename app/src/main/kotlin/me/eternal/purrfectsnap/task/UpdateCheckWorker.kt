@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.task
+package cock.crest.purrfectsnap.lite.task
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -13,10 +13,10 @@ import android.Manifest
 import androidx.core.content.ContextCompat
 import android.content.pm.PackageManager
 import androidx.work.WorkerParameters
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.ui.manager.MainActivity
-import me.eternal.purrfectsnap.ui.manager.data.Updater
-import me.eternal.purrfectsnap.ui.manager.data.Updater.Channel
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.ui.manager.MainActivity
+import cock.crest.purrfectsnap.lite.ui.manager.data.Updater
+import cock.crest.purrfectsnap.lite.ui.manager.data.Updater.Channel
 
 class UpdateCheckWorker(
     private val appContext: Context,

@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.action.impl
+package cock.crest.purrfectsnap.lite.core.action.impl
 
-import me.eternal.purrfectsnap.core.action.AbstractAction
+import cock.crest.purrfectsnap.lite.core.action.AbstractAction
 import java.io.File
 
 class CleanCache : AbstractAction() {

@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
 import android.os.ParcelFileDescriptor
-import me.eternal.purrfectsnap.bridge.AccountStorage
-import me.eternal.purrfectsnap.common.util.ktx.toParcelFileDescriptor
+import cock.crest.purrfectsnap.lite.bridge.AccountStorage
+import cock.crest.purrfectsnap.lite.common.util.ktx.toParcelFileDescriptor
 
 class RemoteAccountStorage(
     private val context: RemoteSideContext

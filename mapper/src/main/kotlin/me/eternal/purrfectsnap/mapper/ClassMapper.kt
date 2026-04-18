@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.mapper
+package cock.crest.purrfectsnap.lite.mapper
 
 import com.android.tools.smali.dexlib2.Opcodes
 import com.android.tools.smali.dexlib2.dexbacked.DexBackedDexFile
@@ -7,7 +7,7 @@ import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.mapper.impl.*
+import cock.crest.purrfectsnap.lite.mapper.impl.*
 import java.io.BufferedInputStream
 import java.io.InputStream
 import java.util.zip.ZipFile

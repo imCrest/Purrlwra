@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.event
+package cock.crest.purrfectsnap.lite.core.event
 
-import me.eternal.purrfectsnap.core.ModContext
+import cock.crest.purrfectsnap.lite.core.ModContext
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.reflect.KClass
 

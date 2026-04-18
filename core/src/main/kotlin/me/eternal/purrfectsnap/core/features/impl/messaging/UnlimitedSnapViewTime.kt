@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessageState
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoEditor
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.BuildMessageEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessageState
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoEditor
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BuildMessageEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 
 class UnlimitedSnapViewTime : Feature("UnlimitedSnapViewTime") {
     override fun init() {

@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.valdi
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.valdi
 
-import me.eternal.purrfectsnap.core.PurrfectSnap
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.core.PurrfectSnap
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 
 class ValdiViewNode(obj: Long) : AbstractWrapper(obj) {
     companion object {

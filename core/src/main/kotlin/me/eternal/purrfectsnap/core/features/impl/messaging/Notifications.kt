@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import android.app.Notification
 import android.app.NotificationManager
@@ -12,31 +12,31 @@ import android.os.Build
 import android.os.Bundle
 import android.os.UserHandle
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.common.data.NotificationType
-import me.eternal.purrfectsnap.common.data.download.SplitMediaAssetType
-import me.eternal.purrfectsnap.common.util.snap.MediaDownloaderHelper
-import me.eternal.purrfectsnap.common.util.snap.SnapWidgetBroadcastReceiverHelper
-import me.eternal.purrfectsnap.core.event.events.impl.SnapWidgetBroadcastReceiveEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.FriendMutationObserver
-import me.eternal.purrfectsnap.core.features.impl.downloader.MediaDownloader
-import me.eternal.purrfectsnap.core.features.impl.downloader.decoder.AttachmentType
-import me.eternal.purrfectsnap.core.features.impl.downloader.decoder.MessageDecoder
-import me.eternal.purrfectsnap.core.features.impl.experiments.BetterTranscript
-import me.eternal.purrfectsnap.core.features.impl.spying.StealthMode
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.YukiHookCompat
-import me.eternal.purrfectsnap.core.util.hook.findRestrictedConstructor
-import me.eternal.purrfectsnap.core.util.hook.findRestrictedMethod
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.util.media.PreviewUtils
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
-import me.eternal.purrfectsnap.core.wrapper.impl.sanitizeForLayout
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.common.data.NotificationType
+import cock.crest.purrfectsnap.lite.common.data.download.SplitMediaAssetType
+import cock.crest.purrfectsnap.lite.common.util.snap.MediaDownloaderHelper
+import cock.crest.purrfectsnap.lite.common.util.snap.SnapWidgetBroadcastReceiverHelper
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SnapWidgetBroadcastReceiveEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.FriendMutationObserver
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder.AttachmentType
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder.MessageDecoder
+import cock.crest.purrfectsnap.lite.core.features.impl.experiments.BetterTranscript
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.StealthMode
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.YukiHookCompat
+import cock.crest.purrfectsnap.lite.core.util.hook.findRestrictedConstructor
+import cock.crest.purrfectsnap.lite.core.util.hook.findRestrictedMethod
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.util.media.PreviewUtils
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.sanitizeForLayout
 import java.nio.ByteBuffer
 import kotlin.coroutines.suspendCoroutine
 
@@ -58,9 +58,9 @@ class Notifications : Feature("Notifications") {
     }
 
     companion object{
-        const val ACTION_REPLY = "me.eternal.purrfectsnap.action.notification.REPLY"
-        const val ACTION_DOWNLOAD = "me.eternal.purrfectsnap.action.notification.DOWNLOAD"
-        const val ACTION_MARK_AS_READ = "me.eternal.purrfectsnap.action.notification.MARK_AS_READ"
+        const val ACTION_REPLY = "cock.crest.purrfectsnap.lite.action.notification.REPLY"
+        const val ACTION_DOWNLOAD = "cock.crest.purrfectsnap.lite.action.notification.DOWNLOAD"
+        const val ACTION_MARK_AS_READ = "cock.crest.purrfectsnap.lite.action.notification.MARK_AS_READ"
         const val SNAPCHAT_NOTIFICATION_GROUP = "snapchat_notification_group"
     }
 

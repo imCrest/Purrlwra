@@ -1,16 +1,16 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
 import android.content.ContentValues
 import com.google.gson.JsonArray
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.common.data.TrackerRule
-import me.eternal.purrfectsnap.common.data.TrackerRuleAction
-import me.eternal.purrfectsnap.common.data.TrackerRuleActionParams
-import me.eternal.purrfectsnap.common.data.TrackerRuleEvent
-import me.eternal.purrfectsnap.common.data.TrackerScopeType
-import me.eternal.purrfectsnap.common.util.ktx.getInteger
-import me.eternal.purrfectsnap.common.util.ktx.getLongOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.data.TrackerRule
+import cock.crest.purrfectsnap.lite.common.data.TrackerRuleAction
+import cock.crest.purrfectsnap.lite.common.data.TrackerRuleActionParams
+import cock.crest.purrfectsnap.lite.common.data.TrackerRuleEvent
+import cock.crest.purrfectsnap.lite.common.data.TrackerScopeType
+import cock.crest.purrfectsnap.lite.common.util.ktx.getInteger
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLongOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 import kotlin.coroutines.suspendCoroutine
 
 fun AppDatabase.clearTrackerRules() {

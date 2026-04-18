@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.data
+package cock.crest.purrfectsnap.lite.core.data
 
-import me.eternal.purrfectsnap.core.util.ClassDetector
+import cock.crest.purrfectsnap.lite.core.util.ClassDetector
 
 class SnapClassCache (
     private val classLoader: ClassLoader

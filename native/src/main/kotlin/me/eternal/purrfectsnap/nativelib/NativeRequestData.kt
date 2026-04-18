@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.nativelib
+package cock.crest.purrfectsnap.lite.nativelib
 
 class NativeRequestData(
     val uri: String,

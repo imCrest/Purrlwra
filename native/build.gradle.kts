@@ -328,7 +328,7 @@ val generateChecksumsFile = tasks.register("generateChecksumsFile") {
         checksumsFile.parentFile.mkdirs()
         checksumsFile.writeText(
             """
-            package me.eternal.purrfectsnap.nativelib
+            package cock.crest.purrfectsnap.lite.nativelib
 
             object Checksums {
                 val checksums = mapOf(

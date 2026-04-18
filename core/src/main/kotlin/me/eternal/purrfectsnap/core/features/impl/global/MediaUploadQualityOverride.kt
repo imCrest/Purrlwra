@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.core.features.impl.global
+package cock.crest.purrfectsnap.lite.core.features.impl.global
 
 import android.graphics.Bitmap
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.mapper.impl.MediaQualityLevelProviderMapper
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.mapper.impl.MediaQualityLevelProviderMapper
 import java.lang.reflect.Method
 
 class MediaUploadQualityOverride : Feature("Media Upload Quality Override") {

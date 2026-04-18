@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.util
+package cock.crest.purrfectsnap.lite.ui.util
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.runBlocking

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util
+package cock.crest.purrfectsnap.lite.core.util
 
 import kotlin.math.cos
 import kotlin.math.hypot

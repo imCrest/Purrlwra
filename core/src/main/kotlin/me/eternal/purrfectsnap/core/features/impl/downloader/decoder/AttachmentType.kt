@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.downloader.decoder
+package cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder
 
 enum class AttachmentType(
     val key: String,

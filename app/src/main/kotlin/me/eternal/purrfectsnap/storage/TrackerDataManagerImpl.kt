@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
-import me.eternal.purrfectsnap.common.data.ExportedTrackerData
-import me.eternal.purrfectsnap.common.data.TrackerDataManager
-import me.eternal.purrfectsnap.storage.AppDatabase
+import cock.crest.purrfectsnap.lite.common.data.ExportedTrackerData
+import cock.crest.purrfectsnap.lite.common.data.TrackerDataManager
+import cock.crest.purrfectsnap.lite.storage.AppDatabase
 
 class TrackerDataManagerImpl(private val db: AppDatabase) : TrackerDataManager {
     override fun getExportedTrackerData(): ExportedTrackerData {
         return ExportedTrackerData(
-            type = me.eternal.purrfectsnap.common.data.ExportType.BULK,
+            type = cock.crest.purrfectsnap.lite.common.data.ExportType.BULK,
             rules = db.getTrackerRulesDesc().map { rule ->
                 rule.copy(
                     events = db.getTrackerEvents(rule.id),
@@ -20,7 +20,7 @@ class TrackerDataManagerImpl(private val db: AppDatabase) : TrackerDataManager {
     override fun getExportedTrackerData(ruleId: Int): ExportedTrackerData? {
         return db.getTrackerRule(ruleId)?.let {
             ExportedTrackerData(
-                type = me.eternal.purrfectsnap.common.data.ExportType.SINGLE,
+                type = cock.crest.purrfectsnap.lite.common.data.ExportType.SINGLE,
                 rules = listOf(it.copy(
                     events = db.getTrackerEvents(it.id),
                     scopes = db.getRuleTrackerScopes(it.id)
@@ -30,7 +30,7 @@ class TrackerDataManagerImpl(private val db: AppDatabase) : TrackerDataManager {
     }
 
     override fun importTrackerData(data: ExportedTrackerData) {
-        if (data.type == me.eternal.purrfectsnap.common.data.ExportType.BULK) {
+        if (data.type == cock.crest.purrfectsnap.lite.common.data.ExportType.BULK) {
             db.clearTrackerRules()
         }
         data.rules.forEach { rule ->

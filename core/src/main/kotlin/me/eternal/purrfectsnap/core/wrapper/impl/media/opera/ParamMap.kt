@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.media.opera
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera
 
-import me.eternal.purrfectsnap.common.util.ktx.findFields
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.common.util.ktx.findFields
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 import java.lang.reflect.Field
 import java.util.concurrent.ConcurrentHashMap
 

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -15,10 +15,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
-import me.eternal.purrfectsnap.core.wrapper.impl.getMessageText
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.getMessageText
 
 class TranslationUI(private val context: ModContext) {
     private val translationManager by lazy { TranslationManager(context) }

@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.features.impl.downloader.decoder
+package cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder
 
-import me.eternal.purrfectsnap.common.data.download.MediaEncryptionKeyPair
+import cock.crest.purrfectsnap.lite.common.data.download.MediaEncryptionKeyPair
 
 data class BitmojiSticker(
     val reference: String,

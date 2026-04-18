@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.scripting.impl
+package cock.crest.purrfectsnap.lite.common.scripting.impl
 
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
 import org.mozilla.javascript.annotations.JSFunction
 
 typealias Listener = (List<String?>) -> Unit

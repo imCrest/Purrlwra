@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.wrapper.impl
+package cock.crest.purrfectsnap.lite.core.wrapper.impl
 
-import me.eternal.purrfectsnap.common.data.QuotedMessageContentStatus
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.common.data.QuotedMessageContentStatus
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 import org.mozilla.javascript.annotations.JSGetter
 import org.mozilla.javascript.annotations.JSSetter
 

@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.media
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.media
 
 import android.util.Base64
 import android.util.Log
-import me.eternal.purrfectsnap.common.data.download.MediaEncryptionKeyPair
-import me.eternal.purrfectsnap.core.util.ktx.findFieldNamesByType
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.common.data.download.MediaEncryptionKeyPair
+import cock.crest.purrfectsnap.lite.core.util.ktx.findFieldNamesByType
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 import java.io.InputStream
 import java.io.OutputStream
 import javax.crypto.Cipher

@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.core.ui.menu
+package cock.crest.purrfectsnap.lite.core.ui.menu
 
 import android.annotation.SuppressLint
 import android.view.Gravity
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.COFOverride
-import me.eternal.purrfectsnap.core.ui.menu.impl.*
-import me.eternal.purrfectsnap.core.util.ktx.getIdentifier
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.COFOverride
+import cock.crest.purrfectsnap.lite.core.ui.menu.impl.*
+import cock.crest.purrfectsnap.lite.core.util.ktx.getIdentifier
 import kotlin.reflect.KClass
 
 @SuppressLint("DiscouragedApi")

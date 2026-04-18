@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
 import androidx.core.database.getStringOrNull
 

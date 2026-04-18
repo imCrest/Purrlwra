@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util.media
+package cock.crest.purrfectsnap.lite.core.util.media
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -6,7 +6,7 @@ import android.graphics.Canvas
 import android.graphics.Matrix
 import android.media.MediaDataSource
 import android.media.MediaMetadataRetriever
-import me.eternal.purrfectsnap.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.data.FileType
 import java.io.File
 import kotlin.math.max
 

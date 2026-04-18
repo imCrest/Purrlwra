@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.setup.patch
+package cock.crest.purrfectsnap.lite.setup.patch
 
 import java.io.File
 import java.io.InputStream

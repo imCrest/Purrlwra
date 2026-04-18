@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.tracker
+package cock.crest.purrfectsnap.lite.ui.manager.pages.tracker
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.animateFloatAsState
@@ -49,13 +49,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ExportedTrackerData
-import me.eternal.purrfectsnap.common.data.ExportType
-import me.eternal.purrfectsnap.storage.getTrackerRule
-import me.eternal.purrfectsnap.storage.getTrackerRulesDesc
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.saveFile
+import cock.crest.purrfectsnap.lite.common.data.ExportedTrackerData
+import cock.crest.purrfectsnap.lite.common.data.ExportType
+import cock.crest.purrfectsnap.lite.storage.getTrackerRule
+import cock.crest.purrfectsnap.lite.storage.getTrackerRulesDesc
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.saveFile
 import org.json.JSONArray
 
 class FriendTrackerConfigExportScreen : Routes.Route() {

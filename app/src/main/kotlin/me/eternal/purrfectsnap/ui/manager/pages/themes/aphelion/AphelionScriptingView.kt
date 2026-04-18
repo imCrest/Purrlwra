@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -7,10 +7,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavBackStackEntry
 import androidx.documentfile.provider.DocumentFile
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.ui.manager.pages.scripting.ScriptingRootSection
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.common.util.ktx.openLink
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.ui.manager.pages.scripting.ScriptingRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.common.util.ktx.openLink
 import kotlinx.coroutines.launch
 
 @Composable

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui.menu.impl
+package cock.crest.purrfectsnap.lite.core.ui.menu.impl
 
 import android.content.Context
 import android.text.format.Formatter
@@ -27,29 +27,29 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import me.eternal.purrfectsnap.bridge.logger.LoggedChatEdit
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.common.util.snap.RemoteMediaResolver
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.impl.downloader.MediaDownloader
-import me.eternal.purrfectsnap.core.features.impl.downloader.decoder.MessageDecoder
-import me.eternal.purrfectsnap.core.features.impl.experiments.ConvertMessageLocally
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.features.impl.spying.MessageLogger
-import me.eternal.purrfectsnap.core.features.impl.ui.LocalPinnedMessages
-import me.eternal.purrfectsnap.core.ui.ViewAppearanceHelper
-import me.eternal.purrfectsnap.core.ui.debugEditText
-import me.eternal.purrfectsnap.core.ui.iterateParent
-import me.eternal.purrfectsnap.core.ui.menu.AbstractMenu
-import me.eternal.purrfectsnap.core.ui.triggerCloseTouchEvent
-import me.eternal.purrfectsnap.core.util.ktx.isDarkTheme
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.util.ktx.vibrateLongPress
+import cock.crest.purrfectsnap.lite.bridge.logger.LoggedChatEdit
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.common.util.snap.RemoteMediaResolver
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder.MessageDecoder
+import cock.crest.purrfectsnap.lite.core.features.impl.experiments.ConvertMessageLocally
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.MessageLogger
+import cock.crest.purrfectsnap.lite.core.features.impl.ui.LocalPinnedMessages
+import cock.crest.purrfectsnap.lite.core.ui.ViewAppearanceHelper
+import cock.crest.purrfectsnap.lite.core.ui.debugEditText
+import cock.crest.purrfectsnap.lite.core.ui.iterateParent
+import cock.crest.purrfectsnap.lite.core.ui.menu.AbstractMenu
+import cock.crest.purrfectsnap.lite.core.ui.triggerCloseTouchEvent
+import cock.crest.purrfectsnap.lite.core.util.ktx.isDarkTheme
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.vibrateLongPress
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -74,8 +74,8 @@ class NewChatActionMenu : AbstractMenu() {
         edits: List<LoggedChatEdit>,
     ) {
         createComposeAlertDialog(context.mainActivity!!) {
-            me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme {
-                me.eternal.purrfectsnap.core.ui.PurrfectGlassCard(
+            cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme {
+                cock.crest.purrfectsnap.lite.core.ui.PurrfectGlassCard(
                     modifier = Modifier.fillMaxWidth().heightIn(max = 500.dp),
                     title = this@NewChatActionMenu.context.translation["chat_action_menu.show_chat_edit_history"]
                 ) {
@@ -102,7 +102,7 @@ class NewChatActionMenu : AbstractMenu() {
                                         .format(edit.timestamp) + " (${index + 1})",
                                     fontSize = 12.sp,
                                     fontWeight = FontWeight.Light,
-                                    color = me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette.textSecondary
+                                    color = cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette.textSecondary
                                 )
                             }
                         }

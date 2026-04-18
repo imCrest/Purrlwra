@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.util.snap
+package cock.crest.purrfectsnap.lite.common.util.snap
 
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.util.ktx.await
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.util.ktx.await
 import okhttp3.Headers
 import okhttp3.OkHttpClient
 import okhttp3.Request

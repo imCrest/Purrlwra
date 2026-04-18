@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.mapper.impl.BCryptClassMapper
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.mapper.impl.BCryptClassMapper
 
 class MeoPasscodeBypass : Feature("Meo Passcode Bypass") {
     override fun init() {

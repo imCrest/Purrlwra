@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui.menu.impl
+package cock.crest.purrfectsnap.lite.core.ui.menu.impl
 
 import android.annotation.SuppressLint
 import android.content.res.ColorStateList
@@ -42,16 +42,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.res.use
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.impl.OperaViewerParamsOverride
-import me.eternal.purrfectsnap.core.features.impl.downloader.MediaDownloader
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.ui.menu.AbstractMenu
-import me.eternal.purrfectsnap.core.ui.triggerCloseTouchEvent
-import me.eternal.purrfectsnap.core.util.ktx.getIdentifier
-import me.eternal.purrfectsnap.core.util.ktx.vibrateLongPress
-import me.eternal.purrfectsnap.core.wrapper.impl.ScSize
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.impl.OperaViewerParamsOverride
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.ui.children
+import cock.crest.purrfectsnap.lite.core.ui.menu.AbstractMenu
+import cock.crest.purrfectsnap.lite.core.ui.triggerCloseTouchEvent
+import cock.crest.purrfectsnap.lite.core.util.ktx.getIdentifier
+import cock.crest.purrfectsnap.lite.core.util.ktx.vibrateLongPress
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.ScSize
 import java.text.DateFormat
 import java.util.Date
 

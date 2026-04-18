@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
 import android.content.ContentValues
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 
 
 fun AppDatabase.getRepositories(type: String): List<String> {

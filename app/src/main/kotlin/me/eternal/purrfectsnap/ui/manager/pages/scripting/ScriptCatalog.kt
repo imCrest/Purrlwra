@@ -1,5 +1,5 @@
 @file:OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
-package me.eternal.purrfectsnap.ui.manager.pages.scripting
+package cock.crest.purrfectsnap.lite.ui.manager.pages.scripting
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.background
@@ -27,10 +27,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.net.toUri
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.common.util.ktx.openLink
-import me.eternal.purrfectsnap.storage.getRepositories
-import me.eternal.purrfectsnap.ui.manager.components.AestheticEmptyState
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.common.util.ktx.openLink
+import cock.crest.purrfectsnap.lite.storage.getRepositories
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticEmptyState
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 import okhttp3.OkHttpClient
 import okhttp3.Request
 

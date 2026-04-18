@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -28,15 +28,15 @@ import androidx.compose.ui.unit.sp
 import androidx.core.app.NotificationCompat
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.core.event.events.impl.BindViewEvent
-import me.eternal.purrfectsnap.core.event.events.impl.SendMessageWithContentEvent
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BindViewEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SendMessageWithContentEvent
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
 import kotlin.random.Random
 
 class AutoDeleteSentMessages : MessagingRuleFeature("Auto Delete Sent Messages", MessagingRuleType.AUTO_DELETE_SENT_MESSAGES) {

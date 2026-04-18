@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.features
+package cock.crest.purrfectsnap.lite.core.features
 
 import android.app.Activity
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.core.ModContext
+import cock.crest.purrfectsnap.lite.core.ModContext
 
 abstract class Feature(
     val key: String

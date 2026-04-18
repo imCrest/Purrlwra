@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.ui
+package cock.crest.purrfectsnap.lite.common.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

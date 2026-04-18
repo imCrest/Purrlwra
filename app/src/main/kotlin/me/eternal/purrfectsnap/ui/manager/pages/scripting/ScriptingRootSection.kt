@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.scripting
+package cock.crest.purrfectsnap.lite.ui.manager.pages.scripting
 
 import android.content.Intent
 import androidx.compose.foundation.BorderStroke
@@ -34,28 +34,28 @@ import androidx.compose.ui.window.Dialog
 import androidx.documentfile.provider.DocumentFile
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.common.scripting.type.ModuleInfo
-import me.eternal.purrfectsnap.common.scripting.ui.EnumScriptInterface
-import me.eternal.purrfectsnap.common.scripting.ui.InterfaceManager
-import me.eternal.purrfectsnap.common.scripting.ui.ScriptInterface
-import me.eternal.purrfectsnap.common.ui.AsyncUpdateDispatcher
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.ui.rememberAsyncUpdateDispatcher
-import me.eternal.purrfectsnap.common.util.ktx.getUrlFromClipboard
-import me.eternal.purrfectsnap.common.util.ktx.openLink
-import me.eternal.purrfectsnap.storage.isScriptEnabled
-import me.eternal.purrfectsnap.storage.setScriptEnabled
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.components.AestheticEmptyState
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.util.chooseFolder
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
-import me.eternal.purrfectsnap.ui.util.pullrefresh.PullRefreshIndicator
-import me.eternal.purrfectsnap.ui.util.pullrefresh.pullRefresh
-import me.eternal.purrfectsnap.ui.util.pullrefresh.rememberPullRefreshState
+import cock.crest.purrfectsnap.lite.common.scripting.type.ModuleInfo
+import cock.crest.purrfectsnap.lite.common.scripting.ui.EnumScriptInterface
+import cock.crest.purrfectsnap.lite.common.scripting.ui.InterfaceManager
+import cock.crest.purrfectsnap.lite.common.scripting.ui.ScriptInterface
+import cock.crest.purrfectsnap.lite.common.ui.AsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.common.util.ktx.getUrlFromClipboard
+import cock.crest.purrfectsnap.lite.common.util.ktx.openLink
+import cock.crest.purrfectsnap.lite.storage.isScriptEnabled
+import cock.crest.purrfectsnap.lite.storage.setScriptEnabled
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticEmptyState
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.util.chooseFolder
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.PullRefreshIndicator
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.pullRefresh
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.rememberPullRefreshState
 
 class ScriptingRootSection : Routes.Route() {
     override val translation by lazy { context.translation.getCategory("manager.scripting") }

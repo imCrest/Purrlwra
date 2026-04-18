@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.annotation.SuppressLint
 import android.location.Location
@@ -11,16 +11,16 @@ import android.os.Build
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Wifi
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.LSPatchUpdater
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.LSPatchUpdater
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 import java.lang.reflect.Modifier
 import java.net.InetAddress
 import java.security.SecureRandom
 import java.util.Locale
 import java.util.TimeZone
-import me.eternal.purrfectsnap.common.config.ModConfig
+import cock.crest.purrfectsnap.lite.common.config.ModConfig
 
 class DeviceSpooferHook : Feature("Device Spoofer") {
     private var spoofedAndroidId: String? = null

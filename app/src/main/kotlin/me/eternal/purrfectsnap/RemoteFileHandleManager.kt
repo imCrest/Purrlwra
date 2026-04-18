@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
 import android.os.ParcelFileDescriptor
-import me.eternal.purrfectsnap.bridge.storage.FileHandle
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.util.ktx.toParcelFileDescriptor
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandle
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.util.ktx.toParcelFileDescriptor
 import java.io.File
 import java.io.OutputStream
 

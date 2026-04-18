@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.mapper.impl
+package cock.crest.purrfectsnap.lite.mapper.impl
 
-import me.eternal.purrfectsnap.mapper.AbstractClassMapper
-import me.eternal.purrfectsnap.mapper.ext.getClassName
-import me.eternal.purrfectsnap.mapper.ext.getSuperClassName
+import cock.crest.purrfectsnap.lite.mapper.AbstractClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ext.getClassName
+import cock.crest.purrfectsnap.lite.mapper.ext.getSuperClassName
 
 class ChatMediaDrawerMapper : AbstractClassMapper("ChatMediaDrawer") {
     val chatMediaDrawerClass = classReference("chatMediaDrawerClass")

@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.common.data.download
+package cock.crest.purrfectsnap.lite.common.data.download
 
-import me.eternal.purrfectsnap.common.config.impl.RootConfig
+import cock.crest.purrfectsnap.lite.common.config.impl.RootConfig
 import java.text.SimpleDateFormat
 import java.util.Locale
 

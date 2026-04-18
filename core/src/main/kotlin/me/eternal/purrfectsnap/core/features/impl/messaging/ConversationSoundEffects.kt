@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import android.media.AudioAttributes
 import android.media.AudioFormat
 import android.media.AudioManager
 import android.media.AudioTrack
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.core.event.events.impl.ConversationUpdateEvent
-import me.eternal.purrfectsnap.core.event.events.impl.SendMessageWithContentEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.event.events.impl.ConversationUpdateEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SendMessageWithContentEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 import kotlin.math.PI
 import kotlin.math.exp
 import kotlin.math.sin

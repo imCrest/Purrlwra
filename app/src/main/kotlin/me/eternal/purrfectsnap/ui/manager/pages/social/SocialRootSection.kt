@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.social
+package cock.crest.purrfectsnap.lite.ui.manager.pages.social
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -37,17 +37,17 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.MessagingGroupInfo
-import me.eternal.purrfectsnap.common.data.SocialScope
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.storage.*
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.coil.BitmojiImage
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingGroupInfo
+import cock.crest.purrfectsnap.lite.common.data.SocialScope
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.storage.*
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.coil.BitmojiImage
 
 class SocialRootSection : Routes.Route() {
     internal var friendList: List<MessagingFriendInfo> by mutableStateOf(emptyList())

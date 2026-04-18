@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.common.scripting.impl
+package cock.crest.purrfectsnap.lite.common.scripting.impl
 
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.common.scripting.ktx.contextScope
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.contextScope
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody

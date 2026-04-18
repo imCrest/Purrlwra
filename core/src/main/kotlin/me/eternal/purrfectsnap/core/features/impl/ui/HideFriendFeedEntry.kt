@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.data.RuleState
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.data.RuleState
 
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
 
 class HideFriendFeedEntry : MessagingRuleFeature("HideFriendFeedEntry", ruleType = MessagingRuleType.HIDE_FRIEND_FEED) {
     private fun createDeletedFeedEntry(conversationIdInstance: Any) = findClass("com.snapchat.client.messaging.DeletedFeedEntry").dataBuilder {
@@ -35,7 +35,7 @@ class HideFriendFeedEntry : MessagingRuleFeature("HideFriendFeedEntry", ruleType
         hookedCallbacks: MutableSet<String>,
         callbackClassName: String,
         methodName: String,
-        block: (param: me.eternal.purrfectsnap.core.util.hook.HookAdapter) -> Unit
+        block: (param: cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter) -> Unit
     ) {
         val hookKey = "$callbackClassName#$methodName"
         if (!hookedCallbacks.add(hookKey)) return

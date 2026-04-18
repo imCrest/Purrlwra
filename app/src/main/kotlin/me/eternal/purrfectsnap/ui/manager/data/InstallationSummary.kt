@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.data
+package cock.crest.purrfectsnap.lite.ui.manager.data
 
 
 data class SnapchatAppInfo(

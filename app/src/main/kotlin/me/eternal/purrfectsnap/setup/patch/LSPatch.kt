@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.setup.patch
+package cock.crest.purrfectsnap.lite.setup.patch
 
 import android.content.Context
 import com.android.tools.build.apkzlib.zip.AlignmentRules

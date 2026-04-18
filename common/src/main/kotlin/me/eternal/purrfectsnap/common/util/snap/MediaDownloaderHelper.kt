@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.util.snap
+package cock.crest.purrfectsnap.lite.common.util.snap
 
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.data.download.SplitMediaAssetType
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.data.download.SplitMediaAssetType
 import java.io.BufferedInputStream
 import java.io.InputStream
 import java.util.zip.ZipEntry

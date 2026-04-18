@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup.screens.impl
+package cock.crest.purrfectsnap.lite.ui.setup.screens.impl
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -52,11 +52,11 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.screens.SetupScreen
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.util.OnLifecycleEvent
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.util.OnLifecycleEvent
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 
 data class PermissionData(
     val translationKey: String,

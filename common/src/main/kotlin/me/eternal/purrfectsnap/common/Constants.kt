@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common
+package cock.crest.purrfectsnap.lite.common
 
 object Constants {
     val SNAPCHAT_PACKAGE_NAME get() = "com.snapchat.android"

@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.common.scripting.bindings
+package cock.crest.purrfectsnap.lite.common.scripting.bindings
 
-import me.eternal.purrfectsnap.common.scripting.JSModule
-import me.eternal.purrfectsnap.common.scripting.ScriptRuntime
-import me.eternal.purrfectsnap.common.scripting.type.ModuleInfo
+import cock.crest.purrfectsnap.lite.common.scripting.JSModule
+import cock.crest.purrfectsnap.lite.common.scripting.ScriptRuntime
+import cock.crest.purrfectsnap.lite.common.scripting.type.ModuleInfo
 
 class BindingsContext(
     val moduleInfo: ModuleInfo,

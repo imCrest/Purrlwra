@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoWriter
-import me.eternal.purrfectsnap.core.event.events.impl.BuildMessageEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
-import me.eternal.purrfectsnap.core.wrapper.impl.getMessageText
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoWriter
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BuildMessageEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.getMessageText
 
 class MessageTranslator : Feature("Instant Translation") {
     private val translationManager by lazy { TranslationManager(context) }

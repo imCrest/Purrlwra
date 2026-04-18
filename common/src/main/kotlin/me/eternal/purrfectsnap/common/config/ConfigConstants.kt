@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.config
+package cock.crest.purrfectsnap.lite.common.config
 
 /*
   Due to recent resource obfuscation, some UI features will no longer work because it depends on non obfuscated resources

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.action.impl
+package cock.crest.purrfectsnap.lite.core.action.impl
 
 import android.app.AlertDialog
 import android.graphics.Color as AndroidColor
@@ -61,21 +61,21 @@ import com.github.skydoves.colorpicker.compose.BrightnessSlider
 import com.github.skydoves.colorpicker.compose.ColorPickerController
 import com.github.skydoves.colorpicker.compose.HsvColorPicker
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.database.impl.FriendInfo
-import me.eternal.purrfectsnap.common.database.impl.FriendFeedEntry
-import me.eternal.purrfectsnap.common.bridge.wrapper.LoggedMessage
-import me.eternal.purrfectsnap.common.bridge.wrapper.LoggerWrapper
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.core.action.AbstractAction
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.logger.CoreLogger
-import me.eternal.purrfectsnap.core.messaging.ConversationExporter
-import me.eternal.purrfectsnap.core.messaging.ExportFormat
-import me.eternal.purrfectsnap.core.messaging.ExportParams
-import me.eternal.purrfectsnap.core.messaging.ExportSortOrder
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.database.impl.FriendInfo
+import cock.crest.purrfectsnap.lite.common.database.impl.FriendFeedEntry
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LoggedMessage
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LoggerWrapper
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.core.action.AbstractAction
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.logger.CoreLogger
+import cock.crest.purrfectsnap.lite.core.messaging.ConversationExporter
+import cock.crest.purrfectsnap.lite.core.messaging.ExportFormat
+import cock.crest.purrfectsnap.lite.core.messaging.ExportParams
+import cock.crest.purrfectsnap.lite.core.messaging.ExportSortOrder
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
 import java.io.File
 import kotlin.math.absoluteValue
 

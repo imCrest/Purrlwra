@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.util
+package cock.crest.purrfectsnap.lite.common.util
 
 val PURGE_VALUES = arrayOf("1_hour", "3_hours", "6_hours", "12_hours", "1_day", "3_days", "1_week", "2_weeks", "1_month", "3_months", "6_months")
 const val PURGE_TRANSLATION_KEY = "features.options.auto_purge"

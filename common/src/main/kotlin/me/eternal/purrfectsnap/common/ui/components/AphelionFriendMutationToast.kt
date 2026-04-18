@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.ui.components
+package cock.crest.purrfectsnap.lite.common.ui.components
 
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.BorderStroke
@@ -35,7 +35,7 @@ fun AphelionFriendMutationToast(
     LaunchedEffect(bitmojiUrl) {
         if (bitmojiUrl != null) {
             runCatching {
-                me.eternal.purrfectsnap.common.util.snap.RemoteMediaResolver.downloadMedia(bitmojiUrl) { inputStream, _ ->
+                cock.crest.purrfectsnap.lite.common.util.snap.RemoteMediaResolver.downloadMedia(bitmojiUrl) { inputStream, _ ->
                     bitmojiBitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
                 }
             }

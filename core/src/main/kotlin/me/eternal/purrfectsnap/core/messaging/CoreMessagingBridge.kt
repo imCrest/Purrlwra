@@ -1,17 +1,17 @@
-package me.eternal.purrfectsnap.core.messaging
+package cock.crest.purrfectsnap.lite.core.messaging
 
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.suspendCancellableCoroutine
-import me.eternal.purrfectsnap.bridge.snapclient.MessagingBridge
-import me.eternal.purrfectsnap.bridge.snapclient.SessionStartListener
-import me.eternal.purrfectsnap.bridge.snapclient.types.Message
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.features.impl.downloader.decoder.MessageDecoder
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.bridge.snapclient.MessagingBridge
+import cock.crest.purrfectsnap.lite.bridge.snapclient.SessionStartListener
+import cock.crest.purrfectsnap.lite.bridge.snapclient.types.Message
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder.MessageDecoder
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
 
 
-fun me.eternal.purrfectsnap.core.wrapper.impl.Message.toBridge(): Message {
+fun cock.crest.purrfectsnap.lite.core.wrapper.impl.Message.toBridge(): Message {
     return Message().also { output ->
         output.conversationId = this.messageDescriptor!!.conversationId.toString()
         output.senderId = this.senderId.toString()
@@ -118,7 +118,7 @@ class CoreMessagingBridge(
 
     override fun getOneToOneConversationId(userId: String) = context.database.getDMConversationId(userId)
 
-    override fun getAutoOpenInterface(): me.eternal.purrfectsnap.bridge.AutoOpenInterface? {
-        return context.feature(me.eternal.purrfectsnap.core.features.impl.experiments.AutoOpenSnaps::class).getInterface()
+    override fun getAutoOpenInterface(): cock.crest.purrfectsnap.lite.bridge.AutoOpenInterface? {
+        return context.feature(cock.crest.purrfectsnap.lite.core.features.impl.experiments.AutoOpenSnaps::class).getInterface()
     }
 }

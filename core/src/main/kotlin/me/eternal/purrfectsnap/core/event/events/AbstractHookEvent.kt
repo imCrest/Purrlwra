@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.event.events
+package cock.crest.purrfectsnap.lite.core.event.events
 
-import me.eternal.purrfectsnap.core.event.Event
-import me.eternal.purrfectsnap.core.util.hook.HookAdapter
+import cock.crest.purrfectsnap.lite.core.event.Event
+import cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter
 
 abstract class AbstractHookEvent : Event() {
     lateinit var adapter: HookAdapter

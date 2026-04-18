@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.mapper.tests
+package cock.crest.purrfectsnap.lite.mapper.tests
 
 import com.google.gson.GsonBuilder
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.mapper.ClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ClassMapper
 import org.junit.Test
 import java.io.File
 

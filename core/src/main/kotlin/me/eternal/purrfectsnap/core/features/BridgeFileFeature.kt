@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.core.features
+package cock.crest.purrfectsnap.lite.core.features
 
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.bridge.toWrapper
-import me.eternal.purrfectsnap.common.util.LazyBridgeValue
-import me.eternal.purrfectsnap.common.util.mappedLazyBridge
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.bridge.toWrapper
+import cock.crest.purrfectsnap.lite.common.util.LazyBridgeValue
+import cock.crest.purrfectsnap.lite.common.util.mappedLazyBridge
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets

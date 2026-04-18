@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.scripting.impl
+package cock.crest.purrfectsnap.lite.scripting.impl
 
 import com.google.gson.JsonObject
-import me.eternal.purrfectsnap.common.scripting.impl.ConfigInterface
-import me.eternal.purrfectsnap.scripting.RemoteScriptManager
+import cock.crest.purrfectsnap.lite.common.scripting.impl.ConfigInterface
+import cock.crest.purrfectsnap.lite.scripting.RemoteScriptManager
 import java.io.File
 
 class ManagerScriptConfig(

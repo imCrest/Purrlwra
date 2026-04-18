@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.messaging
+package cock.crest.purrfectsnap.lite.core.messaging
 
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoWriter
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.util.CallbackBuilder
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
-import me.eternal.purrfectsnap.core.wrapper.impl.MessageDestinations
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoWriter
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.util.CallbackBuilder
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.MessageDestinations
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
 
 class MessageSender(
     private val context: ModContext,

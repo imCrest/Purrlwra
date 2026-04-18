@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.media
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.media
 
 import android.util.Base64
-import me.eternal.purrfectsnap.common.data.download.MediaEncryptionKeyPair
+import cock.crest.purrfectsnap.lite.common.data.download.MediaEncryptionKeyPair
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec

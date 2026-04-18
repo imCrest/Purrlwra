@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.graphics.Color as AndroidColor
 import android.os.Handler
@@ -14,7 +14,7 @@ import kotlin.math.abs
  * Handles snap jump logic: tap simulation, overlay, and navigation to target snap index.
  */
 class OperaStorySnapJump(
-    private val context: me.eternal.purrfectsnap.core.ModContext,
+    private val context: cock.crest.purrfectsnap.lite.core.ModContext,
     private val overlayState: OperaStoryOverlayState,
     private val storyFrameLayout: () -> ViewGroup?
 ) {

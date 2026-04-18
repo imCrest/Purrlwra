@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.util
+package cock.crest.purrfectsnap.lite.ui.util
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.pager.PagerState

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.setup.patch
+package cock.crest.purrfectsnap.lite.setup.patch
 
 import com.android.tools.smali.dexlib2.Opcodes
 import com.android.tools.smali.dexlib2.dexbacked.DexBackedDexFile

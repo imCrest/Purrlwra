@@ -1,16 +1,16 @@
-package me.eternal.purrfectsnap.core.ui.menu.impl
+package cock.crest.purrfectsnap.lite.core.ui.menu.impl
 
 import android.app.ActivityManager
 import android.os.Process
 import android.view.View
 import android.widget.FrameLayout
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ui.OverlayType
-import me.eternal.purrfectsnap.core.ui.menu.AbstractMenu
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getId
-import me.eternal.purrfectsnap.core.util.ktx.vibrateLongPress
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ui.OverlayType
+import cock.crest.purrfectsnap.lite.core.ui.menu.AbstractMenu
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getId
+import cock.crest.purrfectsnap.lite.core.util.ktx.vibrateLongPress
 
 class SettingsMenu : AbstractMenu() {
     private val hovaHeaderSearchIconId by lazy {

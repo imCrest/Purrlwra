@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.FeatureNotice
-import me.eternal.purrfectsnap.common.config.RES_OBF_VERSION_CHECK
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.FeatureNotice
+import cock.crest.purrfectsnap.lite.common.config.RES_OBF_VERSION_CHECK
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
 
 class UserInterfaceTweaks : ConfigContainer() {
     class BootstrapOverride : ConfigContainer() {

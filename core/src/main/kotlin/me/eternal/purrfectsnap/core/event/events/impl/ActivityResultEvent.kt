@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.event.events.impl
+package cock.crest.purrfectsnap.lite.core.event.events.impl
 
 import android.app.Activity
 import android.content.Intent
-import me.eternal.purrfectsnap.core.event.events.AbstractHookEvent
+import cock.crest.purrfectsnap.lite.core.event.events.AbstractHookEvent
 
 class ActivityResultEvent(
     val activity: Activity,

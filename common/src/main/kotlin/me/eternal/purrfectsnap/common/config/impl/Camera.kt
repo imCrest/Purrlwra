@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
 import android.content.Context
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraManager
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.config.*
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.config.*
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 
 class Camera : ConfigContainer() {
     companion object {

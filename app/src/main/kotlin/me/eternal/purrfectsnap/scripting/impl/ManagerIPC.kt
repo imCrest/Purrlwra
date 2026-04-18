@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.scripting.impl
+package cock.crest.purrfectsnap.lite.scripting.impl
 
 import android.os.DeadObjectException
-import me.eternal.purrfectsnap.bridge.scripting.IPCListener
-import me.eternal.purrfectsnap.common.scripting.impl.IPCInterface
-import me.eternal.purrfectsnap.common.scripting.impl.Listener
+import cock.crest.purrfectsnap.lite.bridge.scripting.IPCListener
+import cock.crest.purrfectsnap.lite.common.scripting.impl.IPCInterface
+import cock.crest.purrfectsnap.lite.common.scripting.impl.Listener
 import java.util.concurrent.ConcurrentHashMap
 
 typealias IPCListeners = ConcurrentHashMap<String, MutableMap<String, MutableSet<IPCListener>>>  // channel, eventName -> listeners

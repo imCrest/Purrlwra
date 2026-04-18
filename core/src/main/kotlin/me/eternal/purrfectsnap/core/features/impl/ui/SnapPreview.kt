@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.graphics.Bitmap
 import android.graphics.Canvas
@@ -8,19 +8,19 @@ import android.graphics.drawable.shapes.Shape
 import android.view.ViewGroup
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.BindViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.addForegroundDrawable
-import me.eternal.purrfectsnap.core.ui.randomTag
-import me.eternal.purrfectsnap.core.ui.removeForegroundDrawable
-import me.eternal.purrfectsnap.core.util.EvictingMap
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.media.PreviewUtils
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BindViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.addForegroundDrawable
+import cock.crest.purrfectsnap.lite.core.ui.randomTag
+import cock.crest.purrfectsnap.lite.core.ui.removeForegroundDrawable
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.media.PreviewUtils
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
 import java.io.File
 
 class SnapPreview : Feature("SnapPreview") {

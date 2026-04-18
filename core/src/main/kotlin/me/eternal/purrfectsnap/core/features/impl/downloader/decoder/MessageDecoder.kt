@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.core.features.impl.downloader.decoder
+package cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder
 
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonElement
 import com.google.gson.JsonObject
-import me.eternal.purrfectsnap.common.data.download.DownloadMediaType
-import me.eternal.purrfectsnap.common.data.download.InputMedia
-import me.eternal.purrfectsnap.common.data.download.MediaEncryptionKeyPair
-import me.eternal.purrfectsnap.common.data.download.toKeyPair
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.common.util.snap.RemoteMediaResolver
-import me.eternal.purrfectsnap.core.wrapper.impl.MessageContent
+import cock.crest.purrfectsnap.lite.common.data.download.DownloadMediaType
+import cock.crest.purrfectsnap.lite.common.data.download.InputMedia
+import cock.crest.purrfectsnap.lite.common.data.download.MediaEncryptionKeyPair
+import cock.crest.purrfectsnap.lite.common.data.download.toKeyPair
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.common.util.snap.RemoteMediaResolver
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.MessageContent
 import java.io.InputStream
 import java.net.URL
 import kotlin.io.encoding.Base64

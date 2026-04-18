@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.tracker
+package cock.crest.purrfectsnap.lite.ui.manager.pages.tracker
 
 import android.net.Uri
 import androidx.compose.foundation.BorderStroke
@@ -38,18 +38,18 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.common.bridge.wrapper.TrackerLog
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.TrackerEventType
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.storage.getFriendInfo
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.util.coil.BitmojiImage
-import me.eternal.purrfectsnap.ui.util.saveFile
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.TrackerLog
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.TrackerEventType
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.storage.getFriendInfo
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.util.coil.BitmojiImage
+import cock.crest.purrfectsnap.lite.ui.util.saveFile
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
 import java.text.DateFormat
 
 

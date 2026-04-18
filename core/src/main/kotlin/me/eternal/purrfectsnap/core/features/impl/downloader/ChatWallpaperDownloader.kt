@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.downloader
+package cock.crest.purrfectsnap.lite.core.features.impl.downloader
 
 import android.view.ViewGroup
 import androidx.compose.foundation.BorderStroke
@@ -23,22 +23,22 @@ import androidx.compose.ui.unit.dp
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.absoluteValue
-import me.eternal.purrfectsnap.common.data.download.DownloadMediaType
-import me.eternal.purrfectsnap.common.data.download.InputMedia
-import me.eternal.purrfectsnap.common.data.download.MediaDownloadSource
-import me.eternal.purrfectsnap.common.data.download.toKeyPair
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.getValdiContext
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette
-import me.eternal.purrfectsnap.core.ui.triggerCloseTouchEvent
-import me.eternal.purrfectsnap.core.util.EvictingMap
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.common.data.download.DownloadMediaType
+import cock.crest.purrfectsnap.lite.common.data.download.InputMedia
+import cock.crest.purrfectsnap.lite.common.data.download.MediaDownloadSource
+import cock.crest.purrfectsnap.lite.common.data.download.toKeyPair
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.getValdiContext
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.core.ui.triggerCloseTouchEvent
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
 
 class ChatWallpaperDownloader : Feature("Chat Wallpaper Downloader") {
     private class ChatWallpaper(

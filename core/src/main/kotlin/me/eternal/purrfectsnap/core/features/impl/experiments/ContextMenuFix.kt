@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 import java.nio.ByteBuffer
 
 class ContextMenuFix: Feature("Context Menu Fix") {

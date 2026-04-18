@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.home
+package cock.crest.purrfectsnap.lite.ui.manager.pages.home
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -39,9 +39,9 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
 import androidx.compose.ui.window.Dialog
 
 @Composable

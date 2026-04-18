@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 
 fun AppDatabase.getQuickTiles(): List<String> {
     return database.rawQuery("SELECT `key` FROM quick_tiles ORDER BY position ASC", null).use { cursor ->

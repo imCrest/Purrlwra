@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.event
+package cock.crest.purrfectsnap.lite.core.event
 
 import android.app.Activity
 import android.content.Intent
@@ -6,22 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.os.Build
-import me.eternal.purrfectsnap.common.util.snap.SnapWidgetBroadcastReceiverHelper
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.event.events.impl.*
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
-import me.eternal.purrfectsnap.core.util.hook.findRestrictedMethod
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.Message
-import me.eternal.purrfectsnap.core.wrapper.impl.MessageContent
-import me.eternal.purrfectsnap.core.wrapper.impl.MessageDestinations
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
-import me.eternal.purrfectsnap.mapper.impl.ViewBinderMapper
+import cock.crest.purrfectsnap.lite.common.util.snap.SnapWidgetBroadcastReceiverHelper
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.event.events.impl.*
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
+import cock.crest.purrfectsnap.lite.core.util.hook.findRestrictedMethod
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Message
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.MessageContent
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.MessageDestinations
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.mapper.impl.ViewBinderMapper
 import java.nio.ByteBuffer
 
 class EventDispatcher(

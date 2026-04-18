@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.mapper
+package cock.crest.purrfectsnap.lite.mapper
 
 import android.util.Log
 import com.google.gson.Gson

@@ -1,5 +1,5 @@
 @file:OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
-package me.eternal.purrfectsnap.ui.manager.pages.home
+package cock.crest.purrfectsnap.lite.ui.manager.pages.home
 
 import android.net.Uri
 import androidx.compose.foundation.BorderStroke
@@ -60,19 +60,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.LogLine
-import me.eternal.purrfectsnap.LogReader
-import me.eternal.purrfectsnap.common.logger.LogChannel
-import me.eternal.purrfectsnap.common.logger.LogLevel
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.util.pullrefresh.PullRefreshIndicator
-import me.eternal.purrfectsnap.ui.util.pullrefresh.pullRefresh
-import me.eternal.purrfectsnap.ui.util.pullrefresh.rememberPullRefreshState
-import me.eternal.purrfectsnap.ui.util.saveFile
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.LogLine
+import cock.crest.purrfectsnap.lite.LogReader
+import cock.crest.purrfectsnap.lite.common.logger.LogChannel
+import cock.crest.purrfectsnap.lite.common.logger.LogLevel
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.PullRefreshIndicator
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.pullRefresh
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.rememberPullRefreshState
+import cock.crest.purrfectsnap.lite.ui.util.saveFile
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
 
 class HomeLogs : Routes.Route() {
     internal val logListState = LazyListState()

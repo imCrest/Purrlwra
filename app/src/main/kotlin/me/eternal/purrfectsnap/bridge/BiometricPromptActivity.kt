@@ -1,6 +1,6 @@
 @file:Suppress("DEPRECATION")
 
-package me.eternal.purrfectsnap.bridge
+package cock.crest.purrfectsnap.lite.bridge
 
 import android.content.Intent
 import android.hardware.biometrics.BiometricManager
@@ -12,7 +12,7 @@ import android.os.CancellationSignal
 import android.app.KeyguardManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import me.eternal.purrfectsnap.SharedContextHolder
+import cock.crest.purrfectsnap.lite.SharedContextHolder
 import java.util.concurrent.Executors
 
 class BiometricPromptActivity: ComponentActivity() {

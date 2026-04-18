@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.view.View
 import android.view.ViewGroup
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.getValdiContext
-import me.eternal.purrfectsnap.core.ui.getValdiViewNode
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.valdi.ValdiViewNode
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.getValdiContext
+import cock.crest.purrfectsnap.lite.core.ui.getValdiViewNode
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.valdi.ValdiViewNode
 
 class FirstCreatedUsername : Feature("FirstCreatedUsername") {
     private val profileViewSuffixes = setOf(

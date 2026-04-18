@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.ui
+package cock.crest.purrfectsnap.lite.common.scripting.ui
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -13,17 +13,17 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.common.scripting.ktx.contextScope
-import me.eternal.purrfectsnap.common.scripting.ktx.scriptableObject
-import me.eternal.purrfectsnap.common.scripting.ui.components.Node
-import me.eternal.purrfectsnap.common.scripting.ui.components.NodeType
-import me.eternal.purrfectsnap.common.scripting.ui.components.impl.ActionNode
-import me.eternal.purrfectsnap.common.scripting.ui.components.impl.ActionType
-import me.eternal.purrfectsnap.common.scripting.ui.components.impl.RowColumnNode
-import me.eternal.purrfectsnap.common.scripting.ui.components.impl.TextInputNode
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.contextScope
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.scriptableObject
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.Node
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.NodeType
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl.ActionNode
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl.ActionType
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl.RowColumnNode
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl.TextInputNode
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
 import org.mozilla.javascript.Function
 import org.mozilla.javascript.annotations.JSFunction
 

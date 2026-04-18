@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.mapper.impl
+package cock.crest.purrfectsnap.lite.mapper.impl
 
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction21c
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 import com.android.tools.smali.dexlib2.iface.reference.FieldReference
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
-import me.eternal.purrfectsnap.mapper.AbstractClassMapper
-import me.eternal.purrfectsnap.mapper.ext.findConstString
-import me.eternal.purrfectsnap.mapper.ext.getClassName
-import me.eternal.purrfectsnap.mapper.ext.hasStaticConstructorString
-import me.eternal.purrfectsnap.mapper.ext.isEnum
+import cock.crest.purrfectsnap.lite.mapper.AbstractClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ext.findConstString
+import cock.crest.purrfectsnap.lite.mapper.ext.getClassName
+import cock.crest.purrfectsnap.lite.mapper.ext.hasStaticConstructorString
+import cock.crest.purrfectsnap.lite.mapper.ext.isEnum
 import java.lang.reflect.Modifier
 
 class CompositeConfigurationProviderMapper : AbstractClassMapper("CompositeConfigurationProvider") {

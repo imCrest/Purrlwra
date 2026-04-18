@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.data
+package cock.crest.purrfectsnap.lite.common.data
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

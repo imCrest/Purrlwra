@@ -1,5 +1,5 @@
 @file:OptIn(androidx.compose.animation.ExperimentalAnimationApi::class)
-package me.eternal.purrfectsnap.ui.overlay
+package cock.crest.purrfectsnap.lite.ui.overlay
 
 import android.app.Dialog
 import android.content.Intent
@@ -27,14 +27,14 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
 import com.arthenica.ffmpegkit.Packages.getPackageName
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.common.ui.AppMaterialTheme
-import me.eternal.purrfectsnap.common.ui.ThemeMode
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.ui.manager.Navigation
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.common.ui.AppMaterialTheme
+import cock.crest.purrfectsnap.lite.common.ui.ThemeMode
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.ui.manager.Navigation
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 
 
 class RemoteOverlay(

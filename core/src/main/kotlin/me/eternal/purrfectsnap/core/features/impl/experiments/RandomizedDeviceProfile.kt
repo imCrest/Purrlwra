@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.content.Context
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 import org.json.JSONArray
 import org.json.JSONObject
 import java.net.InetAddress

@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.view.ViewGroup
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.getValdiContext
-import me.eternal.purrfectsnap.core.ui.getValdiViewNode
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.getValdiContext
+import cock.crest.purrfectsnap.lite.core.ui.getValdiViewNode
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
 
 class SnapScoreChanges: Feature("Snap Score Changes") {
     private val scores = mutableMapOf<String, Long>()

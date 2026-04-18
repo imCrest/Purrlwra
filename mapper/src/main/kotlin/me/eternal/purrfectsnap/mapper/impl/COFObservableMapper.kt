@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.mapper.impl
+package cock.crest.purrfectsnap.lite.mapper.impl
 
 import com.android.tools.smali.dexlib2.iface.instruction.formats.Instruction35c
 import com.android.tools.smali.dexlib2.iface.reference.MethodReference
-import me.eternal.purrfectsnap.mapper.AbstractClassMapper
-import me.eternal.purrfectsnap.mapper.ext.getClassName
+import cock.crest.purrfectsnap.lite.mapper.AbstractClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ext.getClassName
 
 class COFObservableMapper: AbstractClassMapper("COFObservable") {
     val classReference = classReference("class")

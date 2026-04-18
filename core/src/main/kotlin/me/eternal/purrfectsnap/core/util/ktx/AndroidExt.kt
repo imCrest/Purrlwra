@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util.ktx
+package cock.crest.purrfectsnap.lite.core.util.ktx
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,8 +9,8 @@ import android.graphics.drawable.Drawable
 import android.os.VibrationEffect
 import android.os.Vibrator
 import androidx.core.graphics.ColorUtils
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 
 val notFoundCache = mutableSetOf<String>()
 

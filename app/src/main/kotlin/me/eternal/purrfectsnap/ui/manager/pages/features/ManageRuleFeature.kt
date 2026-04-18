@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.features
+package cock.crest.purrfectsnap.lite.ui.manager.pages.features
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -37,20 +37,20 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.compose.currentBackStackEntryAsState
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.ui.manager.rememberRouteScrollState
-import me.eternal.purrfectsnap.common.data.RuleState
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.ui.rememberAsyncUpdateDispatcher
-import me.eternal.purrfectsnap.storage.clearRuleIds
-import me.eternal.purrfectsnap.storage.getRuleIds
-import me.eternal.purrfectsnap.storage.setRule
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.manager.pages.social.AddFriendDialog
-import me.eternal.purrfectsnap.ui.manager.pages.social.AddFriendDialog.Actions
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.ui.manager.rememberRouteScrollState
+import cock.crest.purrfectsnap.lite.common.data.RuleState
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.storage.clearRuleIds
+import cock.crest.purrfectsnap.lite.storage.getRuleIds
+import cock.crest.purrfectsnap.lite.storage.setRule
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.AddFriendDialog
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.AddFriendDialog.Actions
 
 class ManageRuleFeature : Routes.Route()  {
     override val title: @Composable () -> Unit = {

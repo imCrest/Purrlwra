@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -18,18 +18,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
 import android.os.Build
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.bridge.toWrapper
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.core.PurrfectSnap
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.downloader.MediaDownloader
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.wrapper.impl.valdi.ValdiFunction
-import me.eternal.purrfectsnap.core.wrapper.impl.valdi.ValdiMarshaller
-import me.eternal.purrfectsnap.nativelib.NativeLib
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.bridge.toWrapper
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.core.PurrfectSnap
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.valdi.ValdiFunction
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.valdi.ValdiMarshaller
+import cock.crest.purrfectsnap.lite.nativelib.NativeLib
 import kotlin.math.absoluteValue
 import kotlin.random.Random
 

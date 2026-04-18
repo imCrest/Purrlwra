@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.util.media
+package cock.crest.purrfectsnap.lite.core.util.media
 
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader

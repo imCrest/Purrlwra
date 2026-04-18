@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
 import android.database.sqlite.SQLiteDatabase
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.MessagingGroupInfo
-import me.eternal.purrfectsnap.common.util.SQLiteDatabaseHelper
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingGroupInfo
+import cock.crest.purrfectsnap.lite.common.util.SQLiteDatabaseHelper
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 

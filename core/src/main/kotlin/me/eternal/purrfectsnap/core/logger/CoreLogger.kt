@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.logger
+package cock.crest.purrfectsnap.lite.core.logger
 
 import android.annotation.SuppressLint
 import android.util.Log
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.logger.LogChannel
-import me.eternal.purrfectsnap.common.logger.LogLevel
-import me.eternal.purrfectsnap.core.bridge.BridgeClient
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.YukiHookCompat
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.LogChannel
+import cock.crest.purrfectsnap.lite.common.logger.LogLevel
+import cock.crest.purrfectsnap.lite.core.bridge.BridgeClient
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.YukiHookCompat
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 
 @SuppressLint("PrivateApi")
 class CoreLogger(

@@ -1,20 +1,20 @@
-package me.eternal.purrfectsnap.core.database
+package cock.crest.purrfectsnap.lite.core.database
 
 import android.content.ContentValues
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteDatabase.OpenParams
 import android.database.sqlite.SQLiteDatabaseCorruptException
-import me.eternal.purrfectsnap.common.database.DatabaseObject
-import me.eternal.purrfectsnap.common.database.impl.*
-import me.eternal.purrfectsnap.common.util.ktx.getBlobOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getIntOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getInteger
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.wrapper.impl.toSnapUUID
-import me.eternal.purrfectsnap.nativelib.NativeLib
+import cock.crest.purrfectsnap.lite.common.database.DatabaseObject
+import cock.crest.purrfectsnap.lite.common.database.impl.*
+import cock.crest.purrfectsnap.lite.common.util.ktx.getBlobOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getIntOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getInteger
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.toSnapUUID
+import cock.crest.purrfectsnap.lite.nativelib.NativeLib
 
 
 enum class DatabaseType(

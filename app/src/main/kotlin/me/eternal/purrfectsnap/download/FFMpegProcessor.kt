@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.download
+package cock.crest.purrfectsnap.lite.download
 
 import android.media.AudioFormat
 import android.media.MediaMetadataRetriever
@@ -7,12 +7,12 @@ import com.arthenica.ffmpegkit.FFmpegSession
 import com.arthenica.ffmpegkit.Level
 import com.arthenica.ffmpegkit.Statistics
 import kotlinx.coroutines.suspendCancellableCoroutine
-import me.eternal.purrfectsnap.LogManager
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.common.config.impl.DownloaderConfig
-import me.eternal.purrfectsnap.common.data.download.AudioStreamFormat
-import me.eternal.purrfectsnap.common.logger.LogLevel
-import me.eternal.purrfectsnap.task.PendingTask
+import cock.crest.purrfectsnap.lite.LogManager
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.common.config.impl.DownloaderConfig
+import cock.crest.purrfectsnap.lite.common.data.download.AudioStreamFormat
+import cock.crest.purrfectsnap.lite.common.logger.LogLevel
+import cock.crest.purrfectsnap.lite.task.PendingTask
 import java.io.File
 import java.util.concurrent.Executors
 

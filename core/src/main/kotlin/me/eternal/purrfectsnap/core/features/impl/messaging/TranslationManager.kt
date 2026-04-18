@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.core.ModContext
+import cock.crest.purrfectsnap.lite.core.ModContext
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder

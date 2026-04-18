@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core.features.impl.tweaks
+package cock.crest.purrfectsnap.lite.core.features.impl.tweaks
 
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoEditor
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.NativeUnaryCallEvent
-import me.eternal.purrfectsnap.core.event.events.impl.SendMessageWithContentEvent
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoEditor
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NativeUnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SendMessageWithContentEvent
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
 
 class UnsaveableMessages : MessagingRuleFeature(
     "Unsaveable Messages",

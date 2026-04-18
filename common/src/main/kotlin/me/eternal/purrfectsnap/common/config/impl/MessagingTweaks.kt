@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.ConfigFlag
-import me.eternal.purrfectsnap.common.config.FeatureNotice
-import me.eternal.purrfectsnap.common.config.PropertyValue
-import me.eternal.purrfectsnap.common.data.NotificationType
-import me.eternal.purrfectsnap.common.util.PURGE_DISABLED_KEY
-import me.eternal.purrfectsnap.common.util.PURGE_TRANSLATION_KEY
-import me.eternal.purrfectsnap.common.util.PURGE_VALUES
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.ConfigFlag
+import cock.crest.purrfectsnap.lite.common.config.FeatureNotice
+import cock.crest.purrfectsnap.lite.common.config.PropertyValue
+import cock.crest.purrfectsnap.lite.common.data.NotificationType
+import cock.crest.purrfectsnap.lite.common.util.PURGE_DISABLED_KEY
+import cock.crest.purrfectsnap.lite.common.util.PURGE_TRANSLATION_KEY
+import cock.crest.purrfectsnap.lite.common.util.PURGE_VALUES
 
 class MessagingTweaks : ConfigContainer() {
     companion object {

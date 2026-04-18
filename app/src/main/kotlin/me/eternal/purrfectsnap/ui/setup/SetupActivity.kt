@@ -1,6 +1,6 @@
 @file:OptIn(androidx.compose.animation.ExperimentalAnimationApi::class)
 
-package me.eternal.purrfectsnap.ui.setup
+package cock.crest.purrfectsnap.lite.ui.setup
 
 import android.app.Activity
 import android.os.Build
@@ -90,21 +90,21 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.SharedContextHolder
-import me.eternal.purrfectsnap.common.ui.AppMaterialTheme
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.screens.SetupScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.InstallModeScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.InstallMode
-import me.eternal.purrfectsnap.ui.setup.screens.impl.MappingsScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.PermissionsScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.PickLanguageScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.PatchSnapchatScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.RootInstallSnapchatScreen
-import me.eternal.purrfectsnap.ui.setup.screens.impl.SaveFolderScreen
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.SharedContextHolder
+import cock.crest.purrfectsnap.lite.common.ui.AppMaterialTheme
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.InstallModeScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.InstallMode
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.MappingsScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.PermissionsScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.PickLanguageScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.PatchSnapchatScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.RootInstallSnapchatScreen
+import cock.crest.purrfectsnap.lite.ui.setup.screens.impl.SaveFolderScreen
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 import kotlinx.coroutines.delay
 
 private data class SetupStepMeta(

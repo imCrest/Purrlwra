@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager
+package cock.crest.purrfectsnap.lite.ui.manager
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.ScrollState

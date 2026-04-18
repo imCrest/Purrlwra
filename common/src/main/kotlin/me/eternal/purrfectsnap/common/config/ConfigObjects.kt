@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.config
+package cock.crest.purrfectsnap.lite.common.config
 
 import androidx.compose.ui.graphics.vector.ImageVector
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
 import kotlin.reflect.KProperty
 
 data class PropertyPair<T>(

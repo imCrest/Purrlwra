@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.core.features.impl.spying
+package cock.crest.purrfectsnap.lite.core.features.impl.spying
 
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.data.RuleState
-import me.eternal.purrfectsnap.core.event.events.impl.OnSnapInteractionEvent
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.data.RuleState
+import cock.crest.purrfectsnap.lite.core.event.events.impl.OnSnapInteractionEvent
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
 import java.util.concurrent.CopyOnWriteArraySet
 import java.util.concurrent.ConcurrentHashMap
 

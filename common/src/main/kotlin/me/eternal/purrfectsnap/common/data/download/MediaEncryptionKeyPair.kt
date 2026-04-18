@@ -1,5 +1,5 @@
 
-package me.eternal.purrfectsnap.common.data.download
+package cock.crest.purrfectsnap.lite.common.data.download
 
 import java.io.InputStream
 import javax.crypto.Cipher

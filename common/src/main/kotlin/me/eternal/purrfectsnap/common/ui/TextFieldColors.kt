@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.ui
+package cock.crest.purrfectsnap.lite.common.ui
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.TextFieldDefaults

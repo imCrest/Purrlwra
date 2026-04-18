@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl
+package cock.crest.purrfectsnap.lite.core.features.impl
 
 import android.app.Notification
 import android.app.NotificationChannel
@@ -7,11 +7,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.ui.graphics.vector.ImageVector
 import com.google.gson.JsonObject
-import me.eternal.purrfectsnap.common.data.FriendLinkType
-import me.eternal.purrfectsnap.common.database.impl.FriendInfo
-import me.eternal.purrfectsnap.core.event.events.impl.NetworkApiRequestEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.common.data.FriendLinkType
+import cock.crest.purrfectsnap.lite.common.database.impl.FriendInfo
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NetworkApiRequestEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
 import java.io.InputStreamReader
 import java.util.Calendar
 
@@ -55,10 +55,10 @@ class FriendMutationObserver: Feature("FriendMutationObserver") {
         val provider = aphelionToastProvider
         if (isAphelion && provider != null) {
             val bitmojiUrl = friendInfo?.let {
-                me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie.getBitmojiSelfie(
+                cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie.getBitmojiSelfie(
                     it.bitmojiSelfieId,
                     it.bitmojiAvatarId,
-                    me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie.BitmojiSelfieType.NEW_THREE_D
+                    cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie.BitmojiSelfieType.NEW_THREE_D
                 )
             }
             provider(icon, contentText, bitmojiUrl) {

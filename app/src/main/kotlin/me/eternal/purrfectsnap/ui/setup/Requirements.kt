@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup
+package cock.crest.purrfectsnap.lite.ui.setup
 
 object Requirements {
     const val FIRST_RUN = 0b000001

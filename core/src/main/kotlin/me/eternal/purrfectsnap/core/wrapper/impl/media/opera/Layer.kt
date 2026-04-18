@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.media.opera
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera
 
-import me.eternal.purrfectsnap.common.util.ktx.findFieldsToString
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.common.util.ktx.findFieldsToString
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 
 class Layer(obj: Any?) : AbstractWrapper(obj) {
     val paramMap: ParamMap

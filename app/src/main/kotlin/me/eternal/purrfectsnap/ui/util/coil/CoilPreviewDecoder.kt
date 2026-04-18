@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.util.coil
+package cock.crest.purrfectsnap.lite.ui.util.coil
 
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -6,12 +6,12 @@ import android.graphics.drawable.BitmapDrawable
 import coil.decode.DecodeResult
 import coil.decode.Decoder
 import coil.fetch.SourceResult
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.data.download.MediaEncryptionKeyPair
-import me.eternal.purrfectsnap.common.data.download.SplitMediaAssetType
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.util.snap.MediaDownloaderHelper
-import me.eternal.purrfectsnap.core.util.media.PreviewUtils
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.data.download.MediaEncryptionKeyPair
+import cock.crest.purrfectsnap.lite.common.data.download.SplitMediaAssetType
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.util.snap.MediaDownloaderHelper
+import cock.crest.purrfectsnap.lite.core.util.media.PreviewUtils
 
 class CoilPreviewDecoder(
     private val resources: Resources,

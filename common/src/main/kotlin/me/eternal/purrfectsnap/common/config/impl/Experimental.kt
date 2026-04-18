@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Fingerprint
 import androidx.compose.material.icons.filled.Memory
 import androidx.compose.material.icons.filled.Security
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.ConfigFlag
-import me.eternal.purrfectsnap.common.config.FeatureNotice
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.ConfigFlag
+import cock.crest.purrfectsnap.lite.common.config.FeatureNotice
 
 class Experimental : ConfigContainer() {
     companion object {

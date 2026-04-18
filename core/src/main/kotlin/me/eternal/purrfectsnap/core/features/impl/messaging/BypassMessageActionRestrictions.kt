@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
-import me.eternal.purrfectsnap.core.event.events.impl.BuildMessageEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BuildMessageEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 
 class BypassMessageActionRestrictions : Feature("Bypass Message Action Restrictions") {
     override fun init() {

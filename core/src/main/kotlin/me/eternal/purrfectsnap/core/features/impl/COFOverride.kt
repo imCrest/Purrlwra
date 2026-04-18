@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.core.features.impl
+package cock.crest.purrfectsnap.lite.core.features.impl
 
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.Feature
 
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.mapper.impl.COFObservableMapper
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.mapper.impl.COFObservableMapper
 import java.lang.reflect.Method
 
 class COFOverride : Feature("COF Override") {

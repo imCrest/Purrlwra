@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.mapper.impl
+package cock.crest.purrfectsnap.lite.mapper.impl
 
-import me.eternal.purrfectsnap.mapper.AbstractClassMapper
-import me.eternal.purrfectsnap.mapper.ext.findConstString
-import me.eternal.purrfectsnap.mapper.ext.getClassName
-import me.eternal.purrfectsnap.mapper.ext.isAbstract
-import me.eternal.purrfectsnap.mapper.ext.searchNextFieldReference
+import cock.crest.purrfectsnap.lite.mapper.AbstractClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ext.findConstString
+import cock.crest.purrfectsnap.lite.mapper.ext.getClassName
+import cock.crest.purrfectsnap.lite.mapper.ext.isAbstract
+import cock.crest.purrfectsnap.lite.mapper.ext.searchNextFieldReference
 
 class DefaultMediaItemMapper : AbstractClassMapper("DefaultMediaItem") {
     val cameraRollMediaId = classReference("cameraRollMediaIdClass")

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.data
+package cock.crest.purrfectsnap.lite.ui.manager.data
 
 import android.content.Intent
 import android.widget.Toast
@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.RemoteSideContext
+import cock.crest.purrfectsnap.lite.RemoteSideContext
 import java.io.File
 import java.io.FileOutputStream
 import java.util.zip.ZipInputStream

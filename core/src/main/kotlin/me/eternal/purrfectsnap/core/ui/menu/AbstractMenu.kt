@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.ui.menu
+package cock.crest.purrfectsnap.lite.core.ui.menu
 
 import android.view.View
 import android.view.ViewGroup
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
 
 abstract class AbstractMenu {
     lateinit var menuViewInjector: MenuViewInjector

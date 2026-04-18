@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -22,21 +22,21 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.common.data.FriendLinkType
-import me.eternal.purrfectsnap.common.database.impl.FriendInfo
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
-import me.eternal.purrfectsnap.core.event.events.impl.BindViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.Snapchatter
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.Layer
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.ParamMap
-import me.eternal.purrfectsnap.mapper.impl.OperaPageViewControllerMapper
+import cock.crest.purrfectsnap.lite.common.data.FriendLinkType
+import cock.crest.purrfectsnap.lite.common.database.impl.FriendInfo
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BindViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Snapchatter
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.Layer
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.ParamMap
+import cock.crest.purrfectsnap.lite.mapper.impl.OperaPageViewControllerMapper
 import java.text.SimpleDateFormat
 import java.util.*
 

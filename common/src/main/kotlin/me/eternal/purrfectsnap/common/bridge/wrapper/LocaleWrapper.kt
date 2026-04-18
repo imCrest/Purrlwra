@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.common.bridge.wrapper
+package cock.crest.purrfectsnap.lite.common.bridge.wrapper
 
 import android.content.Context
 import android.os.ParcelFileDescriptor
 import android.os.ParcelFileDescriptor.AutoCloseInputStream
 import com.google.gson.JsonObject
 import com.google.gson.JsonParser
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.util.LazyBridgeValue
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.util.LazyBridgeValue
 import java.util.Locale
 
 
@@ -99,7 +99,7 @@ class LocaleWrapper(
         translationMap.clear()
         load()
         if (isSetup) return
-        context.sendBroadcast(android.content.Intent("me.eternal.purrfectsnap.RESTART"))
+        context.sendBroadcast(android.content.Intent("cock.crest.purrfectsnap.lite.RESTART"))
     }
 
     operator fun get(key: String) = getOrNull(key) ?: key.also { AbstractLogger.directDebug("Missing translation for $key") }

@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.common.data
+package cock.crest.purrfectsnap.lite.common.data
 
-import me.eternal.purrfectsnap.common.data.ContentType.entries
-import me.eternal.purrfectsnap.common.data.FriendAddSource.entries
-import me.eternal.purrfectsnap.common.data.FriendLinkType.entries
-import me.eternal.purrfectsnap.common.data.MixerStoryType.entries
-import me.eternal.purrfectsnap.common.data.NotificationType.entries
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.common.data.ContentType.entries
+import cock.crest.purrfectsnap.lite.common.data.FriendAddSource.entries
+import cock.crest.purrfectsnap.lite.common.data.FriendLinkType.entries
+import cock.crest.purrfectsnap.lite.common.data.MixerStoryType.entries
+import cock.crest.purrfectsnap.lite.common.data.NotificationType.entries
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
 
 enum class MessageState {
     PREPARING, SENDING, COMMITTED, FAILED, CANCELING, PENDING_DECRYPTION

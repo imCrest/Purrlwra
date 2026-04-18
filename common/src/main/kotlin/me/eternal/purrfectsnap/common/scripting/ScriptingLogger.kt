@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.scripting
+package cock.crest.purrfectsnap.lite.common.scripting
 
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.logger.LogChannel
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.LogChannel
 
 class ScriptingLogger(
     private val logger: AbstractLogger

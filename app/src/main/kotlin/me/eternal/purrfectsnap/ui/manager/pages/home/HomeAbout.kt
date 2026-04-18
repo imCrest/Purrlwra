@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.home
+package cock.crest.purrfectsnap.lite.ui.manager.pages.home
 
 import android.os.SystemClock
 import androidx.compose.foundation.BorderStroke
@@ -28,12 +28,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.PurrfectMarqueeText
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.PurrfectMarqueeText
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 
 class HomeAbout : Routes.Route() {
     override val translation by lazy { context.translation.getCategory("manager.sections.home_about") }

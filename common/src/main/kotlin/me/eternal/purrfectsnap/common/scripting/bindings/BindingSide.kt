@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.bindings
+package cock.crest.purrfectsnap.lite.common.scripting.bindings
 
 enum class BindingSide(
     val key: String

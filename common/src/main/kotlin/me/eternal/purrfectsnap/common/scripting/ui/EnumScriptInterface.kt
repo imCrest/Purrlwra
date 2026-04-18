@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.common.scripting.ui
+package cock.crest.purrfectsnap.lite.common.scripting.ui
 
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
 
 enum class EnumScriptInterface(
     val key: String,

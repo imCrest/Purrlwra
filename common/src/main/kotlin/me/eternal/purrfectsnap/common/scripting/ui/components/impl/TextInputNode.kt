@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.scripting.ui.components.impl
+package cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl
 
-import me.eternal.purrfectsnap.common.scripting.ui.components.Node
-import me.eternal.purrfectsnap.common.scripting.ui.components.NodeType
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.Node
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.NodeType
 
 class TextInputNode : Node(NodeType.TEXT_INPUT) {
     fun placeholder(text: String): TextInputNode {

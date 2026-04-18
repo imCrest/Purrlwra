@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.location.Location
 import android.location.LocationManager
@@ -17,24 +17,24 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import me.eternal.purrfectsnap.common.ui.OverlayType
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.common.util.protobuf.EditorContext
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoEditor
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.util.RandomWalking
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getId
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.isDarkTheme
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.common.ui.OverlayType
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.common.util.protobuf.EditorContext
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoEditor
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.children
+import cock.crest.purrfectsnap.lite.core.util.RandomWalking
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getId
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.isDarkTheme
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
 import java.nio.ByteBuffer
 import java.util.UUID
 import kotlin.math.atan2
@@ -180,7 +180,7 @@ class BetterLocation : Feature("Better Location") {
             locationHistory.values.toList().mapNotNull { locationHistory ->
                 val friendInfo = context.database.getFriendInfo(locationHistory.userId) ?: return@mapNotNull null
 
-                me.eternal.purrfectsnap.bridge.location.FriendLocation().also {
+                cock.crest.purrfectsnap.lite.bridge.location.FriendLocation().also {
                     it.username = friendInfo.mutableUsername ?: return@mapNotNull null
                     it.displayName = friendInfo.displayName
                     it.bitmojiId = friendInfo.bitmojiAvatarId

@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core.action
+package cock.crest.purrfectsnap.lite.core.action
 
 import android.content.Intent
-import me.eternal.purrfectsnap.common.action.EnumAction
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.action.impl.BulkMessagingAction
-import me.eternal.purrfectsnap.core.action.impl.CleanCache
-import me.eternal.purrfectsnap.core.action.impl.ExportChatMessages
-import me.eternal.purrfectsnap.core.action.impl.ExportMemories
-import me.eternal.purrfectsnap.core.action.impl.ManageFriendList
+import cock.crest.purrfectsnap.lite.common.action.EnumAction
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.action.impl.BulkMessagingAction
+import cock.crest.purrfectsnap.lite.core.action.impl.CleanCache
+import cock.crest.purrfectsnap.lite.core.action.impl.ExportChatMessages
+import cock.crest.purrfectsnap.lite.core.action.impl.ExportMemories
+import cock.crest.purrfectsnap.lite.core.action.impl.ManageFriendList
 
 class ActionManager(
     private val modContext: ModContext,

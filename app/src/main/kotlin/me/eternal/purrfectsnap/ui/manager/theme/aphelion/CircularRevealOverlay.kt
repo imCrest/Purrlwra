@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.theme.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion
 
 import android.graphics.BitmapShader
 import android.graphics.Shader
@@ -16,7 +16,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import kotlin.math.sqrt
 import androidx.compose.ui.platform.LocalHapticFeedback
-import me.eternal.purrfectsnap.RemoteSideContext
+import cock.crest.purrfectsnap.lite.RemoteSideContext
 
 private const val REVEAL_DURATION_MS = 3200
 private const val WAVE_BAND_WIDTH_PX = 300f

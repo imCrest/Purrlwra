@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.ui.util
+package cock.crest.purrfectsnap.lite.ui.util
 
 import androidx.compose.material3.SwitchColors
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 
 @Composable
 fun purrfectSwitchColors(): SwitchColors = SwitchDefaults.colors(

@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.util.hook
+package cock.crest.purrfectsnap.lite.core.util.hook
 
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 import org.lsposed.hiddenapibypass.HiddenApiBypass
 import java.lang.reflect.Constructor
 import java.lang.reflect.Member

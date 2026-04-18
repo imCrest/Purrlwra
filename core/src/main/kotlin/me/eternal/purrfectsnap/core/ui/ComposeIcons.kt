@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui
+package cock.crest.purrfectsnap.lite.core.ui
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathFillType

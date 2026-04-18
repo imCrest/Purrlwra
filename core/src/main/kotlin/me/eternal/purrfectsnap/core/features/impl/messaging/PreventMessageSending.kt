@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.NotificationType
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoEditor
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.NativeUnaryCallEvent
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.event.events.impl.SendMessageWithContentEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.NotificationType
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoEditor
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NativeUnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SendMessageWithContentEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 
 class PreventMessageSending : Feature("Prevent message sending") {
     override fun init() {

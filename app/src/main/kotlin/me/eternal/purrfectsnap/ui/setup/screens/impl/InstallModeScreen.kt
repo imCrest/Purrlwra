@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup.screens.impl
+package cock.crest.purrfectsnap.lite.ui.setup.screens.impl
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -48,10 +48,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.screens.SetupScreen
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 
 enum class InstallMode { ROOT, NON_ROOT }
 

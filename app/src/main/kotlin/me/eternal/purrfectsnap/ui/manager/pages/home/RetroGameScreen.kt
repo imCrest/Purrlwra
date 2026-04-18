@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.home
+package cock.crest.purrfectsnap.lite.ui.manager.pages.home
 
 import android.view.MotionEvent
 import androidx.compose.foundation.BorderStroke
@@ -44,9 +44,9 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 import kotlin.math.abs
 import kotlin.math.min
 import kotlin.math.roundToInt

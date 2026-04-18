@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.ui.components
+package cock.crest.purrfectsnap.lite.common.scripting.ui.components
 
 @Suppress("MemberVisibilityCanBePrivate")
 open class Node(

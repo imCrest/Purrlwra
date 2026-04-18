@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.type
+package cock.crest.purrfectsnap.lite.common.scripting.type
 
 import java.io.BufferedReader
 

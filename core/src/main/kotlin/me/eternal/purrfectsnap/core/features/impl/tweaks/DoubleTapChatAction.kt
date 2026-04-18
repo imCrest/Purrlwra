@@ -1,24 +1,24 @@
-package me.eternal.purrfectsnap.core.features.impl.tweaks
+package cock.crest.purrfectsnap.lite.core.features.impl.tweaks
 
 import android.os.SystemClock
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewConfiguration
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
-import me.eternal.purrfectsnap.common.util.ktx.findFieldsToString
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.messaging.AutoMarkAsRead
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.features.impl.spying.StealthMode
-import me.eternal.purrfectsnap.core.ui.getValdiContext
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.wrapper.impl.getMessageText
-import me.eternal.purrfectsnap.mapper.impl.ChatEventDispatcherMapper
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.common.util.ktx.findFieldsToString
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.AutoMarkAsRead
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.StealthMode
+import cock.crest.purrfectsnap.lite.core.ui.getValdiContext
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.getMessageText
+import cock.crest.purrfectsnap.lite.mapper.impl.ChatEventDispatcherMapper
 
 class DoubleTapChatAction: Feature("Double Tap Chat Action") {
     private data class ChatDoubleTapTarget(

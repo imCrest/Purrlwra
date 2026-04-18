@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features
+package cock.crest.purrfectsnap.lite.core.features
 
 object FeatureLoadParams {
     const val NO_INIT = 0

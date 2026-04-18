@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.bridge.wrapper
+package cock.crest.purrfectsnap.lite.common.bridge.wrapper
 
 import android.content.ContentValues
 import android.content.Context
@@ -7,18 +7,18 @@ import android.net.Uri
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonObject
 import kotlinx.coroutines.*
-import me.eternal.purrfectsnap.bridge.logger.BridgeLoggedMessage
-import me.eternal.purrfectsnap.bridge.logger.LoggedChatEdit
-import me.eternal.purrfectsnap.bridge.logger.LoggerInterface
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.data.StoryData
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.util.SQLiteDatabaseHelper
-import me.eternal.purrfectsnap.common.util.ktx.getBlobOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getIntOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getLongOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.bridge.logger.BridgeLoggedMessage
+import cock.crest.purrfectsnap.lite.bridge.logger.LoggedChatEdit
+import cock.crest.purrfectsnap.lite.bridge.logger.LoggerInterface
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.data.StoryData
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.util.SQLiteDatabaseHelper
+import cock.crest.purrfectsnap.lite.common.util.ktx.getBlobOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getIntOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLongOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
 import java.io.File
 import java.util.UUID
 

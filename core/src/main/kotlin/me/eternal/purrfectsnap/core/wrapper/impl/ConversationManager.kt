@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core.wrapper.impl
+package cock.crest.purrfectsnap.lite.core.wrapper.impl
 
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.util.CallbackBuilder
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.util.CallbackBuilder
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
 
 typealias CallbackResult = (error: String?) -> Unit
 

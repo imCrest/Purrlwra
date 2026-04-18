@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.data.download
+package cock.crest.purrfectsnap.lite.common.data.download
 
 data class DownloadMetadata(
     val mediaIdentifier: String,

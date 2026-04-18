@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.theme.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

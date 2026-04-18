@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.view.ViewGroup
 import android.widget.LinearLayout
@@ -8,14 +8,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.unit.dp
-import me.eternal.purrfectsnap.common.ui.AutoClearKeyboardFocus
-import me.eternal.purrfectsnap.common.ui.EditNoteTextField
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.getValdiContext
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.common.ui.AutoClearKeyboardFocus
+import cock.crest.purrfectsnap.lite.common.ui.EditNoteTextField
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.getValdiContext
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
 
 class FriendNotes: Feature("Friend Notes") {
     override fun init() {

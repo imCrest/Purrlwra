@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
 import android.content.ContentValues
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.bridge.location.LocationCoordinates
-import me.eternal.purrfectsnap.common.util.ktx.getDoubleOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getInteger
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.bridge.location.LocationCoordinates
+import cock.crest.purrfectsnap.lite.common.util.ktx.getDoubleOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getInteger
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 
 
 fun AppDatabase.getLocationCoordinates(): List<LocationCoordinates> {

@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.scripting.impl
+package cock.crest.purrfectsnap.lite.core.scripting.impl
 
-import me.eternal.purrfectsnap.bridge.scripting.IPCListener
-import me.eternal.purrfectsnap.common.scripting.impl.IPCInterface
-import me.eternal.purrfectsnap.common.scripting.impl.Listener
+import cock.crest.purrfectsnap.lite.bridge.scripting.IPCListener
+import cock.crest.purrfectsnap.lite.common.scripting.impl.IPCInterface
+import cock.crest.purrfectsnap.lite.common.scripting.impl.Listener
 
 class CoreIPC : IPCInterface() {
     override fun onBroadcast(channel: String, eventName: String, listener: Listener) {

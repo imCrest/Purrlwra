@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui
+package cock.crest.purrfectsnap.lite.core.ui
 
 import android.content.res.Resources
 import android.graphics.Typeface
@@ -6,10 +6,10 @@ import android.util.TypedValue
 import android.view.Gravity
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.isDarkTheme
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.isDarkTheme
 
 class UserInterface(
     private val context: ModContext

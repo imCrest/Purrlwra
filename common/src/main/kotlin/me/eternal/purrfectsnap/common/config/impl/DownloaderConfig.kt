@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.ConfigFlag
-import me.eternal.purrfectsnap.common.config.FeatureNotice
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.ConfigFlag
+import cock.crest.purrfectsnap.lite.common.config.FeatureNotice
 
 class DownloaderConfig : ConfigContainer() {
     inner class FFMpegOptions : ConfigContainer() {

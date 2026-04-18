@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.common.database.impl
+package cock.crest.purrfectsnap.lite.common.database.impl
 
 import android.annotation.SuppressLint
 import android.database.Cursor
-import me.eternal.purrfectsnap.common.database.DatabaseObject
-import me.eternal.purrfectsnap.common.util.ktx.getIntOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getInteger
-import me.eternal.purrfectsnap.common.util.ktx.getLong
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.database.DatabaseObject
+import cock.crest.purrfectsnap.lite.common.util.ktx.getIntOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getInteger
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLong
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 
 data class FriendInfo(
     var id: Int = 0,

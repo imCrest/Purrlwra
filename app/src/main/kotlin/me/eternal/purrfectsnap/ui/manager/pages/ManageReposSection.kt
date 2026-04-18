@@ -1,5 +1,5 @@
 @file:OptIn(androidx.compose.foundation.ExperimentalFoundationApi::class)
-package me.eternal.purrfectsnap.ui.manager.pages
+package cock.crest.purrfectsnap.lite.ui.manager.pages
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -23,15 +23,15 @@ import androidx.navigation.NavBackStackEntry
 import androidx.navigation.compose.currentBackStackEntryAsState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.RepositoryIndex
-import me.eternal.purrfectsnap.common.ui.AsyncUpdateDispatcher
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
-import me.eternal.purrfectsnap.common.util.ktx.getUrlFromClipboard
-import me.eternal.purrfectsnap.storage.addRepo
-import me.eternal.purrfectsnap.storage.getRepositories
-import me.eternal.purrfectsnap.storage.removeRepo
-import me.eternal.purrfectsnap.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.common.data.RepositoryIndex
+import cock.crest.purrfectsnap.lite.common.ui.AsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableStateList
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.common.util.ktx.getUrlFromClipboard
+import cock.crest.purrfectsnap.lite.storage.addRepo
+import cock.crest.purrfectsnap.lite.storage.getRepositories
+import cock.crest.purrfectsnap.lite.storage.removeRepo
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
 import okhttp3.OkHttpClient
 
 class ManageReposSection: Routes.Route() {

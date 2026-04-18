@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
 import android.app.Activity
 import android.content.Context
@@ -29,33 +29,33 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
-import me.eternal.purrfectsnap.bridge.BridgeService
-import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ReceiversConfig
-import me.eternal.purrfectsnap.common.action.EnumAction
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.common.bridge.wrapper.LoggerWrapper
-import me.eternal.purrfectsnap.common.bridge.wrapper.MappingsWrapper
-import me.eternal.purrfectsnap.common.config.ModConfig
-import me.eternal.purrfectsnap.common.logger.fatalCrash
-import me.eternal.purrfectsnap.common.util.snap.SnapWidgetBroadcastReceiverHelper
-import me.eternal.purrfectsnap.common.util.constantLazyBridge
-import me.eternal.purrfectsnap.common.util.getPurgeTime
-import me.eternal.purrfectsnap.e2ee.E2EEImplementation
-import me.eternal.purrfectsnap.scripting.RemoteScriptManager
-import me.eternal.purrfectsnap.storage.AppDatabase
-import me.eternal.purrfectsnap.task.RemoteTaskInterface
-import me.eternal.purrfectsnap.task.TaskManager
-import me.eternal.purrfectsnap.ui.manager.MainActivity
-import me.eternal.purrfectsnap.ui.manager.data.InstallationSummary
-import me.eternal.purrfectsnap.ui.manager.data.ModInfo
-import me.eternal.purrfectsnap.ui.manager.data.PlatformInfo
-import me.eternal.purrfectsnap.ui.manager.data.SnapchatAppInfo
-import me.eternal.purrfectsnap.ui.overlay.RemoteOverlay
-import me.eternal.purrfectsnap.ui.setup.Requirements
-import me.eternal.purrfectsnap.ui.setup.SetupActivity
-import me.eternal.purrfectsnap.task.AnnouncementCheckWorker
+import cock.crest.purrfectsnap.lite.bridge.BridgeService
+import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ReceiversConfig
+import cock.crest.purrfectsnap.lite.common.action.EnumAction
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LoggerWrapper
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.MappingsWrapper
+import cock.crest.purrfectsnap.lite.common.config.ModConfig
+import cock.crest.purrfectsnap.lite.common.logger.fatalCrash
+import cock.crest.purrfectsnap.lite.common.util.snap.SnapWidgetBroadcastReceiverHelper
+import cock.crest.purrfectsnap.lite.common.util.constantLazyBridge
+import cock.crest.purrfectsnap.lite.common.util.getPurgeTime
+import cock.crest.purrfectsnap.lite.e2ee.E2EEImplementation
+import cock.crest.purrfectsnap.lite.scripting.RemoteScriptManager
+import cock.crest.purrfectsnap.lite.storage.AppDatabase
+import cock.crest.purrfectsnap.lite.task.RemoteTaskInterface
+import cock.crest.purrfectsnap.lite.task.TaskManager
+import cock.crest.purrfectsnap.lite.ui.manager.MainActivity
+import cock.crest.purrfectsnap.lite.ui.manager.data.InstallationSummary
+import cock.crest.purrfectsnap.lite.ui.manager.data.ModInfo
+import cock.crest.purrfectsnap.lite.ui.manager.data.PlatformInfo
+import cock.crest.purrfectsnap.lite.ui.manager.data.SnapchatAppInfo
+import cock.crest.purrfectsnap.lite.ui.overlay.RemoteOverlay
+import cock.crest.purrfectsnap.lite.ui.setup.Requirements
+import cock.crest.purrfectsnap.lite.ui.setup.SetupActivity
+import cock.crest.purrfectsnap.lite.task.AnnouncementCheckWorker
 import java.io.ByteArrayInputStream
 import java.lang.ref.WeakReference
 import java.security.cert.CertificateFactory
@@ -86,7 +86,7 @@ class RemoteSideContext(
     val sharedPreferences: SharedPreferences get() = androidContext.getSharedPreferences("prefs", 0)
     val fileHandleManager = RemoteFileHandleManager(this)
     val database = AppDatabase(this)
-    val trackerDataManager = me.eternal.purrfectsnap.storage.TrackerDataManagerImpl(database)
+    val trackerDataManager = cock.crest.purrfectsnap.lite.storage.TrackerDataManagerImpl(database)
     val config = ModConfig(androidContext, constantLazyBridge { fileHandleManager })
     val translation = LocaleWrapper(androidContext, constantLazyBridge { fileHandleManager })
     val mappings = MappingsWrapper(constantLazyBridge { fileHandleManager })

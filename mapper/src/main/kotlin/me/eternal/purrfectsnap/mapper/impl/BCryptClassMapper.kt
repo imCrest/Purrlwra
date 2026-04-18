@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.mapper.impl
+package cock.crest.purrfectsnap.lite.mapper.impl
 
 import com.android.tools.smali.dexlib2.iface.instruction.formats.ArrayPayload
-import me.eternal.purrfectsnap.mapper.AbstractClassMapper
-import me.eternal.purrfectsnap.mapper.ext.getClassName
-import me.eternal.purrfectsnap.mapper.ext.getStaticConstructor
-import me.eternal.purrfectsnap.mapper.ext.isFinal
+import cock.crest.purrfectsnap.lite.mapper.AbstractClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ext.getClassName
+import cock.crest.purrfectsnap.lite.mapper.ext.getStaticConstructor
+import cock.crest.purrfectsnap.lite.mapper.ext.isFinal
 
 class BCryptClassMapper : AbstractClassMapper("BCryptClass") {
     val classReference = classReference("class")

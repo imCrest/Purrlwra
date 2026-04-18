@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core
+package cock.crest.purrfectsnap.lite.core
 
-import me.eternal.purrfectsnap.common.scripting.JSModule
+import cock.crest.purrfectsnap.lite.common.scripting.JSModule
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -15,34 +15,34 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.bridge.ConfigStateListener
-import me.eternal.purrfectsnap.bridge.SyncCallback
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ReceiversConfig
-import me.eternal.purrfectsnap.common.action.EnumAction
-import me.eternal.purrfectsnap.common.data.FriendLinkType
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.bridge.toWrapper
-import me.eternal.purrfectsnap.common.database.impl.FriendFeedEntry
-import me.eternal.purrfectsnap.common.database.impl.FriendInfo
-import me.eternal.purrfectsnap.common.data.FriendStreaks
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.MessagingGroupInfo
-import me.eternal.purrfectsnap.common.util.toSerialized
-import me.eternal.purrfectsnap.core.bridge.BridgeClient
-import me.eternal.purrfectsnap.core.data.SnapClassCache
-import me.eternal.purrfectsnap.core.event.events.impl.NativeUnaryCallEvent
-import me.eternal.purrfectsnap.core.event.events.impl.SnapWidgetBroadcastReceiveEvent
-import me.eternal.purrfectsnap.core.ui.InAppOverlay
-import me.eternal.purrfectsnap.core.ui.CustomComposable
-import me.eternal.purrfectsnap.core.util.LSPatchUpdater
-import me.eternal.purrfectsnap.core.util.hook.HookAdapter
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.findRestrictedMethod
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.mapper.impl.PlatformClientAttestationMapper
-import me.eternal.purrfectsnap.common.ui.components.AphelionFriendMutationToast
+import cock.crest.purrfectsnap.lite.bridge.ConfigStateListener
+import cock.crest.purrfectsnap.lite.bridge.SyncCallback
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ReceiversConfig
+import cock.crest.purrfectsnap.lite.common.action.EnumAction
+import cock.crest.purrfectsnap.lite.common.data.FriendLinkType
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.bridge.toWrapper
+import cock.crest.purrfectsnap.lite.common.database.impl.FriendFeedEntry
+import cock.crest.purrfectsnap.lite.common.database.impl.FriendInfo
+import cock.crest.purrfectsnap.lite.common.data.FriendStreaks
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingGroupInfo
+import cock.crest.purrfectsnap.lite.common.util.toSerialized
+import cock.crest.purrfectsnap.lite.core.bridge.BridgeClient
+import cock.crest.purrfectsnap.lite.core.data.SnapClassCache
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NativeUnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.SnapWidgetBroadcastReceiveEvent
+import cock.crest.purrfectsnap.lite.core.ui.InAppOverlay
+import cock.crest.purrfectsnap.lite.core.ui.CustomComposable
+import cock.crest.purrfectsnap.lite.core.util.LSPatchUpdater
+import cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.findRestrictedMethod
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.mapper.impl.PlatformClientAttestationMapper
+import cock.crest.purrfectsnap.lite.common.ui.components.AphelionFriendMutationToast
 import kotlin.reflect.KClass
 import kotlin.system.exitProcess
 import kotlin.system.measureTimeMillis
@@ -223,7 +223,7 @@ class PurrfectSnap {
                 features.init()
                 
                 // Wire up the premium friend mutation toast provider
-                features.get(me.eternal.purrfectsnap.core.features.impl.FriendMutationObserver::class)?.let { observer ->
+                features.get(cock.crest.purrfectsnap.lite.core.features.impl.FriendMutationObserver::class)?.let { observer ->
                     observer.aphelionToastProvider = { icon, text, bitmojiUrl, onDismiss ->
                         lateinit var composable: CustomComposable
                         composable = @Composable {

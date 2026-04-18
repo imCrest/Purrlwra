@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.ktx
+package cock.crest.purrfectsnap.lite.common.scripting.ktx
 
 import com.faendir.rhino_android.RhinoAndroidHelper
 import org.mozilla.javascript.*

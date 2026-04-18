@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.ui.manager.data
+package cock.crest.purrfectsnap.lite.ui.manager.data
 
 import com.google.gson.JsonParser
-import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 import okhttp3.OkHttpClient
 import okhttp3.Request
 

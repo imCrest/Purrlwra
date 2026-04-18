@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import android.os.SystemClock
 import androidx.compose.foundation.BorderStroke
@@ -34,15 +34,15 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.common.util.ktx.openLink
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeAbout
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.PurrfectMarqueeText
-import me.eternal.purrfectsnap.ui.util.headerHeightTracker
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.common.util.ktx.openLink
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeAbout
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.PurrfectMarqueeText
+import cock.crest.purrfectsnap.lite.ui.util.headerHeightTracker
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 
 @Composable
 fun HomeAbout.AphelionAboutScreen(nav: NavBackStackEntry) {

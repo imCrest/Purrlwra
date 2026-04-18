@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.features.impl.global
+package cock.crest.purrfectsnap.lite.core.features.impl.global
 
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.mapper.impl.MemoriesPresenterMapper
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.mapper.impl.MemoriesPresenterMapper
 
 class DisableMemoriesSnapFeed : Feature("Disable Memories Snap Feed") {
     override fun init() {

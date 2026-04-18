@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.features.impl.global
+package cock.crest.purrfectsnap.lite.core.features.impl.global
 
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.NetworkApiRequestEvent
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NetworkApiRequestEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 
 class DisableMetrics : Feature("DisableMetrics") {
     override fun init() {

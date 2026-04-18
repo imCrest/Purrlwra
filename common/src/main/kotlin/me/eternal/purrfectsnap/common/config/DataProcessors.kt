@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.config
+package cock.crest.purrfectsnap.lite.common.config
 
 import com.google.gson.JsonArray
 import com.google.gson.JsonElement

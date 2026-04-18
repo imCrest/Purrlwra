@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.view.View
 import android.widget.TextView
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.ui.triggerRootCloseTouchEvent
-import me.eternal.purrfectsnap.core.util.ktx.getId
-import me.eternal.purrfectsnap.core.util.ktx.getIdentifier
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.children
+import cock.crest.purrfectsnap.lite.core.ui.triggerRootCloseTouchEvent
+import cock.crest.purrfectsnap.lite.core.util.ktx.getId
+import cock.crest.purrfectsnap.lite.core.util.ktx.getIdentifier
 import java.util.regex.Pattern
 
 class DisableConfirmationDialogs : Feature("Disable Confirmation Dialogs") {

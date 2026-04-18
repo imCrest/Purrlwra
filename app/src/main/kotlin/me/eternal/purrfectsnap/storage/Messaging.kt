@@ -1,15 +1,15 @@
-package me.eternal.purrfectsnap.storage
+package cock.crest.purrfectsnap.lite.storage
 
-import me.eternal.purrfectsnap.common.data.FriendStreaks
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.MessagingGroupInfo
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.data.isStealthRule
-import me.eternal.purrfectsnap.common.data.normalizeStealthRules
-import me.eternal.purrfectsnap.common.data.withNormalizedRuleToggle
-import me.eternal.purrfectsnap.common.util.ktx.getInteger
-import me.eternal.purrfectsnap.common.util.ktx.getLongOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.data.FriendStreaks
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingGroupInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.data.isStealthRule
+import cock.crest.purrfectsnap.lite.common.data.normalizeStealthRules
+import cock.crest.purrfectsnap.lite.common.data.withNormalizedRuleToggle
+import cock.crest.purrfectsnap.lite.common.util.ktx.getInteger
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLongOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 import java.io.Serializable
 
 fun AppDatabase.getGroups(): List<MessagingGroupInfo> {

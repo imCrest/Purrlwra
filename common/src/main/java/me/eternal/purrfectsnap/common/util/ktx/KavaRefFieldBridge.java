@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.util.ktx;
+package cock.crest.purrfectsnap.lite.common.util.ktx;
 
 import com.highcapable.kavaref.KavaRef;
 import com.highcapable.kavaref.condition.FieldCondition;

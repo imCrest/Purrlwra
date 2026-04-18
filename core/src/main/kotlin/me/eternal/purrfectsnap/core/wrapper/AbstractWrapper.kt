@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.wrapper
+package cock.crest.purrfectsnap.lite.core.wrapper
 
-import me.eternal.purrfectsnap.core.util.CallbackBuilder
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.core.util.CallbackBuilder
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
 import kotlin.reflect.KProperty
 
 abstract class AbstractWrapper(

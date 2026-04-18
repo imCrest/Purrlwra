@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
-import me.eternal.purrfectsnap.common.config.impl.UserInterfaceTweaks
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoEditor
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoWriter
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.common.config.impl.UserInterfaceTweaks
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoEditor
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoWriter
+import cock.crest.purrfectsnap.lite.core.features.Feature
 import java.io.File
 
 

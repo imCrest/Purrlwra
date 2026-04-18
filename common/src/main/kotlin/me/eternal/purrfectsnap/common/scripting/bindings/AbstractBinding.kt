@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.bindings
+package cock.crest.purrfectsnap.lite.common.scripting.bindings
 
 abstract class AbstractBinding(
     val name: String,

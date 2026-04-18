@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -22,13 +22,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.navigation.NavBackStackEntry
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeLogs
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.core.ui.PurrfectGlassCard
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme
-import me.eternal.purrfectsnap.ui.util.headerHeightTracker
-import me.eternal.purrfectsnap.ui.util.Motion
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeLogs
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectGlassCard
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme
+import cock.crest.purrfectsnap.lite.ui.util.headerHeightTracker
+import cock.crest.purrfectsnap.lite.ui.util.Motion
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -38,8 +38,8 @@ fun HomeLogs.AphelionLogsScreen(nav: NavBackStackEntry) {
     val coroutineScope = rememberCoroutineScope()
     var controlsHeight by remember { mutableStateOf(100.dp) }
     val composeContext = LocalContext.current
-    var logReader by remember { mutableStateOf<me.eternal.purrfectsnap.LogReader?>(null) }
-    val visibleLogs = remember { mutableStateListOf<me.eternal.purrfectsnap.LogLine>() }
+    var logReader by remember { mutableStateOf<cock.crest.purrfectsnap.lite.LogReader?>(null) }
+    val visibleLogs = remember { mutableStateListOf<cock.crest.purrfectsnap.lite.LogLine>() }
     var isRefreshing by remember { mutableStateOf(false) }
     var showFilterDialog by remember { mutableStateOf(false) }
 

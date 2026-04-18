@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.core.features.impl
+package cock.crest.purrfectsnap.lite.core.features.impl
 
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.common.data.MixerStoryType
-import me.eternal.purrfectsnap.common.data.StoryData
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoEditor
-import me.eternal.purrfectsnap.core.event.events.impl.NetworkApiRequestEvent
-import me.eternal.purrfectsnap.core.features.Feature
+import cock.crest.purrfectsnap.lite.common.data.MixerStoryType
+import cock.crest.purrfectsnap.lite.common.data.StoryData
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoEditor
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NetworkApiRequestEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
 
 import java.nio.ByteBuffer
 import kotlin.coroutines.suspendCoroutine

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui.menu.impl
+package cock.crest.purrfectsnap.lite.core.ui.menu.impl
 
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
@@ -9,18 +9,18 @@ import android.view.ViewGroup
 import android.view.ViewGroup.MarginLayoutParams
 import android.widget.Button
 import android.widget.LinearLayout
-import me.eternal.purrfectsnap.bridge.logger.LoggedChatEdit
-import me.eternal.purrfectsnap.core.features.impl.downloader.MediaDownloader
-import me.eternal.purrfectsnap.core.features.impl.experiments.ConvertMessageLocally
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.features.impl.spying.MessageLogger
-import me.eternal.purrfectsnap.core.features.impl.ui.LocalPinnedMessages
-import me.eternal.purrfectsnap.core.ui.ViewTagState
-import me.eternal.purrfectsnap.core.ui.menu.AbstractMenu
-import me.eternal.purrfectsnap.core.ui.triggerCloseTouchEvent
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.vibrateLongPress
+import cock.crest.purrfectsnap.lite.bridge.logger.LoggedChatEdit
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.features.impl.experiments.ConvertMessageLocally
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.MessageLogger
+import cock.crest.purrfectsnap.lite.core.features.impl.ui.LocalPinnedMessages
+import cock.crest.purrfectsnap.lite.core.ui.ViewTagState
+import cock.crest.purrfectsnap.lite.core.ui.menu.AbstractMenu
+import cock.crest.purrfectsnap.lite.core.ui.triggerCloseTouchEvent
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.vibrateLongPress
 
 
 class ChatActionMenu : AbstractMenu() {

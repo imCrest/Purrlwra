@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.bridge
+package cock.crest.purrfectsnap.lite.core.bridge
 
 
 import android.content.ComponentName
@@ -12,24 +12,24 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
 import kotlinx.coroutines.withTimeoutOrNull
-import me.eternal.purrfectsnap.bridge.*
-import me.eternal.purrfectsnap.bridge.call.CallDownloadSession
-import me.eternal.purrfectsnap.bridge.e2ee.E2eeInterface
-import me.eternal.purrfectsnap.bridge.location.LocationManager
-import me.eternal.purrfectsnap.bridge.logger.LoggerInterface
-import me.eternal.purrfectsnap.bridge.logger.TrackerInterface
-import me.eternal.purrfectsnap.bridge.task.TaskInterface
-import me.eternal.purrfectsnap.bridge.scripting.IScripting
-import me.eternal.purrfectsnap.bridge.snapclient.MessagingBridge
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.data.MessagingFriendInfo
-import me.eternal.purrfectsnap.common.data.MessagingGroupInfo
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.data.SocialScope
-import me.eternal.purrfectsnap.common.ui.OverlayType
-import me.eternal.purrfectsnap.common.util.toSerialized
-import me.eternal.purrfectsnap.core.ModContext
+import cock.crest.purrfectsnap.lite.bridge.*
+import cock.crest.purrfectsnap.lite.bridge.call.CallDownloadSession
+import cock.crest.purrfectsnap.lite.bridge.e2ee.E2eeInterface
+import cock.crest.purrfectsnap.lite.bridge.location.LocationManager
+import cock.crest.purrfectsnap.lite.bridge.logger.LoggerInterface
+import cock.crest.purrfectsnap.lite.bridge.logger.TrackerInterface
+import cock.crest.purrfectsnap.lite.bridge.task.TaskInterface
+import cock.crest.purrfectsnap.lite.bridge.scripting.IScripting
+import cock.crest.purrfectsnap.lite.bridge.snapclient.MessagingBridge
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.data.MessagingFriendInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingGroupInfo
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.data.SocialScope
+import cock.crest.purrfectsnap.lite.common.ui.OverlayType
+import cock.crest.purrfectsnap.lite.common.util.toSerialized
+import cock.crest.purrfectsnap.lite.core.ModContext
 import java.nio.charset.StandardCharsets
 import java.util.concurrent.Executors
 import kotlin.coroutines.Continuation
@@ -85,14 +85,14 @@ class BridgeClient(
                             //ensure the remote process is running
                             runCatching {
                                 startActivity(Intent()
-                                    .setClassName(Constants.MODULE_PACKAGE_NAME, "me.eternal.purrfectsnap.bridge.ForceStartActivity")
+                                    .setClassName(Constants.MODULE_PACKAGE_NAME, "cock.crest.purrfectsnap.lite.bridge.ForceStartActivity")
                                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_MULTIPLE_TASK)
                                 )
                             }
 
                             runCatching {
                                 val intent = Intent()
-                                    .setClassName(Constants.MODULE_PACKAGE_NAME, "me.eternal.purrfectsnap.bridge.BridgeService")
+                                    .setClassName(Constants.MODULE_PACKAGE_NAME, "cock.crest.purrfectsnap.lite.bridge.BridgeService")
                                 runCatching {
                                     if (this@BridgeClient::service.isInitialized) {
                                         unbindService(this@BridgeClient)

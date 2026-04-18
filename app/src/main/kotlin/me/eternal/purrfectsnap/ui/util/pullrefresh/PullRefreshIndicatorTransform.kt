@@ -16,7 +16,7 @@
 
 @file:Suppress("DEPRECATION")
 
-package me.eternal.purrfectsnap.ui.util.pullrefresh
+package cock.crest.purrfectsnap.lite.ui.util.pullrefresh
 
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.ui.Modifier

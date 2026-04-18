@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup.screens.impl
+package cock.crest.purrfectsnap.lite.ui.setup.screens.impl
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -44,12 +44,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import java.util.Locale
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.screens.SetupScreen
-import me.eternal.purrfectsnap.ui.util.Motion
-import me.eternal.purrfectsnap.ui.util.ObservableMutableState
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
+import cock.crest.purrfectsnap.lite.ui.util.Motion
+import cock.crest.purrfectsnap.lite.ui.util.ObservableMutableState
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 
 class PickLanguageScreen : SetupScreen() {
     private val availableLocales by lazy {

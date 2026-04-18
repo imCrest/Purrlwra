@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FavoriteBorder
@@ -7,12 +7,12 @@ import com.google.gson.JsonObject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.NetworkApiRequestEvent
-import me.eternal.purrfectsnap.core.event.events.impl.UnaryCallEvent
-import me.eternal.purrfectsnap.core.features.BridgeFileFeature
-import me.eternal.purrfectsnap.core.ui.triggerRootCloseTouchEvent
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.NetworkApiRequestEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.UnaryCallEvent
+import cock.crest.purrfectsnap.lite.core.features.BridgeFileFeature
+import cock.crest.purrfectsnap.lite.core.ui.triggerRootCloseTouchEvent
 import java.io.InputStreamReader
 import java.nio.ByteBuffer
 import java.util.UUID

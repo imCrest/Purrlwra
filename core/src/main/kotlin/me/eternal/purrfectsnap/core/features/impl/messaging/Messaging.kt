@@ -1,23 +1,23 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import android.content.ComponentName
 import android.content.Intent
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ReceiversConfig
-import me.eternal.purrfectsnap.core.event.events.impl.ConversationUpdateEvent
-import me.eternal.purrfectsnap.core.event.events.impl.OnSnapInteractionEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.spying.StealthMode
-import me.eternal.purrfectsnap.core.util.EvictingMap
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
-import me.eternal.purrfectsnap.core.wrapper.impl.*
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
-import me.eternal.purrfectsnap.mapper.impl.FriendsFeedEventDispatcherMapper
-import me.eternal.purrfectsnap.mapper.impl.PlatformPresenceActionWrapperMapper
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ReceiversConfig
+import cock.crest.purrfectsnap.lite.core.event.events.impl.ConversationUpdateEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.OnSnapInteractionEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.StealthMode
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.*
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.mapper.impl.FriendsFeedEventDispatcherMapper
+import cock.crest.purrfectsnap.lite.mapper.impl.PlatformPresenceActionWrapperMapper
 import java.util.UUID
 import java.util.concurrent.Future
 
@@ -98,7 +98,7 @@ class Messaging : Feature("Messaging") {
                 context.messagingBridge.triggerSessionStart()
                 context.mainActivity?.takeIf { it.intent.getBooleanExtra(ReceiversConfig.MESSAGING_PREVIEW_EXTRA, false) }?.run {
                     startActivity(Intent().apply {
-                        setComponent(ComponentName(Constants.MODULE_PACKAGE_NAME, "me.eternal.purrfectsnap.ui.manager.MainActivity"))
+                        setComponent(ComponentName(Constants.MODULE_PACKAGE_NAME, "cock.crest.purrfectsnap.lite.ui.manager.MainActivity"))
                         addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     })
                 }

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages
+package cock.crest.purrfectsnap.lite.ui.manager.pages
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -50,24 +50,24 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.download.DownloadProcessor
-import me.eternal.purrfectsnap.bridge.DownloadCallback
-import me.eternal.purrfectsnap.common.data.download.MediaDownloadSource
-import me.eternal.purrfectsnap.common.data.download.DownloadMetadata
-import me.eternal.purrfectsnap.common.ui.TopBarActionButton
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.data.download.createNewFilePath
-import me.eternal.purrfectsnap.common.util.snap.RemoteMediaResolver
-import me.eternal.purrfectsnap.download.FFMpegProcessor
-import me.eternal.purrfectsnap.task.PendingTask
-import me.eternal.purrfectsnap.task.PendingTaskListener
-import me.eternal.purrfectsnap.task.Task
-import me.eternal.purrfectsnap.task.TaskStatus
-import me.eternal.purrfectsnap.task.TaskType
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.*
+import cock.crest.purrfectsnap.lite.download.DownloadProcessor
+import cock.crest.purrfectsnap.lite.bridge.DownloadCallback
+import cock.crest.purrfectsnap.lite.common.data.download.MediaDownloadSource
+import cock.crest.purrfectsnap.lite.common.data.download.DownloadMetadata
+import cock.crest.purrfectsnap.lite.common.ui.TopBarActionButton
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.data.download.createNewFilePath
+import cock.crest.purrfectsnap.lite.common.util.snap.RemoteMediaResolver
+import cock.crest.purrfectsnap.lite.download.FFMpegProcessor
+import cock.crest.purrfectsnap.lite.task.PendingTask
+import cock.crest.purrfectsnap.lite.task.PendingTaskListener
+import cock.crest.purrfectsnap.lite.task.Task
+import cock.crest.purrfectsnap.lite.task.TaskStatus
+import cock.crest.purrfectsnap.lite.task.TaskType
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.*
 import java.io.File
 
 class TasksRootSection : Routes.Route() {
@@ -311,7 +311,7 @@ class TasksRootSection : Routes.Route() {
             }
 
             Column(modifier = Modifier.headerHeightTracker { controlsHeight = it }) {
-                me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar(
+                cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar(
                     title = translation["manager.routes.tasks"],
                     subtitle = translation["tasks_tagline"],
                     scrollOffset = computedScrollOffset,

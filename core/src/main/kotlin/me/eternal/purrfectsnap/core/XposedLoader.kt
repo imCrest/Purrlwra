@@ -1,13 +1,13 @@
-package me.eternal.purrfectsnap.core
+package cock.crest.purrfectsnap.lite.core
 
 import android.app.Application
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.XposedBridge
 import de.robv.android.xposed.callbacks.XC_LoadPackage
-import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 
 class XposedLoader : IXposedHookLoadPackage {
     override fun handleLoadPackage(param: XC_LoadPackage.LoadPackageParam) {

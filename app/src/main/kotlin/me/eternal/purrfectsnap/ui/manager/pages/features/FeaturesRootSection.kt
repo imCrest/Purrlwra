@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.features
+package cock.crest.purrfectsnap.lite.ui.manager.pages.features
 
 import android.net.Uri
 import androidx.compose.animation.*
@@ -71,20 +71,20 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.config.*
-import me.eternal.purrfectsnap.common.config.FeatureNotice
+import cock.crest.purrfectsnap.lite.common.config.*
+import cock.crest.purrfectsnap.lite.common.config.FeatureNotice
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import me.eternal.purrfectsnap.common.ui.TopBarActionButton
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
-import me.eternal.purrfectsnap.core.features.impl.experiments.RandomizedDeviceProfile
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.ManagerTheme
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.*
-import me.eternal.purrfectsnap.ui.util.Dialog
-import me.eternal.purrfectsnap.ui.util.DialogProperties
+import cock.crest.purrfectsnap.lite.common.ui.TopBarActionButton
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableStateList
+import cock.crest.purrfectsnap.lite.core.features.impl.experiments.RandomizedDeviceProfile
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.ManagerTheme
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.*
+import cock.crest.purrfectsnap.lite.ui.util.Dialog
+import cock.crest.purrfectsnap.lite.ui.util.DialogProperties
 import org.json.JSONArray
 import org.json.JSONObject
 import java.util.UUID
@@ -121,6 +121,7 @@ class FeaturesRootSection : Routes.Route() {
     companion object {
         const val FEATURE_CONTAINER_ROUTE = "feature_container/{name}"
         const val SEARCH_FEATURE_ROUTE = "search_feature/{keyword}"
+        private val LITE_ROOT_CONTAINERS = setOf("messaging", "experimental")
     }
 
     internal val allContainers by lazy {
@@ -136,7 +137,16 @@ class FeaturesRootSection : Routes.Route() {
                 }
             }
         }
-        queryContainerRecursive(context.config.root)
+        context.config.root.properties.forEach {
+            if (
+                it.key.name in LITE_ROOT_CONTAINERS &&
+                it.key.dataType.type == DataProcessors.Type.CONTAINER &&
+                !it.key.params.flags.contains(ConfigFlag.HIDDEN)
+            ) {
+                containers[it.key.name] = (it.key to it.value).toPropertyPair() as PropertyPair<Any>
+                queryContainerRecursive(it.value.get() as ConfigContainer)
+            }
+        }
         containers
     }
 
@@ -153,6 +163,10 @@ class FeaturesRootSection : Routes.Route() {
 
     internal fun isSearchVisibleProperty(propertyKey: PropertyKey<*>): Boolean {
         return !propertyKey.params.flags.contains(ConfigFlag.HIDDEN)
+    }
+
+    internal fun isVisibleAtLiteRoot(propertyKey: PropertyKey<*>): Boolean {
+        return propertyKey.name in LITE_ROOT_CONTAINERS
     }
 
     internal fun getFolderReadablePath(context: android.content.Context, folderUri: String?): String? {
@@ -1316,7 +1330,7 @@ class FeaturesRootSection : Routes.Route() {
 
         Column(modifier = modifier.headerHeightTracker { onHeightMeasured(it) }) {
             if (isAphelion) {
-                me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar(
+                cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar(
                     title = headerTitle,
                     subtitle = if (showSearchBar) null else subtitleText,
                     onBack = onBack,
@@ -1896,6 +1910,7 @@ class FeaturesRootSection : Routes.Route() {
             properties = remember(configContainer.globalState) {
                 configContainer.properties.map { (it.key to it.value).toPropertyPair() as PropertyPair<Any> }.filter {
                     !it.key.params.flags.contains(ConfigFlag.HIDDEN) &&
+                        (configContainer !== context.config.root || isVisibleAtLiteRoot(it.key)) &&
                         (
                             configContainer !== context.config.root.experimental.spoof.randomizeDeviceProfile ||
                                 configContainer.globalState == true ||

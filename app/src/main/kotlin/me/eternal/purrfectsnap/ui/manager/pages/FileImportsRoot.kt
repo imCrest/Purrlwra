@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages
+package cock.crest.purrfectsnap.lite.ui.manager.pages
 
 import android.net.Uri
 import android.text.format.Formatter
@@ -48,14 +48,14 @@ import androidx.compose.ui.unit.sp
 import androidx.documentfile.provider.DocumentFile
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.ui.AsyncUpdateDispatcher
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.util.openFile
+import cock.crest.purrfectsnap.lite.common.ui.AsyncUpdateDispatcher
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableStateList
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.util.openFile
 import java.text.DateFormat
 
 class FileImportsRoot: Routes.Route() {

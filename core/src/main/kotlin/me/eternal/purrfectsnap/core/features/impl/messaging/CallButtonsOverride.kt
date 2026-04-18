@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import android.view.MotionEvent
 import android.view.View
@@ -19,18 +19,18 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.PurrfectGlassCard
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme
-import me.eternal.purrfectsnap.core.ui.ViewAppearanceHelper
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.ui.hideViewCompletely
-import me.eternal.purrfectsnap.core.util.hook.HookAdapter
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectGlassCard
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme
+import cock.crest.purrfectsnap.lite.core.ui.ViewAppearanceHelper
+import cock.crest.purrfectsnap.lite.core.ui.children
+import cock.crest.purrfectsnap.lite.core.ui.hideViewCompletely
+import cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 
 class CallButtonsOverride : Feature("CallButtonsOverride") {
     private fun hookTouchEvent(param: HookAdapter, motionEvent: MotionEvent, onConfirm: () -> Unit) {

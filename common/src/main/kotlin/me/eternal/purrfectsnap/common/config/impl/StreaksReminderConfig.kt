@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.common.config.impl
+package cock.crest.purrfectsnap.lite.common.config.impl
 
-import me.eternal.purrfectsnap.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
 
 class StreaksReminderConfig : ConfigContainer(hasGlobalState = true) {
     val interval = integer("interval", 1)

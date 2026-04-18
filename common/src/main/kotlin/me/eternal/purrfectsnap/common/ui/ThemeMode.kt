@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.ui
+package cock.crest.purrfectsnap.lite.common.ui
 
 enum class ThemeMode(val displayName: String) {
     SYSTEM("System Default"),

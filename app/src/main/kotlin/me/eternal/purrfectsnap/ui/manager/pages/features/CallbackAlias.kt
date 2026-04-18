@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.features
+package cock.crest.purrfectsnap.lite.ui.manager.pages.features
 
 typealias ClickCallback = (Boolean) -> Unit
 typealias RegisterClickCallback = (ClickCallback) -> ClickCallback

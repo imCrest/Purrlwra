@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import android.content.SharedPreferences
 import android.content.Intent
@@ -36,24 +36,24 @@ import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.common.action.EnumAction
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.storage.getAllScopeNotes
-import me.eternal.purrfectsnap.storage.setAllScopeNotes
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeSettings
-import me.eternal.purrfectsnap.ui.manager.theme.aphelion.AphelionHaptics
-import me.eternal.purrfectsnap.ui.util.headerHeightTracker
-import me.eternal.purrfectsnap.ui.util.Motion
-import me.eternal.purrfectsnap.ui.setup.Requirements
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
-import me.eternal.purrfectsnap.ui.util.saveFile
-import me.eternal.purrfectsnap.ui.util.openFile
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.common.action.EnumAction
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.storage.getAllScopeNotes
+import cock.crest.purrfectsnap.lite.storage.setAllScopeNotes
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeSettings
+import cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion.AphelionHaptics
+import cock.crest.purrfectsnap.lite.ui.util.headerHeightTracker
+import cock.crest.purrfectsnap.lite.ui.util.Motion
+import cock.crest.purrfectsnap.lite.ui.setup.Requirements
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.ui.util.saveFile
+import cock.crest.purrfectsnap.lite.ui.util.openFile
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalView
@@ -112,7 +112,7 @@ fun HomeSettings.AphelionSettingsScreen(nav: NavBackStackEntry) {
                         .apply()
                     context.config.reset()
                     context.config.writeConfig()
-                    val intent = Intent(context.androidContext, me.eternal.purrfectsnap.ui.setup.SetupActivity::class.java)
+                    val intent = Intent(context.androidContext, cock.crest.purrfectsnap.lite.ui.setup.SetupActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                     context.androidContext.startActivity(intent)
                     routes.navController.popBackStack()

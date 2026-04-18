@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.wrapper.impl.media.dash
+package cock.crest.purrfectsnap.lite.core.wrapper.impl.media.dash
 
-import me.eternal.purrfectsnap.core.util.ktx.findFieldNamesByType
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.wrapper.AbstractWrapper
+import cock.crest.purrfectsnap.lite.core.util.ktx.findFieldNamesByType
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.wrapper.AbstractWrapper
 
 class LongformVideoPlaylistItem(obj: Any?) : AbstractWrapper(obj) {
     private val chapterListField by lazy {

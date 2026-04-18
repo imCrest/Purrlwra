@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting
+package cock.crest.purrfectsnap.lite.common.scripting
 
 fun Any?.toPrimitiveValue(type: Lazy<String>) = when (this) {
     is Number -> when (type.value) {

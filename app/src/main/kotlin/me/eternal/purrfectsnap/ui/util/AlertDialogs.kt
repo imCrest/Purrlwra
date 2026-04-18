@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.util
+package cock.crest.purrfectsnap.lite.ui.util
 
 import android.content.Context
 import android.view.MotionEvent
@@ -43,7 +43,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import me.eternal.purrfectsnap.common.config.ConfigFlag
+import cock.crest.purrfectsnap.lite.common.config.ConfigFlag
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.net.toUri
 import com.github.skydoves.colorpicker.compose.*
@@ -51,13 +51,13 @@ import com.google.gson.JsonParser
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.common.config.DataProcessors
-import me.eternal.purrfectsnap.common.config.PropertyPair
-import me.eternal.purrfectsnap.common.ui.AutoClearKeyboardFocus
-import me.eternal.purrfectsnap.common.util.ktx.await
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.common.config.DataProcessors
+import cock.crest.purrfectsnap.lite.common.config.PropertyPair
+import cock.crest.purrfectsnap.lite.common.ui.AutoClearKeyboardFocus
+import cock.crest.purrfectsnap.lite.common.util.ktx.await
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.osmdroid.config.Configuration
@@ -79,8 +79,8 @@ import java.time.Instant
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
-import me.eternal.purrfectsnap.ui.util.Dialog as StandardDialog
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.ui.util.Dialog as StandardDialog
 
 
 class AlertDialogs(

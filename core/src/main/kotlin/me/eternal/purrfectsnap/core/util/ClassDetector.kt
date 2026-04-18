@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util
+package cock.crest.purrfectsnap.lite.core.util
 
 object ClassDetector {
     fun findClassBySignature(

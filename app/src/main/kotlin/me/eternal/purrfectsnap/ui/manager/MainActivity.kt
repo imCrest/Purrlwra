@@ -1,5 +1,5 @@
 @file:OptIn(androidx.compose.animation.ExperimentalAnimationApi::class)
-package me.eternal.purrfectsnap.ui.manager
+package cock.crest.purrfectsnap.lite.ui.manager
 
 import android.app.Activity
 import android.content.Intent
@@ -38,16 +38,16 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Warning
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.SharedContextHolder
-import me.eternal.purrfectsnap.common.ui.AppMaterialTheme
-import me.eternal.purrfectsnap.common.ui.ThemeMode
-import me.eternal.purrfectsnap.common.ui.ThemePreferences
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-import me.eternal.purrfectsnap.ui.manager.theme.aphelion.CircularRevealOverlay
-import me.eternal.purrfectsnap.ui.util.ThankYouDialog
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.SharedContextHolder
+import cock.crest.purrfectsnap.lite.common.ui.AppMaterialTheme
+import cock.crest.purrfectsnap.lite.common.ui.ThemeMode
+import cock.crest.purrfectsnap.lite.common.ui.ThemePreferences
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+import cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion.CircularRevealOverlay
+import cock.crest.purrfectsnap.lite.ui.util.ThankYouDialog
 import android.content.IntentFilter
 
 class MainActivity : ComponentActivity() {
@@ -55,7 +55,7 @@ class MainActivity : ComponentActivity() {
     private lateinit var managerContext: RemoteSideContext
 
     companion object {
-        const val RESTART_ACTION = "me.eternal.purrfectsnap.RESTART"
+        const val RESTART_ACTION = "cock.crest.purrfectsnap.lite.RESTART"
     }
 
     private val restartReceiver = object : android.content.BroadcastReceiver() {

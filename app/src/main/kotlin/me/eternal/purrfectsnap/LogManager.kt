@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
 import android.util.Log
 import com.google.gson.GsonBuilder
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.logger.LogChannel
-import me.eternal.purrfectsnap.common.logger.LogLevel
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.LogChannel
+import cock.crest.purrfectsnap.lite.common.logger.LogLevel
 import java.io.File
 import java.io.OutputStream
 import java.io.RandomAccessFile

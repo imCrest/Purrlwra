@@ -1,22 +1,22 @@
-package me.eternal.purrfectsnap.core.features.impl.global
+package cock.crest.purrfectsnap.lite.core.features.impl.global
 
 import android.os.SystemClock
 import android.view.View
-import me.eternal.purrfectsnap.core.event.events.impl.BindViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.hideViewCompletely
-import me.eternal.purrfectsnap.core.ui.dispatchSyntheticTap
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
-import me.eternal.purrfectsnap.core.wrapper.impl.SnapUUID
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.Layer
-import me.eternal.purrfectsnap.core.wrapper.impl.media.opera.ParamMap
-import me.eternal.purrfectsnap.mapper.impl.CallbackMapper
-import me.eternal.purrfectsnap.mapper.impl.OperaPageViewControllerMapper
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BindViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.ui.hideViewCompletely
+import cock.crest.purrfectsnap.lite.core.ui.dispatchSyntheticTap
+import cock.crest.purrfectsnap.lite.core.util.dataBuilder
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.SnapUUID
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.Layer
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.media.opera.ParamMap
+import cock.crest.purrfectsnap.lite.mapper.impl.CallbackMapper
+import cock.crest.purrfectsnap.lite.mapper.impl.OperaPageViewControllerMapper
 import java.util.ArrayList
 import java.util.Collections
 import java.util.concurrent.ConcurrentHashMap
@@ -60,7 +60,7 @@ class AdBlockFix : Feature("AdBlockFix") {
             fun hookOnce(
                 callbackClassName: String,
                 methodName: String,
-                block: (param: me.eternal.purrfectsnap.core.util.hook.HookAdapter) -> Unit
+                block: (param: cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter) -> Unit
             ) {
                 val hookKey = "$callbackClassName#$methodName"
                 if (!hookedCallbacks.add(hookKey)) return

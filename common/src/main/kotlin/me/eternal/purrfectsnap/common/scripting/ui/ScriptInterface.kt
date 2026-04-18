@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.ui
+package cock.crest.purrfectsnap.lite.common.scripting.ui
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -23,11 +23,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.scripting.ui.components.Node
-import me.eternal.purrfectsnap.common.scripting.ui.components.NodeType
-import me.eternal.purrfectsnap.common.scripting.ui.components.impl.ActionNode
-import me.eternal.purrfectsnap.common.scripting.ui.components.impl.ActionType
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.Node
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.NodeType
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl.ActionNode
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl.ActionType
 import kotlin.math.abs
 
 

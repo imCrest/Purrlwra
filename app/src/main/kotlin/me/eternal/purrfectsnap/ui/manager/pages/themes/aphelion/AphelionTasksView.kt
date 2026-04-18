@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
@@ -48,18 +48,18 @@ import coil.request.ImageRequest
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.ui.TopBarActionButton
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.task.*
-import me.eternal.purrfectsnap.ui.manager.Routes
-import me.eternal.purrfectsnap.ui.manager.pages.TasksRootSection
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.OnLifecycleEvent
-import me.eternal.purrfectsnap.ui.util.coil.cacheKey
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
-import me.eternal.purrfectsnap.ui.util.Motion
-import me.eternal.purrfectsnap.ui.manager.pages.TasksRootSection.TaskTab
-import me.eternal.purrfectsnap.ui.util.headerHeightTracker
+import cock.crest.purrfectsnap.lite.common.ui.TopBarActionButton
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.task.*
+import cock.crest.purrfectsnap.lite.ui.manager.Routes
+import cock.crest.purrfectsnap.lite.ui.manager.pages.TasksRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.OnLifecycleEvent
+import cock.crest.purrfectsnap.lite.ui.util.coil.cacheKey
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.ui.util.Motion
+import cock.crest.purrfectsnap.lite.ui.manager.pages.TasksRootSection.TaskTab
+import cock.crest.purrfectsnap.lite.ui.util.headerHeightTracker
 import kotlinx.coroutines.delay
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -355,7 +355,7 @@ fun TasksRootSection.AphelionTasksScreen(nav: NavBackStackEntry) {
             }
         }
 
-        me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar(
+        cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar(
             title = context.translation["manager.routes.tasks"] ?: "Tasks",
             subtitle = subtitle,
             scrollOffset = routes.navigation?.globalScrollOffset ?: 0,

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.experiments
+package cock.crest.purrfectsnap.lite.core.features.impl.experiments
 
 import android.app.ActivityManager
 import android.app.Notification
@@ -20,18 +20,18 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import me.eternal.purrfectsnap.bridge.AutoOpenInterface
-import me.eternal.purrfectsnap.common.config.PropertyValue
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessageState
-import me.eternal.purrfectsnap.common.data.MessageUpdate
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.core.event.events.impl.BuildMessageEvent
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.bridge.AutoOpenInterface
+import cock.crest.purrfectsnap.lite.common.config.PropertyValue
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessageState
+import cock.crest.purrfectsnap.lite.common.data.MessageUpdate
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.core.event.events.impl.BuildMessageEvent
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
 import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
@@ -46,9 +46,9 @@ import kotlin.random.Random
  */
 class AutoOpenSnaps: MessagingRuleFeature("Auto Open Snaps", MessagingRuleType.AUTO_OPEN_SNAPS) {
     companion object {
-        const val ACTION_PAUSE_RESUME = "me.eternal.purrfectsnap.AUTO_OPEN_SNAPS_PAUSE_RESUME"
-        const val ACTION_CLEAR_QUEUE = "me.eternal.purrfectsnap.AUTO_OPEN_SNAPS_CLEAR_QUEUE"
-        const val ACTION_STOP_ENGINE = "me.eternal.purrfectsnap.AUTO_OPEN_SNAPS_STOP_ENGINE"
+        const val ACTION_PAUSE_RESUME = "cock.crest.purrfectsnap.lite.AUTO_OPEN_SNAPS_PAUSE_RESUME"
+        const val ACTION_CLEAR_QUEUE = "cock.crest.purrfectsnap.lite.AUTO_OPEN_SNAPS_CLEAR_QUEUE"
+        const val ACTION_STOP_ENGINE = "cock.crest.purrfectsnap.lite.AUTO_OPEN_SNAPS_STOP_ENGINE"
         
         private const val STATUS_NOTIFICATION_ID = 54321
         private const val NOTIFICATION_GROUP_KEY = "purrfectsnap.AUTO_OPEN"
@@ -75,7 +75,7 @@ class AutoOpenSnaps: MessagingRuleFeature("Auto Open Snaps", MessagingRuleType.A
 
     private val autoOpenConfig by lazy { this@AutoOpenSnaps.context.config.messaging.autoOpenSnaps }
     private val notificationManager by lazy { this@AutoOpenSnaps.context.androidContext.getSystemService(NotificationManager::class.java) }
-    private val prefs by lazy { this@AutoOpenSnaps.context.androidContext.getSharedPreferences("me.eternal.purrfectsnap_preferences", Context.MODE_PRIVATE) }
+    private val prefs by lazy { this@AutoOpenSnaps.context.androidContext.getSharedPreferences("cock.crest.purrfectsnap.lite_preferences", Context.MODE_PRIVATE) }
     private val messaging by lazy { this@AutoOpenSnaps.context.feature(Messaging::class) }
     private var wakeLock: PowerManager.WakeLock? = null
 

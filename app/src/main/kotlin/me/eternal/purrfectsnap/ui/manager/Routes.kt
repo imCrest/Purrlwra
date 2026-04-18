@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager
+package cock.crest.purrfectsnap.lite.ui.manager
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.material.icons.Icons
@@ -11,29 +11,29 @@ import androidx.navigation.NavController
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavGraphBuilder
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.ui.manager.pages.FileImportsRoot
-import me.eternal.purrfectsnap.ui.manager.pages.LoggerHistoryRoot
-import me.eternal.purrfectsnap.ui.manager.pages.ManageReposSection
-import me.eternal.purrfectsnap.ui.manager.pages.TasksRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.features.FeaturesRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.features.ManageRuleFeature
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeLogs
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeAbout
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeSettings
-import me.eternal.purrfectsnap.ui.manager.pages.home.RetroGameScreen
-import me.eternal.purrfectsnap.ui.manager.pages.location.BetterLocationRoot
-import me.eternal.purrfectsnap.ui.manager.pages.scripting.ScriptingRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.social.LoggedStories
-import me.eternal.purrfectsnap.ui.manager.pages.social.ManageScope
-import me.eternal.purrfectsnap.ui.manager.pages.social.MessagingPreview
-import me.eternal.purrfectsnap.ui.manager.pages.social.SocialRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.tracker.EditRule
-import me.eternal.purrfectsnap.ui.manager.pages.tracker.FriendTrackerManagerRoot
-import me.eternal.purrfectsnap.ui.manager.pages.tracker.FriendTrackerCatalog
-import me.eternal.purrfectsnap.ui.manager.pages.tracker.ManageFriendTrackerReposSection
-import me.eternal.purrfectsnap.ui.manager.pages.scripting.ManageScriptReposSection
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.ui.manager.pages.FileImportsRoot
+import cock.crest.purrfectsnap.lite.ui.manager.pages.LoggerHistoryRoot
+import cock.crest.purrfectsnap.lite.ui.manager.pages.ManageReposSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.TasksRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.FeaturesRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.ManageRuleFeature
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeLogs
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeAbout
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeSettings
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.RetroGameScreen
+import cock.crest.purrfectsnap.lite.ui.manager.pages.location.BetterLocationRoot
+import cock.crest.purrfectsnap.lite.ui.manager.pages.scripting.ScriptingRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.LoggedStories
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.ManageScope
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.MessagingPreview
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.SocialRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.EditRule
+import cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.FriendTrackerManagerRoot
+import cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.FriendTrackerCatalog
+import cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.ManageFriendTrackerReposSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.scripting.ManageScriptReposSection
 
 
 data class RouteInfo(
@@ -61,16 +61,16 @@ class Routes(
     }
 
     lateinit var navController: NavController
-    lateinit var activityLauncher: me.eternal.purrfectsnap.ui.util.ActivityLauncherHelper
-    var navigation: me.eternal.purrfectsnap.ui.manager.Navigation? = null
+    lateinit var activityLauncher: cock.crest.purrfectsnap.lite.ui.util.ActivityLauncherHelper
+    var navigation: cock.crest.purrfectsnap.lite.ui.manager.Navigation? = null
     private val routes = mutableListOf<Route>()
     var bottomPadding: androidx.compose.ui.unit.Dp = 0.dp
     var configJsonForImport: String? = null
     var friendTrackerConfigJsonForImport: String? = null
     var onRuleImported: (() -> Unit)? = null
 
-    val configImportConfirmation = route(RouteInfo(CONFIG_IMPORT_CONFIRMATION_ROUTE, hasOwnTopBar = true), me.eternal.purrfectsnap.ui.manager.pages.features.ConfigImportConfirmationScreen())
-    val configExportSummary = route(RouteInfo(CONFIG_EXPORT_SUMMARY_ROUTE, hasOwnTopBar = true), me.eternal.purrfectsnap.ui.manager.pages.features.ConfigExportSummaryScreen())
+    val configImportConfirmation = route(RouteInfo(CONFIG_IMPORT_CONFIRMATION_ROUTE, hasOwnTopBar = true), cock.crest.purrfectsnap.lite.ui.manager.pages.features.ConfigImportConfirmationScreen())
+    val configExportSummary = route(RouteInfo(CONFIG_EXPORT_SUMMARY_ROUTE, hasOwnTopBar = true), cock.crest.purrfectsnap.lite.ui.manager.pages.features.ConfigExportSummaryScreen())
 
     val tasks = route(RouteInfo("tasks", icon = Icons.Default.TaskAlt, primary = true, hasOwnTopBar = true), TasksRootSection())
 
@@ -86,8 +86,8 @@ class Routes(
     val viewLoggerHistory = route(RouteInfo(VIEW_LOGGER_HISTORY_ROUTE, hasOwnTopBar = true), LoggerHistoryRoot()).parent(home)
     val friendTracker = route(RouteInfo("friend_tracker", icon = Icons.Default.PersonSearch, hasOwnTopBar = true), FriendTrackerManagerRoot()).parent(home)
     val editRule = route(RouteInfo("edit_rule/?rule_id={rule_id}", hasOwnTopBar = true), EditRule())
-    val friendTrackerConfigExport = route(RouteInfo(FRIEND_TRACKER_CONFIG_EXPORT_ROUTE), me.eternal.purrfectsnap.ui.manager.pages.tracker.FriendTrackerConfigExportScreen())
-    val friendTrackerConfigImport = route(RouteInfo(FRIEND_TRACKER_CONFIG_IMPORT_ROUTE), me.eternal.purrfectsnap.ui.manager.pages.tracker.FriendTrackerConfigImportScreen())
+    val friendTrackerConfigExport = route(RouteInfo(FRIEND_TRACKER_CONFIG_EXPORT_ROUTE), cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.FriendTrackerConfigExportScreen())
+    val friendTrackerConfigImport = route(RouteInfo(FRIEND_TRACKER_CONFIG_IMPORT_ROUTE), cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.FriendTrackerConfigImportScreen())
     val friendTrackerCatalog = route(RouteInfo("friend_tracker_catalog", hasOwnTopBar = true), FriendTrackerCatalog())
     val manageFriendTrackerRepos = route(RouteInfo("manage_friend_tracker_repos", hasOwnTopBar = true), ManageFriendTrackerReposSection())
 

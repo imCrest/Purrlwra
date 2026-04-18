@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.util
+package cock.crest.purrfectsnap.lite.core.util
 
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.util.ktx.getStaticObjectField
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.util.ktx.getStaticObjectField
 import java.io.File
 import java.util.zip.ZipFile
 

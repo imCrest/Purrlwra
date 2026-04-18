@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.core.event.events.impl
+package cock.crest.purrfectsnap.lite.core.event.events.impl
 
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import me.eternal.purrfectsnap.common.database.impl.ConversationMessage
-import me.eternal.purrfectsnap.core.event.Event
+import cock.crest.purrfectsnap.lite.common.database.impl.ConversationMessage
+import cock.crest.purrfectsnap.lite.core.event.Event
 
 class BindViewEvent(
     val prevModel: Any,

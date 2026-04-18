@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui
+package cock.crest.purrfectsnap.lite.core.ui
 
 import android.app.Activity
 import android.view.View
@@ -36,16 +36,16 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.common.ui.AppMaterialTheme
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
-import me.eternal.purrfectsnap.core.event.Event
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.PurrfectSnap
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.isDarkTheme
+import cock.crest.purrfectsnap.lite.common.ui.AppMaterialTheme
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.core.event.Event
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.PurrfectSnap
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.isDarkTheme
 import kotlin.math.roundToInt
 import kotlin.random.Random
 import kotlin.system.exitProcess

@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
-import me.eternal.purrfectsnap.bridge.logger.TrackerInterface
-import me.eternal.purrfectsnap.common.data.ScopedTrackerRule
-import me.eternal.purrfectsnap.common.data.TrackerEventsResult
-import me.eternal.purrfectsnap.common.data.TrackerRule
-import me.eternal.purrfectsnap.common.data.TrackerRuleEvent
-import me.eternal.purrfectsnap.common.util.toSerialized
-import me.eternal.purrfectsnap.storage.getRuleTrackerScopes
-import me.eternal.purrfectsnap.storage.getTrackerEvents
-import me.eternal.purrfectsnap.storage.updateFriendScore
+import cock.crest.purrfectsnap.lite.bridge.logger.TrackerInterface
+import cock.crest.purrfectsnap.lite.common.data.ScopedTrackerRule
+import cock.crest.purrfectsnap.lite.common.data.TrackerEventsResult
+import cock.crest.purrfectsnap.lite.common.data.TrackerRule
+import cock.crest.purrfectsnap.lite.common.data.TrackerRuleEvent
+import cock.crest.purrfectsnap.lite.common.util.toSerialized
+import cock.crest.purrfectsnap.lite.storage.getRuleTrackerScopes
+import cock.crest.purrfectsnap.lite.storage.getTrackerEvents
+import cock.crest.purrfectsnap.lite.storage.updateFriendScore
 
 
 class RemoteTracker(

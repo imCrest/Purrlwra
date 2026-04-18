@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.scripting.ui.components.impl
+package cock.crest.purrfectsnap.lite.common.scripting.ui.components.impl
 
-import me.eternal.purrfectsnap.common.scripting.ui.components.Node
-import me.eternal.purrfectsnap.common.scripting.ui.components.NodeType
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.Node
+import cock.crest.purrfectsnap.lite.common.scripting.ui.components.NodeType
 
 enum class ActionType {
     LAUNCHED,

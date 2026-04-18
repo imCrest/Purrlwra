@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.common.util.snap
+package cock.crest.purrfectsnap.lite.common.util.snap
 
 import android.content.Intent
-import me.eternal.purrfectsnap.common.Constants
+import cock.crest.purrfectsnap.lite.common.Constants
 
 object SnapWidgetBroadcastReceiverHelper {
     private const val ACTION_WIDGET_UPDATE = "com.snap.android.WIDGET_APP_START_UPDATE_ACTION"

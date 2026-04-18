@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.downloader
+package cock.crest.purrfectsnap.lite.core.features.impl.downloader
 
 import android.media.AudioManager
 import android.media.AudioAttributes
@@ -14,14 +14,14 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.core.ui.InAppOverlay
-import me.eternal.purrfectsnap.bridge.call.CallDownloadSession
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
-import me.eternal.purrfectsnap.core.util.ktx.getObjectFieldOrNull
+import cock.crest.purrfectsnap.lite.core.ui.InAppOverlay
+import cock.crest.purrfectsnap.lite.bridge.call.CallDownloadSession
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectFieldOrNull
 import java.io.OutputStream
 import java.nio.ByteBuffer
 import java.nio.ByteOrder

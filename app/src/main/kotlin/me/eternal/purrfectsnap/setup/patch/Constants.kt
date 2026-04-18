@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.setup.patch
+package cock.crest.purrfectsnap.lite.setup.patch
 
 // Mirrors LSPatch constant used to flag patched APKs.
 object Constants {

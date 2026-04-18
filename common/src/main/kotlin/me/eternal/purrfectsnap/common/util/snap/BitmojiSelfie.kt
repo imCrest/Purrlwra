@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.util.snap
+package cock.crest.purrfectsnap.lite.common.util.snap
 
 object BitmojiSelfie {
     enum class BitmojiSelfieType(

@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.common.bridge
+package cock.crest.purrfectsnap.lite.common.bridge
 
 import android.content.Context
 import android.os.ParcelFileDescriptor
 import android.os.ParcelFileDescriptor.AutoCloseInputStream
 import android.os.ParcelFileDescriptor.AutoCloseOutputStream
-import me.eternal.purrfectsnap.bridge.storage.FileHandle
-import me.eternal.purrfectsnap.common.util.LazyBridgeValue
-import me.eternal.purrfectsnap.common.util.lazyBridge
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandle
+import cock.crest.purrfectsnap.lite.common.util.LazyBridgeValue
+import cock.crest.purrfectsnap.lite.common.util.lazyBridge
 import java.io.File
 
 

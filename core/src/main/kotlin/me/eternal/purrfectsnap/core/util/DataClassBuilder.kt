@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.util
+package cock.crest.purrfectsnap.lite.core.util
 
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.ktx.setObjectField
-import me.eternal.purrfectsnap.core.util.ktx.KavaRefFieldBridge
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.setObjectField
+import cock.crest.purrfectsnap.lite.core.util.ktx.KavaRefFieldBridge
 import java.lang.reflect.Proxy
 
 

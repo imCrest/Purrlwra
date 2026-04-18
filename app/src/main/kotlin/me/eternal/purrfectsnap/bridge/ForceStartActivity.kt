@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.bridge
+package cock.crest.purrfectsnap.lite.bridge
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import me.eternal.purrfectsnap.SharedContextHolder
-import me.eternal.purrfectsnap.common.Constants
+import cock.crest.purrfectsnap.lite.SharedContextHolder
+import cock.crest.purrfectsnap.lite.common.Constants
 
 class ForceStartActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {

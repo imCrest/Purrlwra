@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.location
+package cock.crest.purrfectsnap.lite.ui.manager.pages.location
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.background
@@ -21,10 +21,10 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.bridge.location.LocationCoordinates
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.AlertDialogs
+import cock.crest.purrfectsnap.lite.bridge.location.LocationCoordinates
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.AlertDialogs
 
 
 @Composable

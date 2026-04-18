@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.features.impl.ui
+package cock.crest.purrfectsnap.lite.core.features.impl.ui
 
 import android.graphics.Rect
 import android.view.View
@@ -31,17 +31,17 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.gson.reflect.TypeToken
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.database.impl.ConversationMessage
-import me.eternal.purrfectsnap.common.util.protobuf.ProtoReader
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.ui.CustomComposable
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayPalette
-import me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme
-import me.eternal.purrfectsnap.core.wrapper.impl.getMessageText
-import me.eternal.purrfectsnap.core.wrapper.impl.sanitizeForLayout
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.database.impl.ConversationMessage
+import cock.crest.purrfectsnap.lite.common.util.protobuf.ProtoReader
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.ui.CustomComposable
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayPalette
+import cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.getMessageText
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.sanitizeForLayout
 import kotlinx.coroutines.delay
 
 class LocalPinnedMessages : Feature("Local Pinned Messages") {

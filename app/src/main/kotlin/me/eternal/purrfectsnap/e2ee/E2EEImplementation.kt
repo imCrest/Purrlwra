@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.e2ee
+package cock.crest.purrfectsnap.lite.e2ee
 
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.bridge.e2ee.E2eeInterface
-import me.eternal.purrfectsnap.bridge.e2ee.EncryptionResult
-import me.eternal.purrfectsnap.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.bridge.e2ee.E2eeInterface
+import cock.crest.purrfectsnap.lite.bridge.e2ee.EncryptionResult
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
 import org.bouncycastle.pqc.crypto.crystals.kyber.*
 import java.io.File
 import java.security.MessageDigest

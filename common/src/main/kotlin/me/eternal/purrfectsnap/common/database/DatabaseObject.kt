@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.database
+package cock.crest.purrfectsnap.lite.common.database
 
 import android.database.Cursor
 

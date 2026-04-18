@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.common.data.download
+package cock.crest.purrfectsnap.lite.common.data.download
 
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
 
 enum class MediaDownloadSource(
     val key: String,

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.task
+package cock.crest.purrfectsnap.lite.task
 
 import android.content.ContentValues
 import android.content.Context
@@ -6,10 +6,10 @@ import android.database.sqlite.SQLiteDatabase
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.common.util.SQLiteDatabaseHelper
-import me.eternal.purrfectsnap.common.util.ktx.getLong
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.common.util.SQLiteDatabaseHelper
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLong
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 import java.util.concurrent.Executors
 import kotlin.coroutines.suspendCoroutine
 

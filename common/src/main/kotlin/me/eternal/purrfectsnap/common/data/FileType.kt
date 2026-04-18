@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.data
+package cock.crest.purrfectsnap.lite.common.data
 
 import java.io.File
 import java.io.InputStream

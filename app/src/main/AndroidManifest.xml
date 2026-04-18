@@ -67,7 +67,7 @@
         <receiver android:name=".StreaksReminder" />
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="me.eternal.purrfectsnap.fileprovider"
+            android:authorities="cock.crest.purrfectsnap.lite.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

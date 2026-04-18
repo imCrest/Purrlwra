@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.theme
+package cock.crest.purrfectsnap.lite.ui.manager.theme
 
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color

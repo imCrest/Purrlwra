@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core
+package cock.crest.purrfectsnap.lite.core
 
 import android.content.Intent
 import android.os.Bundle
-import me.eternal.purrfectsnap.bridge.DownloadCallback
-import me.eternal.purrfectsnap.common.ReceiversConfig
-import me.eternal.purrfectsnap.common.data.download.*
-import me.eternal.purrfectsnap.core.features.impl.downloader.decoder.AttachmentType
+import cock.crest.purrfectsnap.lite.bridge.DownloadCallback
+import cock.crest.purrfectsnap.lite.common.ReceiversConfig
+import cock.crest.purrfectsnap.lite.common.data.download.*
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder.AttachmentType
 
 class DownloadManagerClient (
     private val context: ModContext,

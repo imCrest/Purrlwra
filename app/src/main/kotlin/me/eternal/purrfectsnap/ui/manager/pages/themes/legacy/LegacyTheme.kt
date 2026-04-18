@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.legacy
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.legacy
 
 import android.os.SystemClock
 import android.content.SharedPreferences
@@ -52,7 +52,7 @@ import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.res.painterResource
 import androidx.core.view.drawToBitmap
-import me.eternal.purrfectsnap.ui.manager.theme.aphelion.AphelionHaptics
+import cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion.AphelionHaptics
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.layout.positionInRoot
 import androidx.compose.ui.platform.LocalView
@@ -76,55 +76,55 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.LogLine
-import me.eternal.purrfectsnap.LogReader
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.action.EnumQuickActions
-import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.action.EnumAction
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.config.ConfigContainer
-import me.eternal.purrfectsnap.common.config.PropertyPair
-import me.eternal.purrfectsnap.common.data.SocialScope
-import me.eternal.purrfectsnap.common.ui.TopBarActionButton
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
-import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
-import me.eternal.purrfectsnap.common.util.ktx.copyToClipboard
-import me.eternal.purrfectsnap.common.util.ktx.openLink
-import me.eternal.purrfectsnap.storage.getAllScopeNotes
-import me.eternal.purrfectsnap.storage.getQuickTiles
-import me.eternal.purrfectsnap.storage.setAllScopeNotes
-import me.eternal.purrfectsnap.storage.setQuickTiles
-import me.eternal.purrfectsnap.ui.manager.ThemeContract
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.components.FloatingTopBar
-import me.eternal.purrfectsnap.ui.manager.data.UpdateDownloader
-import me.eternal.purrfectsnap.ui.manager.data.Updater
-import me.eternal.purrfectsnap.ui.manager.data.Updater.Channel
-import me.eternal.purrfectsnap.ui.manager.pages.TasksRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.features.FeaturesRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeAbout
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeLogs
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeRootSection.Companion.QUICK_TILES_INITIALIZED_PREF
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeRootSection.Companion.cardMargin
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeRootSection.Companion.pageBackgroundGradient
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeSettings
-import me.eternal.purrfectsnap.ui.manager.pages.home.QuickActionsDialog
-import me.eternal.purrfectsnap.ui.manager.pages.scripting.ScriptingRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.social.SocialRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.tracker.FriendTrackerManagerRoot
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.Requirements
-import me.eternal.purrfectsnap.ui.util.OnLifecycleEvent
-import me.eternal.purrfectsnap.ui.util.PurrfectMarqueeText
-import me.eternal.purrfectsnap.ui.util.openFile
-import me.eternal.purrfectsnap.ui.util.purrfectSwitchColors
-import me.eternal.purrfectsnap.ui.util.pullrefresh.PullRefreshIndicator
-import me.eternal.purrfectsnap.ui.util.pullrefresh.pullRefresh
-import me.eternal.purrfectsnap.ui.util.pullrefresh.rememberPullRefreshState
-import me.eternal.purrfectsnap.ui.util.saveFile
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.LogLine
+import cock.crest.purrfectsnap.lite.LogReader
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.action.EnumQuickActions
+import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.action.EnumAction
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.config.ConfigContainer
+import cock.crest.purrfectsnap.lite.common.config.PropertyPair
+import cock.crest.purrfectsnap.lite.common.data.SocialScope
+import cock.crest.purrfectsnap.lite.common.ui.TopBarActionButton
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableState
+import cock.crest.purrfectsnap.lite.common.ui.rememberAsyncMutableStateList
+import cock.crest.purrfectsnap.lite.common.util.ktx.copyToClipboard
+import cock.crest.purrfectsnap.lite.common.util.ktx.openLink
+import cock.crest.purrfectsnap.lite.storage.getAllScopeNotes
+import cock.crest.purrfectsnap.lite.storage.getQuickTiles
+import cock.crest.purrfectsnap.lite.storage.setAllScopeNotes
+import cock.crest.purrfectsnap.lite.storage.setQuickTiles
+import cock.crest.purrfectsnap.lite.ui.manager.ThemeContract
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.components.FloatingTopBar
+import cock.crest.purrfectsnap.lite.ui.manager.data.UpdateDownloader
+import cock.crest.purrfectsnap.lite.ui.manager.data.Updater
+import cock.crest.purrfectsnap.lite.ui.manager.data.Updater.Channel
+import cock.crest.purrfectsnap.lite.ui.manager.pages.TasksRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.FeaturesRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeAbout
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeLogs
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeRootSection.Companion.QUICK_TILES_INITIALIZED_PREF
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeRootSection.Companion.cardMargin
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeRootSection.Companion.pageBackgroundGradient
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeSettings
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.QuickActionsDialog
+import cock.crest.purrfectsnap.lite.ui.manager.pages.scripting.ScriptingRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.SocialRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.FriendTrackerManagerRoot
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.Requirements
+import cock.crest.purrfectsnap.lite.ui.util.OnLifecycleEvent
+import cock.crest.purrfectsnap.lite.ui.util.PurrfectMarqueeText
+import cock.crest.purrfectsnap.lite.ui.util.openFile
+import cock.crest.purrfectsnap.lite.ui.util.purrfectSwitchColors
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.PullRefreshIndicator
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.pullRefresh
+import cock.crest.purrfectsnap.lite.ui.util.pullrefresh.rememberPullRefreshState
+import cock.crest.purrfectsnap.lite.ui.util.saveFile
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File
@@ -701,7 +701,7 @@ object LegacyTheme : ThemeContract {
                         context.config.reset()
                         context.config.writeConfig()
 
-                        val intent = Intent(context.androidContext, me.eternal.purrfectsnap.ui.setup.SetupActivity::class.java)
+                        val intent = Intent(context.androidContext, cock.crest.purrfectsnap.lite.ui.setup.SetupActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         context.androidContext.startActivity(intent)
                         routes.navController.popBackStack()
@@ -1160,8 +1160,8 @@ object LegacyTheme : ThemeContract {
         @Composable
         fun LogFilterDialog() {
             androidx.compose.ui.window.Dialog(onDismissRequest = { showFilterDialog = false }) {
-                me.eternal.purrfectsnap.core.ui.PurrfectOverlayTheme {
-                    me.eternal.purrfectsnap.core.ui.PurrfectGlassCard(title = translation["filter_logs_title"] ?: "Filter Log Categories", modifier = Modifier.fillMaxWidth()) {
+                cock.crest.purrfectsnap.lite.core.ui.PurrfectOverlayTheme {
+                    cock.crest.purrfectsnap.lite.core.ui.PurrfectGlassCard(title = translation["filter_logs_title"] ?: "Filter Log Categories", modifier = Modifier.fillMaxWidth()) {
                         Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             HomeLogs.LogCategory.entries.forEach { category ->
                                 Row(

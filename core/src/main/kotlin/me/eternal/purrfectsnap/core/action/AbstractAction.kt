@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.action
+package cock.crest.purrfectsnap.lite.core.action
 
-import me.eternal.purrfectsnap.core.ModContext
+import cock.crest.purrfectsnap.lite.core.ModContext
 import java.io.File
 
 abstract class AbstractAction{

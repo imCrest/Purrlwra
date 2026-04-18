@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package me.eternal.purrfectsnap.ui.util.pullrefresh
+package cock.crest.purrfectsnap.lite.ui.util.pullrefresh
 
 import androidx.compose.animation.core.animate
 import androidx.compose.foundation.MutatorMutex

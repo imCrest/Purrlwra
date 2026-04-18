@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.util
+package cock.crest.purrfectsnap.lite.common.util
 
 import android.os.IInterface
 

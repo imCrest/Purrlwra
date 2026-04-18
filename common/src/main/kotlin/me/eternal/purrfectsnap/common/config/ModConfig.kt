@@ -1,19 +1,19 @@
-package me.eternal.purrfectsnap.common.config
+package cock.crest.purrfectsnap.lite.common.config
 
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
-import me.eternal.purrfectsnap.bridge.location.LocationCoordinates
-import me.eternal.purrfectsnap.bridge.ConfigStateListener
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.bridge.InternalFileWrapper
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.common.config.impl.RootConfig
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.util.LazyBridgeValue
+import cock.crest.purrfectsnap.lite.bridge.location.LocationCoordinates
+import cock.crest.purrfectsnap.lite.bridge.ConfigStateListener
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileWrapper
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.common.config.impl.RootConfig
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.util.LazyBridgeValue
 import kotlin.properties.Delegates
 
 class ModConfig(
@@ -33,7 +33,10 @@ class ModConfig(
 
     fun isInitialized() = ::root.isInitialized
 
-    private fun createRootConfig() = RootConfig().apply { lateInit(context) }
+    private fun createRootConfig() = RootConfig().apply {
+        lateInit(context)
+        applyLiteDefaults()
+    }
 
     fun load() {
         wasPresent = fileWrapper.exists()
@@ -48,6 +51,7 @@ class ModConfig(
         }
         runCatching {
             loadConfig(targetRoot)
+            targetRoot.applyLiteDefaults()
         }.onFailure {
             writeConfigObject(targetRoot)
         }
@@ -85,7 +89,7 @@ class ModConfig(
     }
 
     fun reset() {
-        root = RootConfig().apply {
+        root = createRootConfig().apply {
             writeConfigObject(this)
         }
     }

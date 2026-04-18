@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.util.ktx
+package cock.crest.purrfectsnap.lite.core.util.ktx
 
 import android.os.Build
 import android.os.ParcelFileDescriptor
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.util.ktx.longHashCode
-import me.eternal.purrfectsnap.core.ModContext
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.util.ktx.longHashCode
+import cock.crest.purrfectsnap.lite.core.ModContext
 import java.io.FileOutputStream
 import kotlin.math.absoluteValue
 

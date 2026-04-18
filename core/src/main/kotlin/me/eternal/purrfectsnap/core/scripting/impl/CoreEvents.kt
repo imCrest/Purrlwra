@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.scripting.impl
+package cock.crest.purrfectsnap.lite.core.scripting.impl
 
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.common.scripting.ktx.scriptableObject
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.event.Event
-import me.eternal.purrfectsnap.core.event.events.impl.*
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.scriptableObject
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.event.Event
+import cock.crest.purrfectsnap.lite.core.event.events.impl.*
 import org.mozilla.javascript.ScriptableObject
 
 class CoreEvents(

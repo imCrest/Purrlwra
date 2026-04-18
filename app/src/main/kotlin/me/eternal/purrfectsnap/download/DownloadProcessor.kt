@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.download
+package cock.crest.purrfectsnap.lite.download
 
 import android.content.ContentUris
 import android.content.ContentValues
@@ -15,24 +15,24 @@ import com.google.gson.GsonBuilder
 import kotlinx.coroutines.*
 import kotlinx.coroutines.sync.Semaphore
 import kotlinx.coroutines.sync.withPermit
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.bridge.DownloadCallback
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ReceiversConfig
-import me.eternal.purrfectsnap.common.data.FileType
-import me.eternal.purrfectsnap.common.data.download.DownloadMediaType
-import me.eternal.purrfectsnap.common.data.download.DownloadMetadata
-import me.eternal.purrfectsnap.common.data.download.DownloadRequest
-import me.eternal.purrfectsnap.common.data.download.InputMedia
-import me.eternal.purrfectsnap.common.data.download.SplitMediaAssetType
-import me.eternal.purrfectsnap.common.util.snap.MediaDownloaderHelper
-import me.eternal.purrfectsnap.common.util.snap.RemoteMediaResolver
-import me.eternal.purrfectsnap.core.features.impl.downloader.decoder.AttachmentType
-import me.eternal.purrfectsnap.task.PendingTask
-import me.eternal.purrfectsnap.task.PendingTaskListener
-import me.eternal.purrfectsnap.task.Task
-import me.eternal.purrfectsnap.task.TaskStatus
-import me.eternal.purrfectsnap.task.TaskType
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.bridge.DownloadCallback
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ReceiversConfig
+import cock.crest.purrfectsnap.lite.common.data.FileType
+import cock.crest.purrfectsnap.lite.common.data.download.DownloadMediaType
+import cock.crest.purrfectsnap.lite.common.data.download.DownloadMetadata
+import cock.crest.purrfectsnap.lite.common.data.download.DownloadRequest
+import cock.crest.purrfectsnap.lite.common.data.download.InputMedia
+import cock.crest.purrfectsnap.lite.common.data.download.SplitMediaAssetType
+import cock.crest.purrfectsnap.lite.common.util.snap.MediaDownloaderHelper
+import cock.crest.purrfectsnap.lite.common.util.snap.RemoteMediaResolver
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.decoder.AttachmentType
+import cock.crest.purrfectsnap.lite.task.PendingTask
+import cock.crest.purrfectsnap.lite.task.PendingTaskListener
+import cock.crest.purrfectsnap.lite.task.Task
+import cock.crest.purrfectsnap.lite.task.TaskStatus
+import cock.crest.purrfectsnap.lite.task.TaskType
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -660,7 +660,7 @@ class DownloadProcessor (
                                 val originalBitmap = BitmapFactory.decodeFile(renamedMedia.absolutePath) ?: throw Exception("Failed to decode original image")
                                 val overlayBitmap = BitmapFactory.decodeFile(renamedOverlayMedia.absolutePath) ?: throw Exception("Failed to decode overlay image")
 
-                                val mergedBitmap = me.eternal.purrfectsnap.core.util.media.PreviewUtils.mergeBitmapOverlay(originalBitmap, overlayBitmap)
+                                val mergedBitmap = cock.crest.purrfectsnap.lite.core.util.media.PreviewUtils.mergeBitmapOverlay(originalBitmap, overlayBitmap)
                                 val mergedImage: File = File.createTempFile("merged", "." + (mediaFileType.fileExtension ?: "jpg"))
 
                                 val compressFormat = when (mediaFileType) {

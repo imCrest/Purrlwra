@@ -1,14 +1,14 @@
-package me.eternal.purrfectsnap.core.scripting.impl
+package cock.crest.purrfectsnap.lite.core.scripting.impl
 
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.common.scripting.ktx.scriptableObject
-import me.eternal.purrfectsnap.common.scripting.toPrimitiveValue
-import me.eternal.purrfectsnap.core.util.hook.HookAdapter
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.hook.hookConstructor
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.scriptableObject
+import cock.crest.purrfectsnap.lite.common.scripting.toPrimitiveValue
+import cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.hook.hookConstructor
 import org.mozilla.javascript.annotations.JSGetter
 import org.mozilla.javascript.annotations.JSSetter
 import java.lang.reflect.Constructor

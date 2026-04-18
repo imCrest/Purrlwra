@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.action.impl
+package cock.crest.purrfectsnap.lite.core.action.impl
 
 import android.content.Intent
 import android.graphics.Bitmap
@@ -40,18 +40,18 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.withTimeout
-import me.eternal.purrfectsnap.common.data.FriendLinkType
-import me.eternal.purrfectsnap.common.ui.createComposeAlertDialog
-import me.eternal.purrfectsnap.core.action.AbstractAction
-import me.eternal.purrfectsnap.core.event.events.impl.ActivityResultEvent
-import me.eternal.purrfectsnap.core.features.impl.experiments.AddFriendSourceSpoof
-import me.eternal.purrfectsnap.core.features.impl.messaging.Messaging
-import me.eternal.purrfectsnap.core.util.ktx.findStaticObjectFieldByType
-import me.eternal.purrfectsnap.core.util.EvictingMap
-import me.eternal.purrfectsnap.core.wrapper.impl.Snapchatter
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.common.util.snap.RemoteMediaResolver
-import me.eternal.purrfectsnap.mapper.impl.FriendRelationshipChangerMapper
+import cock.crest.purrfectsnap.lite.common.data.FriendLinkType
+import cock.crest.purrfectsnap.lite.common.ui.createComposeAlertDialog
+import cock.crest.purrfectsnap.lite.core.action.AbstractAction
+import cock.crest.purrfectsnap.lite.core.event.events.impl.ActivityResultEvent
+import cock.crest.purrfectsnap.lite.core.features.impl.experiments.AddFriendSourceSpoof
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.Messaging
+import cock.crest.purrfectsnap.lite.core.util.ktx.findStaticObjectFieldByType
+import cock.crest.purrfectsnap.lite.core.util.EvictingMap
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.Snapchatter
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.common.util.snap.RemoteMediaResolver
+import cock.crest.purrfectsnap.lite.mapper.impl.FriendRelationshipChangerMapper
 import kotlin.random.Random
 import java.text.SimpleDateFormat
 import java.util.*

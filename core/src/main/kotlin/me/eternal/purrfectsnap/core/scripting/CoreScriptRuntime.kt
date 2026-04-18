@@ -1,12 +1,12 @@
-package me.eternal.purrfectsnap.core.scripting
+package cock.crest.purrfectsnap.lite.core.scripting
 
-import me.eternal.purrfectsnap.common.scripting.JSModule
-import me.eternal.purrfectsnap.bridge.scripting.AutoReloadListener
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.scripting.ScriptRuntime
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.scripting.impl.*
+import cock.crest.purrfectsnap.lite.common.scripting.JSModule
+import cock.crest.purrfectsnap.lite.bridge.scripting.AutoReloadListener
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.scripting.ScriptRuntime
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.core.ModContext
+import cock.crest.purrfectsnap.lite.core.scripting.impl.*
 
 /**
  * Core-side implementation of the [ScriptRuntime].

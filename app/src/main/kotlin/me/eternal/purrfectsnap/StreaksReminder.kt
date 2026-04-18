@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
 import android.app.AlarmManager
 import android.app.NotificationChannel
@@ -10,11 +10,11 @@ import android.content.Intent
 import androidx.core.app.NotificationCompat
 import androidx.core.graphics.drawable.toBitmap
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.bridge.ForceStartActivity
-import me.eternal.purrfectsnap.common.util.snap.BitmojiSelfie
-import me.eternal.purrfectsnap.storage.getFriendStreaks
-import me.eternal.purrfectsnap.storage.getFriends
-import me.eternal.purrfectsnap.ui.util.coil.ImageRequestHelper
+import cock.crest.purrfectsnap.lite.bridge.ForceStartActivity
+import cock.crest.purrfectsnap.lite.common.util.snap.BitmojiSelfie
+import cock.crest.purrfectsnap.lite.storage.getFriendStreaks
+import cock.crest.purrfectsnap.lite.storage.getFriends
+import cock.crest.purrfectsnap.lite.ui.util.coil.ImageRequestHelper
 import kotlin.time.Duration.Companion.hours
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Duration.Companion.minutes

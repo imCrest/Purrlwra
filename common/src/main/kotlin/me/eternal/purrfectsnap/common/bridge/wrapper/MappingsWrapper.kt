@@ -1,18 +1,18 @@
-package me.eternal.purrfectsnap.common.bridge.wrapper
+package cock.crest.purrfectsnap.lite.common.bridge.wrapper
 
 import android.content.Context
 import com.google.gson.JsonParser
 import kotlinx.coroutines.runBlocking
-import me.eternal.purrfectsnap.bridge.storage.FileHandleManager
-import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.bridge.FileHandleScope
-import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
-import me.eternal.purrfectsnap.common.bridge.InternalFileWrapper
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
-import me.eternal.purrfectsnap.common.util.LazyBridgeValue
-import me.eternal.purrfectsnap.mapper.AbstractClassMapper
-import me.eternal.purrfectsnap.mapper.ClassMapper
+import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
+import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
+import cock.crest.purrfectsnap.lite.common.bridge.InternalFileWrapper
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.util.LazyBridgeValue
+import cock.crest.purrfectsnap.lite.mapper.AbstractClassMapper
+import cock.crest.purrfectsnap.lite.mapper.ClassMapper
 import kotlin.reflect.KClass
 
 class MappingsWrapper(

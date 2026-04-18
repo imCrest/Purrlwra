@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.components
+package cock.crest.purrfectsnap.lite.ui.manager.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -27,10 +27,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.unit.lerp
 import androidx.compose.ui.zIndex
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.util.PurrfectMarqueeText
-import me.eternal.purrfectsnap.ui.util.Motion
-import me.eternal.purrfectsnap.ui.util.headerHeightTracker
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.util.PurrfectMarqueeText
+import cock.crest.purrfectsnap.lite.ui.util.Motion
+import cock.crest.purrfectsnap.lite.ui.util.headerHeightTracker
 
 @Immutable
 data class FloatingTopBarColors(

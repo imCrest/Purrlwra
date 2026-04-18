@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.scripting.type
+package cock.crest.purrfectsnap.lite.common.scripting.type
 
 enum class Permissions(
     val key: String,

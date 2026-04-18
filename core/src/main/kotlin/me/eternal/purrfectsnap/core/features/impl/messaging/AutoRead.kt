@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.features.impl.messaging
+package cock.crest.purrfectsnap.lite.core.features.impl.messaging
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.common.data.ContentType
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.core.event.events.impl.ConversationUpdateEvent
-import me.eternal.purrfectsnap.core.features.MessagingRuleFeature
+import cock.crest.purrfectsnap.lite.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.core.event.events.impl.ConversationUpdateEvent
+import cock.crest.purrfectsnap.lite.core.features.MessagingRuleFeature
 import java.util.concurrent.ConcurrentHashMap
 
 class AutoRead : MessagingRuleFeature("Auto Read", MessagingRuleType.AUTO_READ) {
@@ -62,8 +62,8 @@ class AutoRead : MessagingRuleFeature("Auto Read", MessagingRuleType.AUTO_READ) 
         }
     }
 
-    private fun collectUnreadMessages(conversationId: String, myId: String): List<me.eternal.purrfectsnap.common.database.impl.ConversationMessage> {
-        val unread = LinkedHashSet<me.eternal.purrfectsnap.common.database.impl.ConversationMessage>()
+    private fun collectUnreadMessages(conversationId: String, myId: String): List<cock.crest.purrfectsnap.lite.common.database.impl.ConversationMessage> {
+        val unread = LinkedHashSet<cock.crest.purrfectsnap.lite.common.database.impl.ConversationMessage>()
         val pageSize = 200
         val maxPages = 5
         var page = 0

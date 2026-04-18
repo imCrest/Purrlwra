@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup.screens.impl
+package cock.crest.purrfectsnap.lite.ui.setup.screens.impl
 
 import android.content.Intent
 import android.net.Uri
@@ -71,13 +71,13 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.common.bridge.wrapper.LocaleWrapper
-import me.eternal.purrfectsnap.setup.patch.AutoPatchServer
-import me.eternal.purrfectsnap.setup.patch.LSPatch
-import me.eternal.purrfectsnap.ui.manager.components.AestheticDialog
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.screens.SetupScreen
-import me.eternal.purrfectsnap.ui.util.scaleOnPress
+import cock.crest.purrfectsnap.lite.common.bridge.wrapper.LocaleWrapper
+import cock.crest.purrfectsnap.lite.setup.patch.AutoPatchServer
+import cock.crest.purrfectsnap.lite.setup.patch.LSPatch
+import cock.crest.purrfectsnap.lite.ui.manager.components.AestheticDialog
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
+import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 import okhttp3.OkHttpClient
 import okhttp3.Request
 

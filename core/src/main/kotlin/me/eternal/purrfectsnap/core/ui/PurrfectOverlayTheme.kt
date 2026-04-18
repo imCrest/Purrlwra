@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui
+package cock.crest.purrfectsnap.lite.core.ui
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background

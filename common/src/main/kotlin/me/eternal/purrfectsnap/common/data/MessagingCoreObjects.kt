@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.data
+package cock.crest.purrfectsnap.lite.common.data
 
 import android.database.Cursor
 import android.os.Parcelable
@@ -8,12 +8,12 @@ import androidx.compose.material.icons.automirrored.outlined.Reply
 import androidx.compose.material.icons.outlined.*
 import androidx.compose.ui.graphics.vector.ImageVector
 import kotlinx.parcelize.Parcelize
-import me.eternal.purrfectsnap.common.config.FeatureNotice
-import me.eternal.purrfectsnap.common.data.download.toKeyPair
-import me.eternal.purrfectsnap.common.util.ktx.getIntOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getInteger
-import me.eternal.purrfectsnap.common.util.ktx.getLongOrNull
-import me.eternal.purrfectsnap.common.util.ktx.getStringOrNull
+import cock.crest.purrfectsnap.lite.common.config.FeatureNotice
+import cock.crest.purrfectsnap.lite.common.data.download.toKeyPair
+import cock.crest.purrfectsnap.lite.common.util.ktx.getIntOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getInteger
+import cock.crest.purrfectsnap.lite.common.util.ktx.getLongOrNull
+import cock.crest.purrfectsnap.lite.common.util.ktx.getStringOrNull
 import kotlin.time.Duration.Companion.hours
 
 

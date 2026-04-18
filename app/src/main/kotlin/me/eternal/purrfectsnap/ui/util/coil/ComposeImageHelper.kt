@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.util.coil
+package cock.crest.purrfectsnap.lite.ui.util.coil
 
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
@@ -14,9 +14,9 @@ import androidx.compose.ui.unit.dp
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.size.Precision
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.common.data.download.MediaEncryptionKeyPair
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.common.data.download.MediaEncryptionKeyPair
 
 @Composable
 fun BitmojiImage(context: RemoteSideContext, modifier: Modifier = Modifier, size: Int = 48, url: String?) {

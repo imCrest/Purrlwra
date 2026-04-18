@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui.menu.impl
+package cock.crest.purrfectsnap.lite.core.ui.menu.impl
 
 import android.graphics.Rect
 import android.view.Gravity
@@ -34,25 +34,25 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.common.ui.createComposeView
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.event.events.impl.OnSnapInteractionEvent
-import me.eternal.purrfectsnap.core.features.impl.downloader.MediaDownloader
-import me.eternal.purrfectsnap.core.features.impl.downloader.OperaViewerMessageContext
-import me.eternal.purrfectsnap.core.features.impl.messaging.AutoMarkAsRead
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.ui.iterateParent
-import me.eternal.purrfectsnap.core.ui.menu.AbstractMenu
-import me.eternal.purrfectsnap.core.ui.randomTag
-import me.eternal.purrfectsnap.core.ui.triggerCloseTouchEvent
-import me.eternal.purrfectsnap.core.ui.triggerCloseTouchEventAtFraction
-import me.eternal.purrfectsnap.core.util.SNAPCHAT_13_80_VERSION
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getObjectField
-import me.eternal.purrfectsnap.core.util.isSnapchatVersionAtLeast
-import me.eternal.purrfectsnap.core.util.ktx.vibrateLongPress
-import me.eternal.purrfectsnap.mapper.impl.OperaPageViewControllerMapper
+import cock.crest.purrfectsnap.lite.common.ui.createComposeView
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.event.events.impl.OnSnapInteractionEvent
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.OperaViewerMessageContext
+import cock.crest.purrfectsnap.lite.core.features.impl.messaging.AutoMarkAsRead
+import cock.crest.purrfectsnap.lite.core.ui.children
+import cock.crest.purrfectsnap.lite.core.ui.iterateParent
+import cock.crest.purrfectsnap.lite.core.ui.menu.AbstractMenu
+import cock.crest.purrfectsnap.lite.core.ui.randomTag
+import cock.crest.purrfectsnap.lite.core.ui.triggerCloseTouchEvent
+import cock.crest.purrfectsnap.lite.core.ui.triggerCloseTouchEventAtFraction
+import cock.crest.purrfectsnap.lite.core.util.SNAPCHAT_13_80_VERSION
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.core.util.ktx.getObjectField
+import cock.crest.purrfectsnap.lite.core.util.isSnapchatVersionAtLeast
+import cock.crest.purrfectsnap.lite.core.util.ktx.vibrateLongPress
+import cock.crest.purrfectsnap.lite.mapper.impl.OperaPageViewControllerMapper
 import java.util.concurrent.atomic.AtomicInteger
 
 class OperaViewerIcons : AbstractMenu() {

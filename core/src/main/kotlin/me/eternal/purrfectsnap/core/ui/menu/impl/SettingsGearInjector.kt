@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui.menu.impl
+package cock.crest.purrfectsnap.lite.core.ui.menu.impl
 
 import android.app.ActivityManager
 import android.os.Process
@@ -6,13 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.ImageView
-import me.eternal.purrfectsnap.common.Constants
-import me.eternal.purrfectsnap.common.ui.OverlayType
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.ui.menu.AbstractMenu
-import me.eternal.purrfectsnap.core.util.ktx.getDrawable
-import me.eternal.purrfectsnap.core.util.ktx.getStyledAttributes
-import me.eternal.purrfectsnap.core.util.ktx.vibrateLongPress
+import cock.crest.purrfectsnap.lite.common.Constants
+import cock.crest.purrfectsnap.lite.common.ui.OverlayType
+import cock.crest.purrfectsnap.lite.core.event.events.impl.AddViewEvent
+import cock.crest.purrfectsnap.lite.core.ui.menu.AbstractMenu
+import cock.crest.purrfectsnap.lite.core.util.ktx.getDrawable
+import cock.crest.purrfectsnap.lite.core.util.ktx.getStyledAttributes
+import cock.crest.purrfectsnap.lite.core.util.ktx.vibrateLongPress
 
 class SettingsGearInjector : AbstractMenu() {
     private val hovaHeaderAddFriendIconId by lazy {

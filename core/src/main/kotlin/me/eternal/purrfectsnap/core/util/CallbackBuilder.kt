@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.core.util
+package cock.crest.purrfectsnap.lite.core.util
 
-import me.eternal.purrfectsnap.core.util.hook.HookAdapter
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
+import cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
 import java.lang.reflect.Constructor
 import java.lang.reflect.Field
 import java.lang.reflect.Modifier

@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.common.config
+package cock.crest.purrfectsnap.lite.common.config
 
 import android.content.Context
 import com.google.gson.JsonNull
 import com.google.gson.JsonObject
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 import kotlin.reflect.KProperty
 
 typealias ConfigParamsBuilder = ConfigParams.() -> Unit

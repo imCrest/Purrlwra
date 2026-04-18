@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.common.util
+package cock.crest.purrfectsnap.lite.common.util
 
 import android.annotation.SuppressLint
 import android.database.sqlite.SQLiteDatabase
-import me.eternal.purrfectsnap.common.logger.AbstractLogger
+import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 
 object SQLiteDatabaseHelper {
     @SuppressLint("Range")

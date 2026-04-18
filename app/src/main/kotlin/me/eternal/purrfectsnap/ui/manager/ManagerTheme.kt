@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.ui.manager
+package cock.crest.purrfectsnap.lite.ui.manager
 
-import me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion.AphelionTheme
-import me.eternal.purrfectsnap.ui.manager.pages.themes.legacy.LegacyTheme
+import cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion.AphelionTheme
+import cock.crest.purrfectsnap.lite.ui.manager.pages.themes.legacy.LegacyTheme
 
 /**
  * ManagerTheme is the registry of all available themes.

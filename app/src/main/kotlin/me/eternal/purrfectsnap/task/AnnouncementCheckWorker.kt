@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.task
+package cock.crest.purrfectsnap.lite.task
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -13,8 +13,8 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.ContextCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.ui.manager.MainActivity
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.ui.manager.MainActivity
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.security.MessageDigest

@@ -1,6 +1,6 @@
-package me.eternal.purrfectsnap.core.messaging
+package cock.crest.purrfectsnap.lite.core.messaging
 
-import me.eternal.purrfectsnap.common.data.ContentType
+import cock.crest.purrfectsnap.lite.common.data.ContentType
 
 enum class ExportSortOrder {
     NEWEST_TO_OLDEST,

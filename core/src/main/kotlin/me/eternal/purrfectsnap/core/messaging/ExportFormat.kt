@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.messaging;
+package cock.crest.purrfectsnap.lite.core.messaging;
 
 enum class ExportFormat(
     val extension: String,

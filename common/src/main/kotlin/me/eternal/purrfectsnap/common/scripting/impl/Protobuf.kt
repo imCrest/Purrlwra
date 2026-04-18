@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.common.scripting.impl
+package cock.crest.purrfectsnap.lite.common.scripting.impl
 
-import me.eternal.purrfectsnap.common.scripting.bindings.AbstractBinding
-import me.eternal.purrfectsnap.common.scripting.bindings.BindingSide
-import me.eternal.purrfectsnap.common.scripting.ktx.putFunction
-import me.eternal.purrfectsnap.common.scripting.ktx.scriptableObject
-import me.eternal.purrfectsnap.common.util.protobuf.*
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.AbstractBinding
+import cock.crest.purrfectsnap.lite.common.scripting.bindings.BindingSide
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.putFunction
+import cock.crest.purrfectsnap.lite.common.scripting.ktx.scriptableObject
+import cock.crest.purrfectsnap.lite.common.util.protobuf.*
 import org.mozilla.javascript.NativeArray
 import java.io.InputStream
 

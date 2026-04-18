@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util.ktx
+package cock.crest.purrfectsnap.lite.core.util.ktx
 
 fun Any.getObjectField(fieldName: String): Any? {
     return runCatching {

@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.ui
+package cock.crest.purrfectsnap.lite.core.ui
 
 import android.app.Activity
 import android.app.AlertDialog
@@ -12,9 +12,9 @@ import android.os.SystemClock
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import me.eternal.purrfectsnap.core.PurrfectSnap
-import me.eternal.purrfectsnap.core.wrapper.impl.valdi.ValdiContext
-import me.eternal.purrfectsnap.core.wrapper.impl.valdi.ValdiViewNode
+import cock.crest.purrfectsnap.lite.core.PurrfectSnap
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.valdi.ValdiContext
+import cock.crest.purrfectsnap.lite.core.wrapper.impl.valdi.ValdiViewNode
 
 private val foregroundDrawableListTag = randomTag()
 

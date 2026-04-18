@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap.core.features
+package cock.crest.purrfectsnap.lite.core.features
 
-import me.eternal.purrfectsnap.common.data.MessagingRuleType
-import me.eternal.purrfectsnap.common.data.RuleState
+import cock.crest.purrfectsnap.lite.common.data.MessagingRuleType
+import cock.crest.purrfectsnap.lite.common.data.RuleState
 import java.util.concurrent.ConcurrentHashMap
 
 abstract class MessagingRuleFeature(name: String, val ruleType: MessagingRuleType) : Feature(name) {

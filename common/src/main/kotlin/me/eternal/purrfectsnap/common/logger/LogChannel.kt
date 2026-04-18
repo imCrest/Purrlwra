@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.logger
+package cock.crest.purrfectsnap.lite.common.logger
 
 enum class LogChannel(
     val channel: String,

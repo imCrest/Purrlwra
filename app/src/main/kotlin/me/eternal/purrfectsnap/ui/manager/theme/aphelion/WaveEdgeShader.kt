@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.theme.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion
 
 /**
  * Finalized "Perfect Optic" AGSL Shader.

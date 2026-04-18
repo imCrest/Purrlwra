@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.theme.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.theme.aphelion
 
 import android.content.Context
 import android.os.Build
@@ -7,7 +7,7 @@ import android.os.Vibrator
 import android.os.VibratorManager
 import androidx.compose.ui.hapticfeedback.HapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
-import me.eternal.purrfectsnap.RemoteSideContext
+import cock.crest.purrfectsnap.lite.RemoteSideContext
 
 /**
  * Specialized haptic engine for the Aphelion "Liquid Glass" experience.

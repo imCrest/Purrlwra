@@ -1,11 +1,11 @@
-package me.eternal.purrfectsnap.core.features.impl.tweaks
+package cock.crest.purrfectsnap.lite.core.features.impl.tweaks
 
 import android.content.ContextWrapper
 import android.content.pm.PackageManager
-import me.eternal.purrfectsnap.common.config.impl.Global
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.hook
+import cock.crest.purrfectsnap.lite.common.config.impl.Global
+import cock.crest.purrfectsnap.lite.core.features.Feature
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.hook
 
 class DisablePermissionRequests : Feature("Disable Permission Requests") {
     override fun init() {

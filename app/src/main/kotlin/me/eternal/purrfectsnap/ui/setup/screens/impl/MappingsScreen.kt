@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup.screens.impl
+package cock.crest.purrfectsnap.lite.ui.setup.screens.impl
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -32,10 +32,10 @@ import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
-import me.eternal.purrfectsnap.ui.setup.screens.SetupScreen
-import me.eternal.purrfectsnap.ui.util.AlertDialogs
-import me.eternal.purrfectsnap.ui.util.Motion
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.ui.setup.screens.SetupScreen
+import cock.crest.purrfectsnap.lite.ui.util.AlertDialogs
+import cock.crest.purrfectsnap.lite.ui.util.Motion
 
 class MappingsScreen : SetupScreen() {
     @Composable

@@ -1,9 +1,9 @@
-package me.eternal.purrfectsnap.core.event.events.impl
+package cock.crest.purrfectsnap.lite.core.event.events.impl
 
-import me.eternal.purrfectsnap.core.event.events.AbstractHookEvent
-import me.eternal.purrfectsnap.core.util.hook.HookAdapter
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
+import cock.crest.purrfectsnap.lite.core.event.events.AbstractHookEvent
+import cock.crest.purrfectsnap.lite.core.util.hook.HookAdapter
+import cock.crest.purrfectsnap.lite.core.util.hook.HookStage
+import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
 import java.nio.ByteBuffer
 
 class NetworkApiRequestEvent(

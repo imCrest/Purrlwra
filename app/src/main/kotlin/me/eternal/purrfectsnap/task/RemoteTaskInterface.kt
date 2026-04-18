@@ -1,8 +1,8 @@
-package me.eternal.purrfectsnap.task
+package cock.crest.purrfectsnap.lite.task
 
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.bridge.task.TaskInterface
-import me.eternal.purrfectsnap.bridge.task.TaskListener
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.bridge.task.TaskInterface
+import cock.crest.purrfectsnap.lite.bridge.task.TaskListener
 
 class RemoteTaskInterface(
     private val context: RemoteSideContext

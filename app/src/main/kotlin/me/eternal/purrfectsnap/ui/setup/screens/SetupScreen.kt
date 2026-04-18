@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.setup.screens
+package cock.crest.purrfectsnap.lite.ui.setup.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -20,8 +20,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.RemoteSideContext
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 
 abstract class SetupScreen {
     lateinit var context: RemoteSideContext

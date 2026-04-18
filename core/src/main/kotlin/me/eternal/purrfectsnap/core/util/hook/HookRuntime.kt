@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util.hook
+package cock.crest.purrfectsnap.lite.core.util.hook
 
 import com.highcapable.yukihookapi.hook.param.PackageParam
 

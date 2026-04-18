@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
 import android.app.Activity
 import android.content.Context

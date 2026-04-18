@@ -1,7 +1,7 @@
-package me.eternal.purrfectsnap
+package cock.crest.purrfectsnap.lite
 
-import me.eternal.purrfectsnap.bridge.location.FriendLocation
-import me.eternal.purrfectsnap.bridge.location.LocationManager
+import cock.crest.purrfectsnap.lite.bridge.location.FriendLocation
+import cock.crest.purrfectsnap.lite.bridge.location.LocationManager
 
 class RemoteLocationManager(
     private val remoteSideContext: RemoteSideContext

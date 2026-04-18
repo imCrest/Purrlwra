@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.core.util
+package cock.crest.purrfectsnap.lite.core.util
 
 const val SNAPCHAT_13_80_VERSION = "13.80.0.0"
 

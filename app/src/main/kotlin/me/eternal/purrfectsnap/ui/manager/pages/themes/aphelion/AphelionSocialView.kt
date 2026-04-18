@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
@@ -40,10 +40,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavBackStackEntry
 import kotlinx.coroutines.launch
-import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.common.data.SocialScope
-import me.eternal.purrfectsnap.ui.manager.pages.social.SocialRootSection
-import me.eternal.purrfectsnap.ui.manager.theme.PurrfectPalette
+import cock.crest.purrfectsnap.lite.R
+import cock.crest.purrfectsnap.lite.common.data.SocialScope
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.SocialRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable

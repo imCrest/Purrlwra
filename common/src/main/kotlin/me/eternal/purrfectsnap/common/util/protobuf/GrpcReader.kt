@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.common.util.protobuf
+package cock.crest.purrfectsnap.lite.common.util.protobuf
 
 import org.mozilla.javascript.annotations.JSFunction
 

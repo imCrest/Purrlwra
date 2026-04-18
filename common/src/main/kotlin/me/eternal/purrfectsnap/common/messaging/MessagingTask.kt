@@ -1,10 +1,10 @@
-package me.eternal.purrfectsnap.common.messaging
+package cock.crest.purrfectsnap.lite.common.messaging
 
 import androidx.compose.runtime.MutableIntState
 import kotlinx.coroutines.delay
-import me.eternal.purrfectsnap.bridge.snapclient.MessagingBridge
-import me.eternal.purrfectsnap.bridge.snapclient.types.Message
-import me.eternal.purrfectsnap.common.data.ContentType
+import cock.crest.purrfectsnap.lite.bridge.snapclient.MessagingBridge
+import cock.crest.purrfectsnap.lite.bridge.snapclient.types.Message
+import cock.crest.purrfectsnap.lite.common.data.ContentType
 import kotlin.random.Random
 
 

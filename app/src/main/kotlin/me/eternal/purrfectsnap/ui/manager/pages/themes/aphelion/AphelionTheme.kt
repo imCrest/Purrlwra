@@ -1,17 +1,17 @@
-package me.eternal.purrfectsnap.ui.manager.pages.themes.aphelion
+package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.aphelion
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavBackStackEntry
-import me.eternal.purrfectsnap.ui.manager.ThemeContract
-import me.eternal.purrfectsnap.ui.manager.pages.TasksRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.features.FeaturesRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeAbout
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeLogs
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.home.HomeSettings
-import me.eternal.purrfectsnap.ui.manager.pages.scripting.ScriptingRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.social.SocialRootSection
-import me.eternal.purrfectsnap.ui.manager.pages.tracker.FriendTrackerManagerRoot
+import cock.crest.purrfectsnap.lite.ui.manager.ThemeContract
+import cock.crest.purrfectsnap.lite.ui.manager.pages.TasksRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.features.FeaturesRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeAbout
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeLogs
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.home.HomeSettings
+import cock.crest.purrfectsnap.lite.ui.manager.pages.scripting.ScriptingRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.social.SocialRootSection
+import cock.crest.purrfectsnap.lite.ui.manager.pages.tracker.FriendTrackerManagerRoot
 
 object AphelionTheme : ThemeContract {
     @Composable

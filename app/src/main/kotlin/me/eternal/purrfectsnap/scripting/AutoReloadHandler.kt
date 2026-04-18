@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.scripting
+package cock.crest.purrfectsnap.lite.scripting
 
 import android.net.Uri
 import androidx.documentfile.provider.DocumentFile

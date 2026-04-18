@@ -1,4 +1,4 @@
-package me.eternal.purrfectsnap.mapper.ext
+package cock.crest.purrfectsnap.lite.mapper.ext
 
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.iface.ClassDef
