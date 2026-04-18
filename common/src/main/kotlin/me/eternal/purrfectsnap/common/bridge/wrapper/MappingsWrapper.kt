@@ -4,7 +4,7 @@ import android.content.Context
 import com.google.gson.JsonParser
 import kotlinx.coroutines.runBlocking
 import cock.crest.purrfectsnap.lite.bridge.storage.FileHandleManager
-import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.CommonBuildInfo
 import cock.crest.purrfectsnap.lite.common.Constants
 import cock.crest.purrfectsnap.lite.common.bridge.FileHandleScope
 import cock.crest.purrfectsnap.lite.common.bridge.InternalFileHandleType
@@ -25,7 +25,7 @@ class MappingsWrapper(
 
     private val mappers = ClassMapper.DEFAULT_MAPPERS.associateBy { it::class }
 
-    private fun getUniqueBuildId() = (getSnapchatPackageInfo()?.longVersionCode ?: -1) xor BuildConfig.BUILD_HASH.hashCode().toLong()
+    private fun getUniqueBuildId() = (getSnapchatPackageInfo()?.longVersionCode ?: -1) xor CommonBuildInfo.BUILD_HASH.hashCode().toLong()
 
     fun init(context: Context) {
         this.context = context

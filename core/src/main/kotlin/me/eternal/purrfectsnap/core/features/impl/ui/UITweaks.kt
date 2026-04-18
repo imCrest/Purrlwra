@@ -19,18 +19,6 @@ import cock.crest.purrfectsnap.lite.core.util.hook.Hooker
 import cock.crest.purrfectsnap.lite.core.util.hook.hook
 import cock.crest.purrfectsnap.lite.core.util.ktx.getIdentifier
 import android.widget.TextView
-import me.eternal.purrfectsnap.core.event.events.impl.AddViewEvent
-import me.eternal.purrfectsnap.core.event.events.impl.BindViewEvent
-import me.eternal.purrfectsnap.core.features.Feature
-import me.eternal.purrfectsnap.core.ui.children
-import me.eternal.purrfectsnap.core.ui.getValdiContext
-import me.eternal.purrfectsnap.core.ui.hideViewCompletely
-import me.eternal.purrfectsnap.core.ui.onLayoutChange
-import me.eternal.purrfectsnap.core.util.dataBuilder
-import me.eternal.purrfectsnap.core.util.hook.HookStage
-import me.eternal.purrfectsnap.core.util.hook.Hooker
-import me.eternal.purrfectsnap.core.util.hook.hook
-import me.eternal.purrfectsnap.core.util.ktx.getIdentifier
 
 fun getChatInputBar(event: AddViewEvent): Lazy<ViewGroup?>? {
     if (!event.parent.javaClass.name.endsWith("ChatInputLayout")) return null

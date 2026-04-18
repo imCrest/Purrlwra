@@ -25,6 +25,9 @@ plugins {
 
 val nativeBuildHash = rootProject.ext.get("buildHash").toString()
 val nativeLibFileName = "lib${nativeBuildHash}.so"
+val nativeApplicationId = rootProject.ext["applicationId"].toString()
+val nativePackagePath = nativeApplicationId.replace('.', '/')
+val nativeBuildInfoPackage = "$nativeApplicationId.nativelib"
 
 val localProperties = Properties().apply {
     val file = rootProject.file("local.properties")
@@ -346,13 +349,7 @@ android {
 
     ndkVersion = desiredNdkVersion
 
-    buildFeatures {
-        buildConfig = true
-    }
-
     defaultConfig {
-        buildConfigField("String", "NATIVE_NAME", "\"$nativeBuildHash\".toString()")
-        buildConfigField("String", "MODULE_PACKAGE_NAME", "\"${rootProject.ext["applicationId"]}\"")
         minSdk = 28
     }
 
@@ -365,14 +362,43 @@ android {
         getByName("main") {
             jniLibs.srcDir("build/rustJniLibs/android")
             java.srcDir(layout.buildDirectory.dir("generated/source/checksums/kotlin"))
+            java.srcDir(layout.buildDirectory.dir("generated/source/buildInfo/kotlin"))
         }
     }
 }
 
+val generateNativeBuildInfo = tasks.register("generateNativeBuildInfo") {
+    val outputFile = layout.buildDirectory.file("generated/source/buildInfo/kotlin/$nativePackagePath/nativelib/NativeBuildInfo.kt")
+
+    inputs.property("nativeName", nativeBuildHash)
+    inputs.property("modulePackageName", nativeApplicationId)
+    outputs.file(outputFile)
+
+    doLast {
+        val file = outputFile.get().asFile
+        file.parentFile.mkdirs()
+        file.writeText(
+            """
+            package $nativeBuildInfoPackage
+
+            object NativeBuildInfo {
+                const val NATIVE_NAME = "$nativeBuildHash"
+                const val MODULE_PACKAGE_NAME = "$nativeApplicationId"
+            }
+            """.trimIndent()
+        )
+    }
+}
 
 tasks.matching { it.name.startsWith("pre") && it.name.endsWith("Build") }.configureEach {
     syncTasks.forEach { dependsOn(it) }
     dependsOn(generateChecksumsFile)
+    dependsOn(generateNativeBuildInfo)
+}
+
+tasks.matching { it.name.startsWith("compile") && it.name.endsWith("Kotlin") }.configureEach {
+    dependsOn(generateChecksumsFile)
+    dependsOn(generateNativeBuildInfo)
 }
 
 dependencies {

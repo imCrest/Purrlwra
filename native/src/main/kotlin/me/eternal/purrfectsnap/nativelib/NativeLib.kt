@@ -25,7 +25,7 @@ class NativeLib {
 
             val dirs = mutableListOf<File>()
             val moduleDir = runCatching {
-                app.createPackageContext(BuildConfig.MODULE_PACKAGE_NAME, Context.CONTEXT_IGNORE_SECURITY)
+                app.createPackageContext(NativeBuildInfo.MODULE_PACKAGE_NAME, Context.CONTEXT_IGNORE_SECURITY)
                     .applicationInfo.nativeLibraryDir
             }.getOrNull()
             moduleDir?.let { dirs.add(File(it)) }
@@ -41,7 +41,7 @@ class NativeLib {
 
             for (dir in dirs) {
                 val candidates = listOf(
-                    "lib${BuildConfig.NATIVE_NAME}.so",
+                    "lib${NativeBuildInfo.NATIVE_NAME}.so",
                     "libpurrfectsnap.so"
                 ).map { File(dir, it) }
 
@@ -70,7 +70,7 @@ class NativeLib {
             if (libraryLoaded) return true
 
             val candidates = linkedSetOf(
-                BuildConfig.NATIVE_NAME,
+                NativeBuildInfo.NATIVE_NAME,
                 // Some repackagers restore the original Cargo output name.
                 "purrfectsnap",
             ).filter { it.isNotBlank() }
@@ -97,7 +97,7 @@ class NativeLib {
 
         fun ensureLibraryLoaded() {
             if (!tryEnsureLibraryLoaded()) {
-                throw UnsatisfiedLinkError("Failed to load native library: ${BuildConfig.NATIVE_NAME}")
+                throw UnsatisfiedLinkError("Failed to load native library: ${NativeBuildInfo.NATIVE_NAME}")
             }
         }
     }

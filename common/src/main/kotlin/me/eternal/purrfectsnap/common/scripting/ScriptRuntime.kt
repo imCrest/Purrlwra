@@ -3,7 +3,7 @@ package cock.crest.purrfectsnap.lite.common.scripting
 import android.content.Context
 import android.os.ParcelFileDescriptor
 import cock.crest.purrfectsnap.lite.bridge.scripting.IScripting
-import cock.crest.purrfectsnap.lite.common.BuildConfig
+import cock.crest.purrfectsnap.lite.common.CommonBuildInfo
 import cock.crest.purrfectsnap.lite.common.config.impl.RootConfig
 import cock.crest.purrfectsnap.lite.common.logger.AbstractLogger
 import cock.crest.purrfectsnap.lite.common.scripting.type.readModuleInfo
@@ -58,7 +58,7 @@ open class ScriptRuntime(
         val bufferedReader = content.bufferedReader()
         val moduleInfo = bufferedReader.readModuleInfo()
 
-        if (moduleInfo.minPSVersion != null && moduleInfo.minPSVersion > BuildConfig.VERSION_CODE) {
+        if (moduleInfo.minPSVersion != null && moduleInfo.minPSVersion > CommonBuildInfo.VERSION_CODE) {
             throw Exception("Module requires a newer version of PurrfectSnap (min version: ${moduleInfo.minPSVersion})")
         }
 
