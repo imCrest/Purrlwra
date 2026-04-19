@@ -770,22 +770,23 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 }
                             }
 
-                            fun actionCardIcon(id: String) = when (id) {
-                                "quick.file_imports" -> Icons.Outlined.FolderOpen
-                                "quick.logger_history" -> Icons.Outlined.History
-                                "action.export_chat_messages" -> Icons.AutoMirrored.Outlined.Chat
-                                "action.export_memories" -> Icons.Outlined.Image
-                                "action.bulk_messaging_action" -> Icons.Outlined.Message
-                                "action.clean_snapchat_cache" -> Icons.Outlined.CleaningServices
-                                "action.manage_friend_list" -> Icons.Outlined.PersonOutline
-                                else -> Icons.Outlined.Widgets
+                            val actionCardIcons = remember {
+                                mapOf(
+                                    "quick.file_imports" to Icons.Outlined.FolderOpen,
+                                    "quick.logger_history" to Icons.Outlined.History,
+                                    "action.export_chat_messages" to Icons.AutoMirrored.Outlined.Chat,
+                                    "action.export_memories" to Icons.Outlined.Image,
+                                    "action.bulk_messaging_action" to Icons.Outlined.Message,
+                                    "action.clean_snapchat_cache" to Icons.Outlined.CleaningServices,
+                                    "action.manage_friend_list" to Icons.Outlined.PersonOutline
+                                )
                             }
                             Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                 selectedTiles.forEachIndexed { index, name ->
                                     val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
                                     val subtitle = context.translation.getOrNull("actions.${entry.id.substringAfter('.')}.description")
-                                        ?: entry.name
-                                    val icon = actionCardIcon(entry.id)
+                                        ?: ""
+                                    val icon = actionCardIcons[entry.id] ?: Icons.Outlined.Widgets
                                     val startPadding = if (index % 2 == 0) 0.dp else 18.dp
                                     val endPadding = if (index % 2 == 0) 18.dp else 0.dp
                                     ActionCard(
