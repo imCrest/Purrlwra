@@ -221,7 +221,15 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
 
     @Composable
     fun ActionCard(title: String, subtitle: String, icon: ImageVector, modifier: Modifier = Modifier, onClick: () -> Unit) {
-        Surface(modifier = modifier.fillMaxWidth().height(128.dp).clickable { haptic.performHapticFeedback(HapticFeedbackType.LongPress); onClick() }, shape = RoundedCornerShape(28.dp), color = Color(0xFF151E27), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))) {
+        Surface(
+            modifier = modifier
+                .fillMaxWidth()
+                .height(128.dp)
+                .clickable { haptic.performHapticFeedback(HapticFeedbackType.LongPress); onClick() },
+            shape = RoundedCornerShape(28.dp),
+            color = Color(0xFF151E27),
+            border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
+        ) {
             Box(Modifier.fillMaxSize().padding(20.dp)) {
                 Column(Modifier.align(Alignment.TopStart), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     Text(title, color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
@@ -763,7 +771,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 "quick.logger_history" -> Icons.Outlined.History
                                 "action.export_chat_messages" -> Icons.AutoMirrored.Outlined.Chat
                                 "action.export_memories" -> Icons.Outlined.Image
-                                "action.bulk_messaging_action" -> Icons.Outlined.DeleteOutline
+                                "action.bulk_messaging_action" -> Icons.Outlined.Message
                                 "action.clean_snapchat_cache" -> Icons.Outlined.CleaningServices
                                 "action.manage_friend_list" -> Icons.Outlined.PersonOutline
                                 else -> Icons.Outlined.Widgets
@@ -772,7 +780,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 selectedTiles.forEachIndexed { index, name ->
                                     val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
                                     val subtitle = context.translation.getOrNull("actions.${entry.id.substringAfter('.')}.description")
-                                        ?: "Open this quick shortcut"
+                                        ?: "Open ${entry.name}"
                                     val icon = actionCardMeta(entry.id)
                                     ActionCard(title = name, subtitle = subtitle, icon = icon, modifier = Modifier.padding(start = if (index % 2 == 0) 0.dp else 18.dp, end = if (index % 2 == 0) 18.dp else 0.dp)) { entry.action(routes) }
                                 }
