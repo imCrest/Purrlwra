@@ -7,9 +7,12 @@ import kotlinx.coroutines.runBlocking
 import cock.crest.purrfectsnap.lite.core.ModContext
 import cock.crest.purrfectsnap.lite.core.features.impl.*
 import cock.crest.purrfectsnap.lite.core.features.impl.downloader.MediaDownloader
+import cock.crest.purrfectsnap.lite.core.features.impl.downloader.ProfilePictureDownloader
 import cock.crest.purrfectsnap.lite.core.features.impl.experiments.*
-import cock.crest.purrfectsnap.lite.core.features.impl.global.SnapchatPlus
+import cock.crest.purrfectsnap.lite.core.features.impl.global.AdBlockFix
+import cock.crest.purrfectsnap.lite.core.features.impl.global.DisableMetrics
 import cock.crest.purrfectsnap.lite.core.features.impl.messaging.*
+import cock.crest.purrfectsnap.lite.core.features.impl.spying.FriendTracker
 import cock.crest.purrfectsnap.lite.core.features.impl.spying.HalfSwipeNotifier
 import cock.crest.purrfectsnap.lite.core.features.impl.spying.MessageLogger
 import cock.crest.purrfectsnap.lite.core.features.impl.spying.StealthMode
@@ -61,64 +64,40 @@ class FeatureManager(
     fun getRuleFeatures() = features.values.filterIsInstance<MessagingRuleFeature>().sortedBy { it.ruleType.ordinal }
 
     fun init() {
-        // Lite keeps a curated messaging + experimental allowlist, plus the support/runtime hooks they depend on.
+        // Lite keeps only the explicitly requested runtime features.
         register(
             ScopeSync(),
             Messaging(),
             MenuViewInjector(),
-            FriendMutationObserver(),
-            MediaDownloader(),
             ConfigurationOverride(),
             COFOverride(),
-            ConversationToolbox(),
-            EndToEndEncryption(),
+            DisableMetrics(),
+            AdBlockFix(),
+            DisableConfirmationDialogs(),
+            UITweaks(),
+            PreventMessageListAutoScroll(),
+            MessageIndicators(),
+            OperaStoryOverlay(),
+            MediaDownloader(),
+            ProfilePictureDownloader(),
+            MixerStories(),
+            FriendMutationObserver(),
+            FriendTracker(),
+            HalfSwipeNotifier(),
             StealthMode(),
+            BypassScreenshotDetection(),
+            HideTypingIndicator(),
+            UnlimitedSnapViewTime(),
             MessageLogger(),
             Notifications(),
-            AutoMarkAsRead(),
-            AutoRead(),
-            AutoSave(),
-            AutoReply(),
+            SendOverride(),
             PreventMessageSending(),
             UnsaveableMessages(),
-            SendOverride(),
-            UnlimitedSnapViewTime(),
-            BlockCalls(),
-            CallMetadataNotifier(),
-            ConversationSoundEffects(),
-            CallButtonsOverride(),
-            DisableReplayInFF(),
-            BypassScreenshotDetection(),
-            HalfSwipeNotifier(),
             BypassMessageActionRestrictions(),
-            PinConversations(),
-            RemoveGroupsLockedStatus(),
-            ConvertMessageLocally(),
-            SnapchatPlus(),
-            MeoPasscodeBypass(),
-            AppLock(),
-            InfiniteStoryBoost(),
-            DeviceSpooferHook(),
-            NoFriendScoreDelay(),
-            AddFriendSourceSpoof(),
-            AutoOpenSnaps(),
-            MixerStories(),
-            PreventForcedLogout(),
-            AccountSwitcher(),
+            DisableSnapModeRestrictions(),
             MediaFilePicker(),
-            CustomStreaksExpirationFormat(),
-            ValdiHooks(),
-            FirstCreatedUsername(),
-            BestFriendPinning(),
-            ContextMenuFix(),
-            BetterTranscript(),
-            VoiceNoteOverride(),
-            AutoDeleteSentMessages(),
-            FriendNotes(),
-            DoubleTapChatAction(),
+            NoFriendScoreDelay(),
             SnapScoreChanges(),
-            MessageTranslator(),
-            HideTypingIndicator(),
         )
 
         features.values.toList().forEach { feature ->

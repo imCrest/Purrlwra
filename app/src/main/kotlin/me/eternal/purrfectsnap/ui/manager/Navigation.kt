@@ -76,6 +76,7 @@ import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
@@ -241,20 +242,29 @@ class Navigation(
         }
         var selectedTabIds by remember { mutableStateOf(loadSelected()) }
         val selectedRoutes = remember(selectedTabIds) { selectedTabIds.mapNotNull { availableRouteMap[it] } }
-        val barShape = RoundedCornerShape(26.dp)
+        val barShape = RoundedCornerShape(30.dp)
         val barBorder = remember {
             Brush.linearGradient(
                 listOf(
-                    Color.White.copy(alpha = 0.34f),
-                    PurrfectPalette.glowPrimary.copy(alpha = 0.28f),
-                    Color.White.copy(alpha = 0.18f)
+                    Color.White.copy(alpha = 0.40f),
+                    Color.White.copy(alpha = 0.22f),
+                    PurrfectPalette.glowPrimary.copy(alpha = 0.28f)
+                )
+            )
+        }
+        val barLiquidFill = remember {
+            Brush.linearGradient(
+                colors = listOf(
+                    Color.White.copy(alpha = 0.16f),
+                    Color.White.copy(alpha = 0.08f),
+                    PurrfectPalette.cardOverlayColor.copy(alpha = 0.90f)
                 )
             )
         }
         val barSheen = remember {
             Brush.verticalGradient(
                 colors = listOf(
-                    Color.White.copy(alpha = 0.18f),
+                    Color.White.copy(alpha = 0.22f),
                     Color.Transparent
                 )
             )
@@ -272,14 +282,15 @@ class Navigation(
             val animatedBarWidth by animateDpAsState(targetValue = targetBarWidth ?: 0.dp, label = "barWidth")
             Surface(
                 shape = barShape,
-                color = Color.White.copy(alpha = 0.10f),
+                color = Color.White.copy(alpha = 0.06f),
                 contentColor = MaterialTheme.colorScheme.onSurface,
                 border = BorderStroke(
                     1.dp,
                     Brush.linearGradient(
                         listOf(
-                            Color.White.copy(alpha = 0.24f),
-                            PurrfectPalette.glowPrimary.copy(alpha = 0.22f)
+                            Color.White.copy(alpha = 0.30f),
+                            PurrfectPalette.glowPrimary.copy(alpha = 0.24f),
+                            Color.White.copy(alpha = 0.16f)
                         )
                     )
                 ),
@@ -312,10 +323,12 @@ class Navigation(
                         .fillMaxWidth()
                         .height(barHeight)
                         .clip(barShape)
+                        .background(Color.Transparent)
+                        .background(barLiquidFill)
                         .background(
                             Brush.verticalGradient(
                                 listOf(
-                                    Color.White.copy(alpha = 0.14f),
+                                    Color.White.copy(alpha = 0.12f),
                                     PurrfectPalette.cardOverlayColor.copy(alpha = 0.94f)
                                 )
                             )
@@ -329,6 +342,13 @@ class Navigation(
                             .align(Alignment.TopCenter)
                             .background(barSheen)
                             .graphicsLayer { alpha = 0.6f }
+                    )
+                    Box(
+                        modifier = Modifier
+                            .matchParentSize()
+                            .blur(26.dp)
+                            .background(Color.White.copy(alpha = 0.05f))
+                            .graphicsLayer { alpha = 0.45f }
                     )
                     Box(
                         modifier = Modifier

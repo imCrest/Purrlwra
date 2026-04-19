@@ -12,72 +12,51 @@ import cock.crest.purrfectsnap.lite.common.config.PropertyValue
 class RootConfig : ConfigContainer() {
     companion object {
         private val LITE_ALLOWED_PATHS = setOf(
+            "downloader.force_image_format",
+            "downloader.download_profile_pictures",
+            "downloader.opera_download_button",
+            "downloader.story_snap_list_download",
+            "downloader.download_context_menu",
+            "user_interface.prevent_message_list_auto_scroll",
+            "user_interface.hide_story_suggestions",
+            "user_interface.story_source_indicator",
+            "user_interface.message_indicators",
             "messaging.bypass_screenshot_detection",
-            "messaging.anonymous_story_viewing",
-            "messaging.prevent_story_rewatch_indicator",
             "messaging.hide_peek_a_peek",
+            "messaging.prevent_story_rewatch_indicator",
             "messaging.hide_bitmoji_presence",
             "messaging.spoof_viewing_gallery_presence",
             "messaging.spoof_reply_camera_presence",
             "messaging.hide_typing_notifications",
             "messaging.unlimited_snap_view_time",
-            "messaging.auto_mark_as_read",
-            "messaging.mark_snap_as_seen_button",
-            "messaging.mark_snap_as_seen_processing_mode",
-            "messaging.mark_snap_as_seen_limit",
-            "messaging.skip_when_marking_as_seen",
-            "messaging.loop_media_playback",
-            "messaging.disable_replay_in_ff",
             "messaging.half_swipe_notifier",
-            "messaging.call_start_confirmation",
-            "messaging.block_calls",
-            "messaging.call_metadata_notifier",
-            "messaging.conversation_sound_effects_style",
-            "messaging.unlimited_conversation_pinning",
             "messaging.disable_snap_mode_restrictions",
-            "messaging.auto_save_messages_in_conversations",
-            "messaging.unsaveable_messages",
             "messaging.prevent_message_sending",
             "messaging.friend_mutation_notifier",
+            "messaging.unsaveable_messages",
             "messaging.better_notifications",
-            "messaging.notification_blacklist",
             "messaging.message_logger",
             "messaging.gallery_media_send_override",
-            "messaging.scheduled_send_allow_running_in_background",
-            "messaging.strip_media_metadata",
-            "messaging.bypass_message_retention_policy",
             "messaging.bypass_message_action_restrictions",
-            "messaging.remove_groups_locked_status",
-            "messaging.double_tap_chat_action",
-            "messaging.double_tap_chat_action_custom_emoji",
-            "messaging.auto_reply",
-            "messaging.auto_delete_sent_messages",
-            "messaging.auto_open_snaps",
-            "messaging.pre_fetch_snaps",
-            "messaging.instant_translation",
-            "experimental.native_hooks",
-            "experimental.spoof",
-            "experimental.convert_message_locally",
+            "messaging.bypass_message_retention_policy",
+            "global.disable_confirmation_dialogs",
+            "global.disable_metrics",
+            "global.block_ads",
+            "global.disable_story_sections",
+            "camera.hevc_recording",
+            "camera.force_camera_source_encoding",
             "experimental.media_file_picker",
             "experimental.story_logger",
-            "experimental.account_switcher",
-            "experimental.network_optimization",
-            "experimental.better_transcript",
-            "experimental.voice_note_auto_play",
-            "experimental.friend_notes",
-            "experimental.context_menu_fix",
             "experimental.cof_experiments",
-            "experimental.app_lock",
-            "experimental.infinite_story_boost",
-            "experimental.meo_passcode_bypass",
             "experimental.no_friend_score_delay",
-            "experimental.best_friend_pinning",
-            "experimental.e2ee",
-            "experimental.hidden_snapchat_plus_features",
-            "experimental.custom_streaks_expiration_format",
-            "experimental.add_friend_source_spoof",
-            "experimental.prevent_forced_logout",
             "experimental.snapscore_changes",
+            "rules.stealth",
+            "rules.chat_stealth",
+            "rules.snap_stealth",
+            "rules.hide_typing_indicator",
+            "rules.auto_download",
+            "rules.unsaveable_messages",
+            "rules.message_logger",
         )
 
         private val INTERNAL_SUPPORT_PATHS = setOf(
@@ -101,6 +80,30 @@ class RootConfig : ConfigContainer() {
 
     fun applyLiteProfile() {
         pruneContainer(pathPrefix = null)
+        runCatching {
+            downloader.forceImageFormat.set("jpg")
+            userInterface.hideStorySuggestions.set(mutableListOf("hide_suggested_friend_stories"))
+            userInterface.messageIndicators.set(
+                mutableListOf(
+                    "encryption_indicator",
+                    "ovf_editor_indicator",
+                    "director_mode_indicator"
+                )
+            )
+            messaging.preventMessageSending.set(
+                mutableListOf(
+                    "chat_screenshot",
+                    "chat_screen_record",
+                    "camera_roll_save"
+                )
+            )
+            messaging.betterNotifications.chatPreview.set(true)
+            messaging.betterNotifications.mediaPreview.set(
+                mutableListOf("SNAP", "EXTERNAL_MEDIA", "STICKER", "SHARE", "TINY_SNAP", "MAP_REACTION")
+            )
+            global.disableStorySections.set(mutableListOf("suggested_stories"))
+            experimental.cofExperiments.set(Experimental.cofExperimentList.take(3).toMutableList())
+        }
     }
 
     private fun ConfigContainer.pruneContainer(pathPrefix: String?) {

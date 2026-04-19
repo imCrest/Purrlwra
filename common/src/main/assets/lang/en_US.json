@@ -205,8 +205,8 @@
                 "hero_version_label": "Version: {version} - {channel}",
                 "hero_build_label": "Build: {build}",
                 "update_ready_label": "Ready to install",
-                "purr_aura_active_label": "PurrAura Active!",
-                "purr_aura_inactive_label": "PurrAura Inactive",
+                "purr_aura_active_label": "PurrLwra Active!",
+                "purr_aura_inactive_label": "PurrLwra Inactive",
                 "open_settings_button": "Open Settings",
                 "wiki_button": "Wiki",
                 "github_button": "GitHub",
@@ -323,7 +323,7 @@
                 "reset_button": "Reset",
                 "done_button": "Done",
                 "clear_friend_feed": "Clear Friend Feed",
-                "test_mode_label": "Enable PurrAura",
+                "test_mode_label": "Enable PurrLwra",
                 "purr_aura_disable_title": "Are you sure?",
                 "purr_aura_disable_text": "Doing this will put your account at risk and cause bans!",
                 "disable_feature_loading_label": "Disable Feature Loading",
@@ -374,8 +374,8 @@
                 "subtitle": "Explore and manage premium features"
             },
             "bypass_status": {
-                "active": "PurrAura Active",
-                "inactive": "PurrAura Inactive"
+                "active": "PurrLwra Active",
+                "inactive": "PurrLwra Inactive"
             },
             "manage_rule_feature": {
                 "disable_state_option": "Disabled",
@@ -4233,7 +4233,7 @@
     "theme_mode_system": "System",
     "theme_mode_light": "Light",
     "theme_mode_dark": "Dark",
-    "test_mode_label": "Enable PurrAura",
+    "test_mode_label": "Enable PurrLwra",
     "disable_feature_loading_label": "Disable Feature Loading",
     "disable_auto_mapper_label": "Disable Auto Mapper",
     "disable_bypass_indicator_label": "Disable Bypass Indicator",

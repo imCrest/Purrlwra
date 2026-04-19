@@ -456,7 +456,8 @@ class FriendTracker : Feature("Friend Tracker") {
 
     override fun init() {
         val sessionEventsConfig = context.config.friendTracker
-        val shouldProcessSessionEvents = sessionEventsConfig.globalState == true || peekingStateListeners.isNotEmpty()
+        val halfSwipeEnabled = context.config.messaging.halfSwipeNotifier.globalState == true
+        val shouldProcessSessionEvents = sessionEventsConfig.globalState == true || peekingStateListeners.isNotEmpty() || halfSwipeEnabled
         if (!shouldProcessSessionEvents) return
 
         if (sessionEventsConfig.allowRunningInBackground.get()) {
