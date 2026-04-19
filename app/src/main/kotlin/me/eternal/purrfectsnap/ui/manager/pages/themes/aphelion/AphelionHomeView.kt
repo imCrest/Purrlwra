@@ -225,7 +225,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
             modifier = modifier
                 .fillMaxWidth()
                 .height(128.dp)
-                .clickable { haptic.performHapticFeedback(HapticFeedbackType.LongPress); onClick() },
+                .clickable { haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove); onClick() },
             shape = RoundedCornerShape(28.dp),
             color = Color(0xFF151E27),
             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
@@ -766,7 +766,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 }
                             }
 
-                            fun actionCardMeta(id: String) = when (id) {
+                            fun actionCardIcon(id: String) = when (id) {
                                 "quick.file_imports" -> Icons.Outlined.FolderOpen
                                 "quick.logger_history" -> Icons.Outlined.History
                                 "action.export_chat_messages" -> Icons.AutoMirrored.Outlined.Chat
@@ -781,7 +781,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                     val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
                                     val subtitle = context.translation.getOrNull("actions.${entry.id.substringAfter('.')}.description")
                                         ?: "Open ${entry.name}"
-                                    val icon = actionCardMeta(entry.id)
+                                    val icon = actionCardIcon(entry.id)
                                     ActionCard(title = name, subtitle = subtitle, icon = icon, modifier = Modifier.padding(start = if (index % 2 == 0) 0.dp else 18.dp, end = if (index % 2 == 0) 18.dp else 0.dp)) { entry.action(routes) }
                                 }
                             }
