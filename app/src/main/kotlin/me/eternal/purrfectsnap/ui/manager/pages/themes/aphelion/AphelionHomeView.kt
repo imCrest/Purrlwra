@@ -758,21 +758,22 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 }
                             }
 
-                            // TODO: Replace placeholder subtitles with richer localized descriptions.
                             fun actionCardMeta(id: String) = when (id) {
-                                "quick.file_imports" -> "Import critical documents" to Icons.Outlined.FolderOpen
-                                "quick.logger_history" -> "Review recent activity logs" to Icons.Outlined.History
-                                "action.export_chat_messages" -> "Archive key conversations" to Icons.AutoMirrored.Outlined.Chat
-                                "action.export_memories" -> "Backup saved snaps and memories" to Icons.Outlined.Image
-                                "action.bulk_messaging_action" -> "Manage bulk message operations" to Icons.Outlined.DeleteOutline
-                                "action.clean_snapchat_cache" -> "Clear cache to free device space" to Icons.Outlined.CleaningServices
-                                "action.manage_friend_list" -> "Organize and update friend access" to Icons.Outlined.PersonOutline
-                                else -> "Open this quick shortcut" to Icons.Outlined.Widgets
+                                "quick.file_imports" -> Icons.Outlined.FolderOpen
+                                "quick.logger_history" -> Icons.Outlined.History
+                                "action.export_chat_messages" -> Icons.AutoMirrored.Outlined.Chat
+                                "action.export_memories" -> Icons.Outlined.Image
+                                "action.bulk_messaging_action" -> Icons.Outlined.DeleteOutline
+                                "action.clean_snapchat_cache" -> Icons.Outlined.CleaningServices
+                                "action.manage_friend_list" -> Icons.Outlined.PersonOutline
+                                else -> Icons.Outlined.Widgets
                             }
                             Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                                 selectedTiles.forEachIndexed { index, name ->
                                     val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
-                                    val (subtitle, icon) = actionCardMeta(entry.id)
+                                    val subtitle = context.translation.getOrNull("actions.${entry.id.substringAfter('.')}.description")
+                                        ?: "Open this quick shortcut"
+                                    val icon = actionCardMeta(entry.id)
                                     ActionCard(title = name, subtitle = subtitle, icon = icon, modifier = Modifier.padding(start = if (index % 2 == 0) 0.dp else 18.dp, end = if (index % 2 == 0) 18.dp else 0.dp)) { entry.action(routes) }
                                 }
                             }
