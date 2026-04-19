@@ -212,9 +212,9 @@ class Navigation(
         val shrinkThreshold = cock.crest.purrfectsnap.lite.ui.util.Motion.HEADER_MORPH_THRESHOLD
         val isAphelion = context.config.root.global.uiSettings.managerTheme.get() == "APHELION"
         val focusFactor = if (isAphelion) (globalScrollOffset / shrinkThreshold).coerceIn(0f, 1f) else 0f
-        val barHeight = lerp(78.dp, 62.dp, focusFactor)
+        val barHeight = lerp(62.dp, 50.dp, focusFactor)
         val labelAlpha = (1f - (focusFactor * 2.5f)).coerceIn(0f, 1f)
-        val iconTranslationY = (10 * focusFactor).dp
+        val iconTranslationY = (6 * focusFactor).dp
 
         val prefs = remember { context.sharedPreferences }
         val defaultOrder = remember { listOf("features", "home", "tasks") }
@@ -272,7 +272,7 @@ class Navigation(
         Box(
             Modifier
                 .fillMaxWidth()
-                .padding(start = 16.dp, end = 16.dp, bottom = 8.dp)
+                .padding(start = 16.dp, end = 16.dp, bottom = 6.dp)
                 .navigationBarsPadding(),
             contentAlignment = Alignment.BottomCenter
         ) {
@@ -338,7 +338,7 @@ class Navigation(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(18.dp)
+                            .height(12.dp)
                             .align(Alignment.TopCenter)
                             .background(barSheen)
                             .graphicsLayer { alpha = 0.6f }
@@ -346,7 +346,7 @@ class Navigation(
                     Box(
                         modifier = Modifier
                             .matchParentSize()
-                            .blur(26.dp)
+                            .blur(20.dp)
                             .background(Color.White.copy(alpha = 0.05f))
                             .graphicsLayer { alpha = 0.45f }
                     )
@@ -443,7 +443,7 @@ class Navigation(
                                             .fillMaxHeight()
                                             .width(indicatorWidth.coerceAtLeast(0.dp))
                                             .offset(x = offsetX)
-                                            .padding(vertical = lerp(10.dp, 8.dp, focusFactor), horizontal = 2.dp)
+                                            .padding(vertical = lerp(7.dp, 5.dp, focusFactor), horizontal = 2.dp)
                                             .graphicsLayer { scaleX = scaleXAnim; scaleY = scaleYAnim }
                                     ) {
                                         Box(
