@@ -560,36 +560,36 @@ private fun SetupAuroraBackground() {
     ) {
         Canvas(modifier = Modifier.fillMaxSize()) {
             drawCircle(
-                color = PurrfectPalette.glowPrimary.copy(alpha = 0.08f),
+                color = PurrfectPalette.glowPrimary.copy(alpha = 0.06f),
                 radius = size.minDimension * 0.36f,
                 center = Offset(size.width * 0.5f, size.height * 0.18f)
             )
             drawRoundRect(
-                color = Color(0xFF15232A).copy(alpha = 0.92f),
+                color = Color(0xFF131A22).copy(alpha = 0.90f),
                 topLeft = Offset(size.width * 0.32f, size.height * 0.02f + driftY),
                 size = Size(size.width * 0.34f, size.height * 0.16f),
-                cornerRadius = androidx.compose.ui.geometry.CornerRadius(120f, 120f)
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(54f, 54f)
             )
             drawRoundRect(
-                color = Color(0xFF353B49).copy(alpha = 0.86f),
+                color = Color(0xFF2A313B).copy(alpha = 0.82f),
                 topLeft = Offset(size.width * 0.02f, size.height * 0.34f - driftX * 0.12f),
                 size = Size(size.width * 0.16f, size.width * 0.16f),
-                cornerRadius = androidx.compose.ui.geometry.CornerRadius(70f, 70f)
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(34f, 34f)
             )
             drawRoundRect(
-                color = Color(0xFF283336).copy(alpha = 0.82f),
+                color = Color(0xFF202730).copy(alpha = 0.78f),
                 topLeft = Offset(size.width * 0.73f, size.height * 0.38f + driftY * 0.08f),
                 size = Size(size.width * 0.23f, size.height * 0.18f),
-                cornerRadius = androidx.compose.ui.geometry.CornerRadius(100f, 100f)
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(46f, 46f)
             )
             drawRoundRect(
-                color = Color(0xFF18252B).copy(alpha = 0.86f),
+                color = Color(0xFF151B23).copy(alpha = 0.84f),
                 topLeft = Offset(size.width * 0.01f, size.height * 0.76f),
                 size = Size(size.width * 0.19f, size.height * 0.12f),
-                cornerRadius = androidx.compose.ui.geometry.CornerRadius(90f, 90f)
+                cornerRadius = androidx.compose.ui.geometry.CornerRadius(42f, 42f)
             )
             drawCircle(
-                color = Color(0xFF4A5062).copy(alpha = 0.72f),
+                color = Color(0xFF404754).copy(alpha = 0.52f),
                 radius = size.width * 0.09f,
                 center = Offset(size.width * 0.56f, size.height * 0.8f)
             )
@@ -605,16 +605,16 @@ private fun SetupTopBar() {
             .fillMaxWidth()
             .padding(horizontal = 14.dp, vertical = 12.dp)
             .padding(top = topPadding),
-        shape = RoundedCornerShape(28.dp),
-        color = Color.White.copy(alpha = 0.07f),
+        shape = RoundedCornerShape(22.dp),
+        color = Color.White.copy(alpha = 0.09f),
         tonalElevation = 0.dp,
         shadowElevation = 0.dp,
         border = androidx.compose.foundation.BorderStroke(
             1.dp,
             Brush.linearGradient(
                 listOf(
-                    PurrfectPalette.glowPrimary.copy(alpha = 0.6f),
-                    PurrfectPalette.glowSecondary.copy(alpha = 0.45f)
+                    Color.White.copy(alpha = 0.20f),
+                    PurrfectPalette.glowPrimary.copy(alpha = 0.18f)
                 )
             )
         )
@@ -653,9 +653,9 @@ private fun SetupHeader(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Surface(
-                shape = RoundedCornerShape(30),
+                shape = RoundedCornerShape(16.dp),
                 color = Color.White.copy(alpha = 0.08f),
-                border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.14f))
+                border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.16f))
             ) {
                 Row(
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
@@ -680,9 +680,9 @@ private fun SetupHeader(
                 }
             }
             Surface(
-                shape = RoundedCornerShape(30),
-                color = PurrfectPalette.glowPrimary.copy(alpha = 0.16f),
-                border = androidx.compose.foundation.BorderStroke(1.dp, PurrfectPalette.glowPrimary.copy(alpha = 0.35f))
+                shape = RoundedCornerShape(16.dp),
+                color = Color.White.copy(alpha = 0.10f),
+                border = androidx.compose.foundation.BorderStroke(1.dp, PurrfectPalette.glowPrimary.copy(alpha = 0.20f))
             ) {
                 Row(
                     modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp),
@@ -817,12 +817,12 @@ private fun StepBadge(step: SetupStepMeta, state: StepState) {
 private fun SetupProgressBar(progress: Float) {
     val gradient = Brush.horizontalGradient(
         listOf(
-            PurrfectPalette.glowSecondary,
-            PurrfectPalette.glowPrimary
+            Color(0xFFF7FBFF),
+            Color(0xFFCDE6FF)
         )
     )
     Surface(
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(14.dp),
         color = Color.White.copy(alpha = 0.07f),
         border = androidx.compose.foundation.BorderStroke(
             1.dp,
@@ -851,18 +851,18 @@ private fun SetupContentCard(
 ) {
     Surface(
         modifier = modifier,
-        shape = RoundedCornerShape(34.dp),
-        color = Color.White.copy(alpha = 0.04f),
+        shape = RoundedCornerShape(26.dp),
+        color = Color.White.copy(alpha = 0.05f),
         border = androidx.compose.foundation.BorderStroke(
             1.dp,
             Brush.linearGradient(
                 listOf(
-                    PurrfectPalette.glowPrimary.copy(alpha = 0.45f),
-                    PurrfectPalette.glowSecondary.copy(alpha = 0.35f)
+                    Color.White.copy(alpha = 0.18f),
+                    PurrfectPalette.glowPrimary.copy(alpha = 0.16f)
                 )
             )
         ),
-        shadowElevation = 16.dp,
+        shadowElevation = 12.dp,
         tonalElevation = 0.dp
     ) {
         Box(
@@ -872,12 +872,12 @@ private fun SetupContentCard(
                     width = 1.dp,
                     brush = Brush.linearGradient(
                         listOf(
-                            Color.White.copy(alpha = 0.06f),
+                            Color.White.copy(alpha = 0.08f),
                             Color.Transparent,
-                            Color.White.copy(alpha = 0.06f)
+                            Color.White.copy(alpha = 0.08f)
                         )
                     ),
-                    shape = RoundedCornerShape(34.dp)
+                    shape = RoundedCornerShape(26.dp)
                 )
                 .padding(horizontal = 16.dp, vertical = 16.dp)
         ) {
@@ -897,8 +897,8 @@ private fun NextButton(
     val alpha by animateFloatAsState(targetValue = if (enabled) 1f else 0.6f, label = "NextButtonAlpha")
     val gradient = Brush.horizontalGradient(
         listOf(
-            Color(0xFFBFE9FA),
-            Color(0xFF89CFE9)
+            Color(0xFFF8FCFF),
+            Color(0xFFD5EAFF)
         )
     )
     val interactionSource = remember { MutableInteractionSource() }
@@ -906,23 +906,23 @@ private fun NextButton(
         modifier = modifier
             .alpha(alpha)
             .scaleOnPress(interactionSource)
-            .clip(RoundedCornerShape(40.dp))
+            .clip(RoundedCornerShape(22.dp))
             .border(
                 width = 1.dp,
-                color = Color.White.copy(alpha = 0.24f),
-                shape = RoundedCornerShape(40.dp)
+                color = Color.White.copy(alpha = 0.20f),
+                shape = RoundedCornerShape(22.dp)
             )
             .clickable(
                 enabled = enabled,
                 interactionSource = interactionSource,
                 indication = null
             ) { onClick() },
-        color = Color.White.copy(alpha = if (enabled) 0.07f else 0.03f)
+        color = Color.White.copy(alpha = if (enabled) 0.09f else 0.03f)
     ) {
         Box(
             modifier = Modifier
                 .background(if (enabled) gradient else Brush.horizontalGradient(listOf(Color.White.copy(alpha = 0.08f), Color.White.copy(alpha = 0.08f))))
-                .padding(horizontal = 28.dp, vertical = 18.dp)
+                .padding(horizontal = 26.dp, vertical = 17.dp)
         ) {
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -934,14 +934,14 @@ private fun NextButton(
                     } else {
                         translation["setup.activity.continue_button"]
                     },
-                    color = Color(0xFF0B1B24),
+                    color = Color(0xFF111821),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp
                 )
                 Icon(
                     imageVector = if (isFinalStep) Icons.Filled.Check else Icons.AutoMirrored.Filled.ArrowForwardIos,
                     contentDescription = null,
-                    tint = Color(0xFF0B1B24)
+                    tint = Color(0xFF111821)
                 )
             }
         }

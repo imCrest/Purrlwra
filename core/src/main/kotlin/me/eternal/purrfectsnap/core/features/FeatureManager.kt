@@ -61,7 +61,7 @@ class FeatureManager(
     fun getRuleFeatures() = features.values.filterIsInstance<MessagingRuleFeature>().sortedBy { it.ruleType.ordinal }
 
     fun init() {
-        // Lite keeps messaging + experimental features, plus the minimum support layer they rely on.
+        // Lite keeps a curated messaging + experimental allowlist, plus the support/runtime hooks they depend on.
         register(
             ScopeSync(),
             Messaging(),

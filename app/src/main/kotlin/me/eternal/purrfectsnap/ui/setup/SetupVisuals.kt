@@ -57,7 +57,7 @@ enum class SetupHeroScene {
 @Composable
 fun SetupGlassBlock(
     modifier: Modifier = Modifier,
-    shape: Shape = RoundedCornerShape(30.dp),
+    shape: Shape = RoundedCornerShape(24.dp),
     paddingModifier: Modifier = Modifier.padding(horizontal = 20.dp, vertical = 18.dp),
     content: @Composable ColumnScope.() -> Unit
 ) {
@@ -69,21 +69,21 @@ fun SetupGlassBlock(
             1.dp,
             Brush.linearGradient(
                 listOf(
-                    Color.White.copy(alpha = 0.18f),
-                    PurrfectPalette.glowPrimary.copy(alpha = 0.30f),
-                    PurrfectPalette.glowSecondary.copy(alpha = 0.22f)
+                    Color.White.copy(alpha = 0.20f),
+                    PurrfectPalette.glowPrimary.copy(alpha = 0.18f),
+                    Color.White.copy(alpha = 0.10f)
                 )
             )
         ),
         tonalElevation = 0.dp,
-        shadowElevation = 18.dp
+        shadowElevation = 16.dp
     ) {
         Box(
             modifier = Modifier
                 .background(
                     Brush.verticalGradient(
                         listOf(
-                            Color.White.copy(alpha = 0.08f),
+                            Color.White.copy(alpha = 0.12f),
                             Color.Transparent
                         )
                     )
@@ -91,8 +91,8 @@ fun SetupGlassBlock(
                 .background(
                     Brush.linearGradient(
                         listOf(
-                            PurrfectPalette.cardOverlayColor.copy(alpha = 0.94f),
-                            Color(0xFF0A1218).copy(alpha = 0.96f)
+                            Color(0xFF171E27).copy(alpha = 0.95f),
+                            Color(0xFF0A1016).copy(alpha = 0.96f)
                         )
                     )
                 )
@@ -129,23 +129,18 @@ fun SetupBlobTitle(
 ) {
     Surface(
         modifier = modifier.wrapContentWidth(),
-        shape = RoundedCornerShape(
-            topStart = 52.dp,
-            topEnd = 86.dp,
-            bottomEnd = 38.dp,
-            bottomStart = 26.dp
-        ),
-        color = Color(0xFF356C7C),
-        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.15f)),
+        shape = RoundedCornerShape(22.dp),
+        color = Color.White.copy(alpha = 0.10f),
+        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.18f)),
         tonalElevation = 0.dp,
-        shadowElevation = 20.dp
+        shadowElevation = 16.dp
     ) {
         Text(
             text = title,
-            color = Color(0xFFD7F2F8),
-            fontSize = 20.sp,
+            color = Color(0xFFF4FAFF),
+            fontSize = 22.sp,
             fontWeight = FontWeight.ExtraBold,
-            modifier = Modifier.padding(horizontal = 30.dp, vertical = 16.dp)
+            modifier = Modifier.padding(horizontal = 26.dp, vertical = 14.dp)
         )
     }
 }
@@ -160,7 +155,7 @@ fun SetupSceneHero(
     Column(
         modifier = modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(14.dp)
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         SetupBlobTitle(title = title)
         if (!subtitle.isNullOrBlank()) {
@@ -178,7 +173,22 @@ fun SetupSceneHero(
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(240.dp),
+                .height(252.dp)
+                .clip(RoundedCornerShape(28.dp))
+                .background(
+                    Brush.verticalGradient(
+                        listOf(
+                            Color.White.copy(alpha = 0.08f),
+                            Color.Transparent,
+                            Color(0xFF0A1015).copy(alpha = 0.98f)
+                        )
+                    )
+                )
+                .border(
+                    BorderStroke(1.dp, Color.White.copy(alpha = 0.12f)),
+                    RoundedCornerShape(28.dp)
+                )
+                .padding(16.dp),
             contentAlignment = Alignment.Center
         ) {
             SetupDecorCloud(
@@ -243,7 +253,7 @@ fun SetupInfoSection(
 ) {
     SetupGlassBlock(
         modifier = modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(24.dp),
+        shape = RoundedCornerShape(22.dp),
         paddingModifier = Modifier.padding(horizontal = 16.dp, vertical = 14.dp)
     ) {
         Row(
@@ -253,7 +263,7 @@ fun SetupInfoSection(
         ) {
             Surface(
                 modifier = Modifier.size(34.dp),
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(10.dp),
                 color = PurrfectPalette.glowPrimary.copy(alpha = 0.18f)
             ) {
                 Box(contentAlignment = Alignment.Center) {
@@ -313,8 +323,8 @@ fun SetupGradientActionButton(
     val interaction = remember { MutableInteractionSource() }
     val gradient = Brush.horizontalGradient(
         listOf(
-            Color(0xFF9EDAF4),
-            PurrfectPalette.glowPrimary
+            Color(0xFFF7FBFF),
+            Color(0xFFCFE8FF)
         )
     )
     Surface(
@@ -330,7 +340,7 @@ fun SetupGradientActionButton(
             ),
         tonalElevation = 0.dp,
         color = Color.Transparent,
-        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.16f))
+        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.18f))
     ) {
         Box(
             modifier = Modifier
@@ -355,11 +365,11 @@ fun SetupGradientActionButton(
                 Icon(
                     imageVector = icon,
                     contentDescription = null,
-                    tint = Color(0xFF08212C)
+                    tint = Color(0xFF0E1720)
                 )
                 Text(
                     text = label,
-                    color = Color(0xFF08212C),
+                    color = Color(0xFF0E1720),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 16.sp
                 )
@@ -386,7 +396,7 @@ fun SetupLogsPanel(
     )
     SetupGlassBlock(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(24.dp),
+        shape = RoundedCornerShape(22.dp),
         paddingModifier = Modifier.padding(horizontal = 14.dp, vertical = 12.dp)
     ) {
         Row(
@@ -400,11 +410,11 @@ fun SetupLogsPanel(
                 fontWeight = FontWeight.Bold
             )
             Surface(
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(10.dp),
                 color = Color.White.copy(alpha = 0.08f),
                 border = BorderStroke(1.dp, Color.White.copy(alpha = 0.16f)),
                 modifier = Modifier
-                    .clip(RoundedCornerShape(12.dp))
+                    .clip(RoundedCornerShape(10.dp))
                     .clickable(onClick = onCopy)
             ) {
                 Row(
@@ -429,7 +439,7 @@ fun SetupLogsPanel(
         }
         Surface(
             modifier = Modifier.fillMaxWidth(),
-            shape = RoundedCornerShape(18.dp),
+            shape = RoundedCornerShape(16.dp),
             color = Color(0xFF091015),
             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
         ) {
@@ -715,14 +725,7 @@ private fun BoxScope.SetupDecorCloud(
     Box(
         modifier = modifier
             .size(width = width, height = height)
-            .clip(
-                RoundedCornerShape(
-                    topStart = 52.dp,
-                    topEnd = 46.dp,
-                    bottomEnd = 38.dp,
-                    bottomStart = 64.dp
-                )
-            )
+            .clip(RoundedCornerShape(34.dp))
             .background(color.copy(alpha = alpha))
     )
 }
@@ -738,14 +741,14 @@ private fun BoxScope.SetupDecorFlower(
         modifier = modifier.size(size),
         contentAlignment = Alignment.Center
     ) {
-        repeat(6) { index ->
+        repeat(8) { index ->
             Box(
                 modifier = Modifier
-                    .size(width = size / 2, height = size / 4)
-                    .clip(RoundedCornerShape(50))
+                    .size(width = size / 2.2f, height = size / 5f)
+                    .clip(RoundedCornerShape(10.dp))
                     .background(color.copy(alpha = alpha))
                     .align(Alignment.Center)
-                    .rotate(index * 30f)
+                    .rotate(index * 22.5f)
             )
         }
     }

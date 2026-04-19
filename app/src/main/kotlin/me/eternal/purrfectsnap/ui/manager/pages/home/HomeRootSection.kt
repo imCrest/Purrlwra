@@ -1,4 +1,4 @@
-package cock.crest.purrfectsnap.lite.ui.manager.pages.home
+﻿package cock.crest.purrfectsnap.lite.ui.manager.pages.home
 
 import android.content.SharedPreferences
 import androidx.compose.animation.AnimatedContent
@@ -146,9 +146,9 @@ class HomeRootSection : Routes.Route() {
         val cardMargin = 10.dp
         val pageBackgroundGradient = Brush.verticalGradient(
             listOf(
-                Color(0xFF09141C),
-                Color(0xFF102430),
-                Color(0xFF081017)
+                Color(0xFF04070A),
+                Color(0xFF0B1117),
+                Color(0xFF030609)
             )
         )
     }
@@ -159,13 +159,13 @@ class HomeRootSection : Routes.Route() {
     internal val announcementsUrl = "https://raw.githubusercontent.com/sujxlsahu/PurrfectSnap/dev/announcements.txt"
 
     internal val heroGradientColors = listOf(
-        Color(0xFF17384B),
-        Color(0xFF102430),
-        Color(0xFF09141C)
+        Color(0xFF1B232C),
+        Color(0xFF111821),
+        Color(0xFF090F15)
     )
     internal val quickActionsGradientColors = listOf(
-        Color(0xFF102430),
-        Color(0xFF0A151D)
+        Color(0xFF131A22),
+        Color(0xFF0B1117)
     )
     private lateinit var activityLauncherHelper: ActivityLauncherHelper
     data class QaCard(val id: String, val name: String, val icon: ImageVector, val action: (Routes) -> Unit)
@@ -457,7 +457,7 @@ class HomeRootSection : Routes.Route() {
                         fontFamily = avenirNext
                     )
                     Text(
-                        text = "curated by sujxlsahu",
+                        text = "Fucked By SUJ\u039bL",
                         color = Color.White.copy(alpha = 0.75f),
                         fontSize = 14.sp,
                         fontFamily = avenirNext
@@ -775,6 +775,7 @@ class HomeRootSection : Routes.Route() {
     return collected.joinToString("\n").trim()
 }
 }
+
 
 
 

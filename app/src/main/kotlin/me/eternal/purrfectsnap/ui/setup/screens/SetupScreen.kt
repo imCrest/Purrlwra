@@ -58,7 +58,7 @@ abstract class SetupScreen {
         ) {
             Text(
                 text = title,
-                fontSize = 22.sp,
+                fontSize = 24.sp,
                 fontWeight = FontWeight.ExtraBold,
                 color = PurrfectPalette.textPrimary,
                 textAlign = textAlign
@@ -81,17 +81,21 @@ abstract class SetupScreen {
         modifier: Modifier = Modifier,
         content: @Composable ColumnScope.() -> Unit
     ) {
-        SetupGlassBlock(modifier = modifier) {
+        SetupGlassBlock(
+            modifier = modifier,
+            shape = RoundedCornerShape(22.dp),
+            paddingModifier = Modifier.padding(horizontal = 18.dp, vertical = 16.dp)
+        ) {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(4.dp)
+                    .height(3.dp)
                     .background(
                         Brush.horizontalGradient(
                             listOf(
                                 Color.Transparent,
-                                PurrfectPalette.glowSecondary.copy(alpha = 0.34f),
-                                PurrfectPalette.glowPrimary.copy(alpha = 0.42f),
+                                Color.White.copy(alpha = 0.28f),
+                                PurrfectPalette.glowPrimary.copy(alpha = 0.30f),
                                 Color.Transparent
                             )
                         ),

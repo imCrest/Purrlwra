@@ -204,19 +204,19 @@ class Navigation(
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = remember(navBackStackEntry) { routes.getCurrentRoute(navBackStackEntry) }
         val availableRoutes = remember {
-            listOf(routes.tasks, routes.features, routes.home)
+            listOf(routes.features, routes.home, routes.tasks)
         }
         val availableRouteMap = remember(availableRoutes) { availableRoutes.associateBy { it.routeInfo.id } }
 
         val shrinkThreshold = cock.crest.purrfectsnap.lite.ui.util.Motion.HEADER_MORPH_THRESHOLD
         val isAphelion = context.config.root.global.uiSettings.managerTheme.get() == "APHELION"
         val focusFactor = if (isAphelion) (globalScrollOffset / shrinkThreshold).coerceIn(0f, 1f) else 0f
-        val barHeight = lerp(82.dp, 64.dp, focusFactor)
+        val barHeight = lerp(78.dp, 62.dp, focusFactor)
         val labelAlpha = (1f - (focusFactor * 2.5f)).coerceIn(0f, 1f)
         val iconTranslationY = (10 * focusFactor).dp
 
         val prefs = remember { context.sharedPreferences }
-        val defaultOrder = remember { listOf("tasks", "features", "home") }
+        val defaultOrder = remember { listOf("features", "home", "tasks") }
         fun loadSelected(): List<String> {
             val raw = prefs.getString("manager_nav_tabs", null)?.split(',')?.map { it.trim() }?.filter { it.isNotEmpty() } ?: emptyList()
             val cleaned = raw.filter { availableRouteMap.containsKey(it) }
@@ -241,19 +241,20 @@ class Navigation(
         }
         var selectedTabIds by remember { mutableStateOf(loadSelected()) }
         val selectedRoutes = remember(selectedTabIds) { selectedTabIds.mapNotNull { availableRouteMap[it] } }
-        val barShape = RoundedCornerShape(28.dp)
+        val barShape = RoundedCornerShape(26.dp)
         val barBorder = remember {
             Brush.linearGradient(
                 listOf(
-                    PurrfectPalette.glowPrimary.copy(alpha = 0.9f),
-                    PurrfectPalette.glowSecondary.copy(alpha = 0.85f)
+                    Color.White.copy(alpha = 0.34f),
+                    PurrfectPalette.glowPrimary.copy(alpha = 0.28f),
+                    Color.White.copy(alpha = 0.18f)
                 )
             )
         }
         val barSheen = remember {
             Brush.verticalGradient(
                 colors = listOf(
-                    Color.White.copy(alpha = 0.14f),
+                    Color.White.copy(alpha = 0.18f),
                     Color.Transparent
                 )
             )
@@ -271,14 +272,14 @@ class Navigation(
             val animatedBarWidth by animateDpAsState(targetValue = targetBarWidth ?: 0.dp, label = "barWidth")
             Surface(
                 shape = barShape,
-                color = Color.White.copy(alpha = 0.08f),
+                color = Color.White.copy(alpha = 0.10f),
                 contentColor = MaterialTheme.colorScheme.onSurface,
                 border = BorderStroke(
                     1.dp,
                     Brush.linearGradient(
                         listOf(
-                            PurrfectPalette.glowPrimary.copy(alpha = 0.9f),
-                            PurrfectPalette.glowSecondary.copy(alpha = 0.85f)
+                            Color.White.copy(alpha = 0.24f),
+                            PurrfectPalette.glowPrimary.copy(alpha = 0.22f)
                         )
                     )
                 ),
@@ -289,7 +290,7 @@ class Navigation(
                         drawCircle(
                             brush = Brush.radialGradient(
                                 colors = listOf(
-                                    PurrfectPalette.glowPrimary.copy(alpha = 0.25f),
+                                    Color.White.copy(alpha = 0.16f),
                                     Color.Transparent
                                 ),
                                 center = center,
@@ -300,10 +301,10 @@ class Navigation(
                         )
                     }
                     .shadow(
-                        elevation = 28.dp,
+                        elevation = 22.dp,
                         shape = barShape,
-                        spotColor = PurrfectPalette.glowPrimary.copy(alpha = 0.35f),
-                        ambientColor = PurrfectPalette.glowSecondary.copy(alpha = 0.26f)
+                        spotColor = Color.White.copy(alpha = 0.08f),
+                        ambientColor = Color.White.copy(alpha = 0.04f)
                     )
             ) {
                 Box(
@@ -311,7 +312,14 @@ class Navigation(
                         .fillMaxWidth()
                         .height(barHeight)
                         .clip(barShape)
-                        .background(PurrfectPalette.cardOverlay)
+                        .background(
+                            Brush.verticalGradient(
+                                listOf(
+                                    Color.White.copy(alpha = 0.14f),
+                                    PurrfectPalette.cardOverlayColor.copy(alpha = 0.94f)
+                                )
+                            )
+                        )
                         .border(BorderStroke(1.dp, barBorder), barShape)
                 ) {
                     Box(
@@ -331,7 +339,7 @@ class Navigation(
                                 drawCircle(
                                     brush = Brush.radialGradient(
                                         colors = listOf(
-                                            PurrfectPalette.glowSecondary.copy(alpha = 0.2f),
+                                            Color.White.copy(alpha = 0.10f),
                                             Color.Transparent
                                         ),
                                         center = center,
@@ -409,7 +417,7 @@ class Navigation(
                                 val scaleYAnim = 1f - (scaleYBase + scaleYExtra * mult) * pulse
                                 if (barWidthPx > 0f && itemCount > 0) {
                                     val offsetX = with(density) { offsetAnim.value.toDp() } + horizontalInset
-                                    val indicatorShape = RoundedCornerShape(18.dp)
+                                    val indicatorShape = RoundedCornerShape(20.dp)
                                     Box(
                                         modifier = Modifier
                                             .fillMaxHeight()
@@ -425,20 +433,20 @@ class Navigation(
                                                 .background(
                                                     Brush.linearGradient(
                                                         listOf(
-                                                            PurrfectPalette.glowPrimary.copy(alpha = 0.42f),
-                                                            PurrfectPalette.glowSecondary.copy(alpha = 0.38f)
+                                                            Color.White.copy(alpha = 0.22f),
+                                                            PurrfectPalette.glowPrimary.copy(alpha = 0.18f)
                                                         )
                                                     )
                                                 )
                                                 .border(
-                                                    BorderStroke(1.dp, Brush.linearGradient(listOf(PurrfectPalette.glowPrimary, PurrfectPalette.glowSecondary))),
+                                                    BorderStroke(1.dp, Brush.linearGradient(listOf(Color.White.copy(alpha = 0.32f), PurrfectPalette.glowPrimary.copy(alpha = 0.28f)))),
                                                     indicatorShape
                                                 )
                                                 .drawBehind {
                                                     drawCircle(
                                                         brush = Brush.radialGradient(
                                                             colors = listOf(
-                                                                PurrfectPalette.glowPrimary.copy(alpha = 0.35f),
+                                                                Color.White.copy(alpha = 0.14f),
                                                                 Color.Transparent
                                                             ),
                                                             center = center,
@@ -448,7 +456,7 @@ class Navigation(
                                                         center = center
                                                     )
                                                     drawRoundRect(
-                                                        color = Color.White.copy(alpha = 0.08f),
+                                                        color = Color.White.copy(alpha = 0.12f),
                                                         cornerRadius = CornerRadius(size.height / 2, size.height / 2),
                                                         size = size
                                                     )
@@ -490,7 +498,7 @@ class Navigation(
                                             textAlign = TextAlign.Center,
                                             fontSize = 12.sp,
                                             fontWeight = FontWeight.SemiBold,
-                                            color = Color.White.copy(alpha = (0.6f + 0.4f * selectionProgress) * labelAlpha),
+                                            color = Color(0xFFF4F9FF).copy(alpha = (0.56f + 0.44f * selectionProgress) * labelAlpha),
                                             maxLines = if (isLong) 2 else 1,
                                             overflow = if (isLong) TextOverflow.Ellipsis else TextOverflow.Clip,
                                             softWrap = isLong,
@@ -504,9 +512,9 @@ class Navigation(
                                     selected = isSelected,
                                     colors = NavigationBarItemDefaults.colors(
                                         selectedIconColor = Color.White,
-                                        unselectedIconColor = Color.White.copy(alpha = 0.72f),
+                                        unselectedIconColor = Color.White.copy(alpha = 0.58f),
                                         selectedTextColor = Color.White,
-                                        unselectedTextColor = Color.White.copy(alpha = 0.72f),
+                                        unselectedTextColor = Color.White.copy(alpha = 0.58f),
                                         indicatorColor = Color.Transparent
                                     ),
                                     onClick = {

@@ -11,9 +11,73 @@ import cock.crest.purrfectsnap.lite.common.config.PropertyValue
 
 class RootConfig : ConfigContainer() {
     companion object {
-        private val LITE_FEATURE_PREFIXES = setOf(
-            "messaging",
-            "experimental",
+        private val LITE_ALLOWED_PATHS = setOf(
+            "messaging.bypass_screenshot_detection",
+            "messaging.anonymous_story_viewing",
+            "messaging.prevent_story_rewatch_indicator",
+            "messaging.hide_peek_a_peek",
+            "messaging.hide_bitmoji_presence",
+            "messaging.spoof_viewing_gallery_presence",
+            "messaging.spoof_reply_camera_presence",
+            "messaging.hide_typing_notifications",
+            "messaging.unlimited_snap_view_time",
+            "messaging.auto_mark_as_read",
+            "messaging.mark_snap_as_seen_button",
+            "messaging.mark_snap_as_seen_processing_mode",
+            "messaging.mark_snap_as_seen_limit",
+            "messaging.skip_when_marking_as_seen",
+            "messaging.loop_media_playback",
+            "messaging.disable_replay_in_ff",
+            "messaging.half_swipe_notifier",
+            "messaging.call_start_confirmation",
+            "messaging.block_calls",
+            "messaging.call_metadata_notifier",
+            "messaging.conversation_sound_effects_style",
+            "messaging.unlimited_conversation_pinning",
+            "messaging.disable_snap_mode_restrictions",
+            "messaging.auto_save_messages_in_conversations",
+            "messaging.unsaveable_messages",
+            "messaging.prevent_message_sending",
+            "messaging.friend_mutation_notifier",
+            "messaging.better_notifications",
+            "messaging.notification_blacklist",
+            "messaging.message_logger",
+            "messaging.gallery_media_send_override",
+            "messaging.scheduled_send_allow_running_in_background",
+            "messaging.strip_media_metadata",
+            "messaging.bypass_message_retention_policy",
+            "messaging.bypass_message_action_restrictions",
+            "messaging.remove_groups_locked_status",
+            "messaging.double_tap_chat_action",
+            "messaging.double_tap_chat_action_custom_emoji",
+            "messaging.auto_reply",
+            "messaging.auto_delete_sent_messages",
+            "messaging.auto_open_snaps",
+            "messaging.pre_fetch_snaps",
+            "messaging.instant_translation",
+            "experimental.native_hooks",
+            "experimental.spoof",
+            "experimental.convert_message_locally",
+            "experimental.media_file_picker",
+            "experimental.story_logger",
+            "experimental.account_switcher",
+            "experimental.network_optimization",
+            "experimental.better_transcript",
+            "experimental.voice_note_auto_play",
+            "experimental.friend_notes",
+            "experimental.context_menu_fix",
+            "experimental.cof_experiments",
+            "experimental.app_lock",
+            "experimental.infinite_story_boost",
+            "experimental.meo_passcode_bypass",
+            "experimental.no_friend_score_delay",
+            "experimental.best_friend_pinning",
+            "experimental.e2ee",
+            "experimental.hidden_snapchat_plus_features",
+            "experimental.custom_streaks_expiration_format",
+            "experimental.add_friend_source_spoof",
+            "experimental.prevent_forced_logout",
+            "experimental.snapscore_changes",
         )
 
         private val INTERNAL_SUPPORT_PATHS = setOf(
@@ -40,7 +104,7 @@ class RootConfig : ConfigContainer() {
     }
 
     private fun ConfigContainer.pruneContainer(pathPrefix: String?) {
-        if (pathPrefix != null && hasGlobalState && LITE_FEATURE_PREFIXES.none { isPathOrDescendant(pathPrefix, it) }) {
+        if (pathPrefix != null && hasGlobalState && LITE_ALLOWED_PATHS.none { isPathOrDescendant(pathPrefix, it) }) {
             globalState = false
         }
 
@@ -95,13 +159,13 @@ class RootConfig : ConfigContainer() {
     }
 
     private fun shouldKeepProperty(fullPath: String): Boolean {
-        return LITE_FEATURE_PREFIXES.any { isPathOrDescendant(fullPath, it) } ||
+        return LITE_ALLOWED_PATHS.any { isPathOrDescendant(fullPath, it) } ||
             INTERNAL_SUPPORT_PATHS.any { isPathOrDescendant(fullPath, it) }
     }
 
     private fun shouldKeepContainer(fullPath: String): Boolean {
         return shouldKeepProperty(fullPath) ||
-            LITE_FEATURE_PREFIXES.any { isPathOrDescendant(it, fullPath) } ||
+            LITE_ALLOWED_PATHS.any { isPathOrDescendant(it, fullPath) } ||
             INTERNAL_SUPPORT_PATHS.any { isPathOrDescendant(it, fullPath) }
     }
 

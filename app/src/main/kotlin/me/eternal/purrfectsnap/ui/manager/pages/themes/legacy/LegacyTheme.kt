@@ -1,4 +1,4 @@
-package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.legacy
+﻿package cock.crest.purrfectsnap.lite.ui.manager.pages.themes.legacy
 
 import android.os.SystemClock
 import android.content.SharedPreferences
@@ -143,15 +143,15 @@ object LegacyTheme : ThemeContract {
             onClick: () -> Unit,
         ) {
             Surface(
-                shape = RoundedCornerShape(40),
-                color = Color.White.copy(alpha = 0.06f),
-                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.12f))
+                shape = RoundedCornerShape(20.dp),
+                color = Color.White.copy(alpha = 0.07f),
+                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.14f))
             ) {
                 Row(
                     modifier = Modifier
-                        .clip(RoundedCornerShape(40))
+                        .clip(RoundedCornerShape(20.dp))
                         .clickable(onClick = onClick)
-                        .padding(horizontal = 14.dp, vertical = 8.dp),
+                        .padding(horizontal = 14.dp, vertical = 10.dp),
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
@@ -185,28 +185,59 @@ object LegacyTheme : ThemeContract {
             onManageClick: () -> Unit,
             avenirNext: FontFamily
         ) {
-            val heroShape = RoundedCornerShape(36.dp)
+            val heroShape = RoundedCornerShape(28.dp)
             val gitHashShort = remember { (context.installationSummary.modInfo?.gitHash ?: BuildConfig.GIT_HASH).take(7) }
             Box(
                 modifier = Modifier
                     .padding(horizontal = cardMargin, vertical = 6.dp)
                     .clip(heroShape)
+                    .background(
+                        Brush.verticalGradient(
+                            listOf(
+                                Color.White.copy(alpha = 0.10f),
+                                Color.Transparent,
+                                Color(0xFF0A1016).copy(alpha = 0.98f)
+                            )
+                        )
+                    )
                     .background(Brush.linearGradient(heroGradientColors))
-                    .border(1.dp, Color.White.copy(alpha = 0.1f), heroShape)
+                    .border(1.dp, Color.White.copy(alpha = 0.14f), heroShape)
             ) {
                 Column(
-                    modifier = Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 22.dp),
+                    modifier = Modifier.fillMaxWidth().padding(horizontal = 22.dp, vertical = 24.dp),
                     verticalArrangement = Arrangement.spacedBy(16.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
+                    horizontalAlignment = Alignment.Start
                 ) {
-                    Column(verticalArrangement = Arrangement.spacedBy(6.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Surface(
+                        shape = RoundedCornerShape(16.dp),
+                        color = Color.White.copy(alpha = 0.08f),
+                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.12f)),
+                        tonalElevation = 0.dp,
+                        shadowElevation = 0.dp
+                    ) {
+                        Text(
+                            text = "HOME DECK",
+                            color = PurrfectPalette.glowSecondary,
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Black,
+                            letterSpacing = 1.2.sp,
+                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 8.dp)
+                        )
+                    }
+                    Column(verticalArrangement = Arrangement.spacedBy(6.dp), horizontalAlignment = Alignment.Start) {
                         Text("PurrfectSnap Lite", color = Color.White, fontSize = 34.sp, fontWeight = FontWeight.ExtraBold, fontFamily = avenirNext)
-                        Text("curated by sujxlsahu", color = Color.White.copy(alpha = 0.75f), fontSize = 14.sp, fontFamily = avenirNext)
-                        Text(text = translation["hero_tagline"] ?: "", color = Color.White.copy(alpha = 0.9f), fontSize = 15.sp, lineHeight = 20.sp, textAlign = TextAlign.Center)
+                        Text("Fucked By SUJ\u039bL", color = Color.White.copy(alpha = 0.74f), fontSize = 14.sp, fontFamily = avenirNext)
+                        Text(
+                            text = translation["hero_tagline"] ?: "",
+                            color = Color.White.copy(alpha = 0.88f),
+                            fontSize = 15.sp,
+                            lineHeight = 20.sp,
+                            textAlign = TextAlign.Start
+                        )
                     }
                     FlowRow(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.spacedBy(12.dp, Alignment.CenterHorizontally),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp, Alignment.Start),
                         verticalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         HeroBadge(translation.format("hero_version_label", "version" to versionName, "channel" to channelLabel))
@@ -218,9 +249,9 @@ object LegacyTheme : ThemeContract {
                     if (latestUpdate != null) {
                         Surface(
                             modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(20.dp),
+                            shape = RoundedCornerShape(22.dp),
                             color = Color.White.copy(alpha = 0.08f),
-                            border = BorderStroke(1.dp, Color.White.copy(alpha = 0.14f)),
+                            border = BorderStroke(1.dp, Color.White.copy(alpha = 0.16f)),
                             tonalElevation = 0.dp, shadowElevation = 0.dp
                         ) {
                             Row(
@@ -236,7 +267,7 @@ object LegacyTheme : ThemeContract {
                                     when (state) {
                                         UpdateDownloader.DownloadState.IDLE,
                                         UpdateDownloader.DownloadState.FAILED -> {
-                                            Button(onClick = onUpdateAction, shape = RoundedCornerShape(50), colors = ButtonDefaults.buttonColors(containerColor = Color.White, contentColor = Color(0xFF1B152E)), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.12f)), contentPadding = PaddingValues(12.dp)) {
+                                            Button(onClick = onUpdateAction, shape = RoundedCornerShape(18.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEAF5FF), contentColor = Color(0xFF111821)), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.12f)), contentPadding = PaddingValues(12.dp)) {
                                                 Icon(Icons.Default.Download, contentDescription = translation["download_icon_description"] ?: "", modifier = Modifier.size(18.dp))
                                             }
                                         }
@@ -260,12 +291,12 @@ object LegacyTheme : ThemeContract {
 
                     Surface(
                         color = Color.White.copy(alpha = 0.08f),
-                        shape = RoundedCornerShape(24.dp),
-                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.10f)),
+                        shape = RoundedCornerShape(22.dp),
+                        border = BorderStroke(1.dp, Color.White.copy(alpha = 0.12f)),
                         tonalElevation = 0.dp, shadowElevation = 0.dp
                     ) {
                         Column(modifier = Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                            Surface(shape = RoundedCornerShape(50), color = Color.White.copy(alpha = 0.06f), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.10f)), tonalElevation = 0.dp, shadowElevation = 0.dp) {
+                            Surface(shape = RoundedCornerShape(16.dp), color = Color.White.copy(alpha = 0.06f), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.10f)), tonalElevation = 0.dp, shadowElevation = 0.dp) {
                                 Row(modifier = Modifier.padding(horizontal = 14.dp, vertical = 10.dp), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
                                     Box(modifier = Modifier.size(14.dp).clip(RoundedCornerShape(50)).background(if (isPurrAuraActive) PurrfectPalette.glowPrimary else Color(0xFF8C8CA3)))
                                     Text(
@@ -276,7 +307,7 @@ object LegacyTheme : ThemeContract {
                             }
                             OutlinedButton(
                                 onClick = { routes.settings.navigate() },
-                                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.3f)),
+                                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.24f)),
                                 colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White),
                                 modifier = Modifier.align(Alignment.CenterHorizontally)
                             ) {
@@ -287,14 +318,14 @@ object LegacyTheme : ThemeContract {
                         }
                     }
 
-                    Surface(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(26.dp), color = Color.White.copy(alpha = 0.06f), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.10f)), tonalElevation = 0.dp, shadowElevation = 0.dp) {
+                    Surface(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(22.dp), color = Color.White.copy(alpha = 0.06f), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.12f)), tonalElevation = 0.dp, shadowElevation = 0.dp) {
                         Row(modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Button(modifier = Modifier.weight(1f), onClick = { context.androidContext.openLink("https://purrfectsnap.vercel.app/", context.translation["toast_open_link_failed"]) }, colors = ButtonDefaults.buttonColors(containerColor = Color.White, contentColor = Color(0xFF1B152E))) {
+                            Button(modifier = Modifier.weight(1f), onClick = { context.androidContext.openLink("https://purrfectsnap.vercel.app/", context.translation["toast_open_link_failed"]) }, shape = RoundedCornerShape(18.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFEAF5FF), contentColor = Color(0xFF111821))) {
                                 Icon(Icons.Filled.Language, contentDescription = null, modifier = Modifier.size(18.dp))
                                 Spacer(modifier = Modifier.width(8.dp))
                                 Text(text = "Site", maxLines = 1, overflow = TextOverflow.Ellipsis)
                             }
-                            OutlinedButton(modifier = Modifier.weight(1f), onClick = { context.androidContext.openLink("https://github.com/sujxlsahu/PurrfectSnap", context.translation["toast_open_link_failed"]) }, border = BorderStroke(1.dp, Color.White.copy(alpha = 0.35f)), colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
+                            OutlinedButton(modifier = Modifier.weight(1f), onClick = { context.androidContext.openLink("https://github.com/sujxlsahu/PurrfectSnap", context.translation["toast_open_link_failed"]) }, shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.24f)), colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White)) {
                                 Icon(imageVector = ImageVector.vectorResource(id = R.drawable.ic_github), contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
                                 Spacer(modifier = Modifier.width(6.dp))
                                 Text(text = translation["github_button"] ?: "", maxLines = 1, overflow = TextOverflow.Ellipsis)
@@ -497,14 +528,27 @@ object LegacyTheme : ThemeContract {
                 )
                 Spacer(modifier = Modifier.height(12.dp))
                 AnimatedContent(targetState = selectedTiles.isNotEmpty(), label = "QuickActionsAnim") { hasQuickActions ->
-                    val quickCardShape = RoundedCornerShape(34.dp)
+                    val quickCardShape = RoundedCornerShape(28.dp)
                     Surface(
                         modifier = Modifier.padding(horizontal = cardMargin, vertical = 10.dp),
-                        shape = quickCardShape, tonalElevation = 0.dp, shadowElevation = 24.dp,
-                        color = Color.Transparent, border = BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
+                        shape = quickCardShape, tonalElevation = 0.dp, shadowElevation = 18.dp,
+                        color = Color.Transparent, border = BorderStroke(1.dp, Color.White.copy(alpha = 0.10f))
                     ) {
                         Column(
-                            modifier = Modifier.fillMaxWidth().background(Brush.linearGradient(quickActionsGradientColors)).padding(horizontal = 24.dp, vertical = 28.dp).padding(bottom = navigationBarPadding + 32.dp),
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .background(
+                                    Brush.verticalGradient(
+                                        listOf(
+                                            Color.White.copy(alpha = 0.06f),
+                                            Color.Transparent,
+                                            Color(0xFF0A1015).copy(alpha = 0.98f)
+                                        )
+                                    )
+                                )
+                                .background(Brush.linearGradient(quickActionsGradientColors))
+                                .padding(horizontal = 24.dp, vertical = 28.dp)
+                                .padding(bottom = navigationBarPadding + 32.dp),
                             horizontalAlignment = Alignment.CenterHorizontally
                         ) {
                             if (!hasQuickActions) {
@@ -528,7 +572,7 @@ object LegacyTheme : ThemeContract {
                                     Text(translation["quick_actions_title"] ?: "", fontSize = 24.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, color = Color.White, maxLines = 3, overflow = TextOverflow.Clip)
                                     Text(translation.format("quick_actions_count_label", "count" to selectedTiles.size.toString()), fontSize = 13.sp, color = Color.White.copy(alpha = 0.75f), textAlign = TextAlign.Center)
                                     Row(modifier = Modifier.wrapContentWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
-                                        OutlinedButton(onClick = { showQuickActionsMenu = true }, border = BorderStroke(1.dp, Color.White.copy(alpha = 0.3f)), colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White) ) {
+                                        OutlinedButton(onClick = { showQuickActionsMenu = true }, shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.24f)), colors = ButtonDefaults.outlinedButtonColors(contentColor = Color.White) ) {
                                             Icon(imageVector = ImageVector.vectorResource(id = R.drawable.ic_manage), contentDescription = translation["manage_quick_actions_description"], modifier = Modifier.size(18.dp))
                                             Spacer(modifier = Modifier.width(6.dp))
                                             Text(translation["quick_actions_manage_button"] ?: "")
@@ -549,16 +593,29 @@ object LegacyTheme : ThemeContract {
                                             val interactionSource = remember { MutableInteractionSource() }
                                             Surface(
                                                 modifier = Modifier.width(tileWidth).aspectRatio(1.05f).scaleOnPress(interactionSource).clickable { action(routes) },
-                                                shape = RoundedCornerShape(18.dp),
-                                                color = Color.White.copy(alpha = 0.06f), tonalElevation = 0.dp, shadowElevation = 0.dp,
-                                                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.16f))
+                                                shape = RoundedCornerShape(24.dp),
+                                                color = Color.White.copy(alpha = 0.07f), tonalElevation = 0.dp, shadowElevation = 0.dp,
+                                                border = BorderStroke(1.dp, Color.White.copy(alpha = 0.14f))
                                             ) {
-                                                Box(Modifier.fillMaxSize().background(Brush.linearGradient(listOf(PurrfectPalette.glowPrimary.copy(alpha = 0.3f), PurrfectPalette.glowSecondary.copy(alpha = 0.22f)))).clipToBounds()) {
-                                                    Column(modifier = Modifier.fillMaxSize().padding(all = 10.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                                                Box(
+                                                    Modifier
+                                                        .fillMaxSize()
+                                                        .background(
+                                                            Brush.verticalGradient(
+                                                                listOf(
+                                                                    Color.White.copy(alpha = 0.08f),
+                                                                    Color.Transparent,
+                                                                    PurrfectPalette.cardOverlayColor.copy(alpha = 0.94f)
+                                                                )
+                                                            )
+                                                        )
+                                                        .clipToBounds()
+                                                ) {
+                                                    Column(modifier = Modifier.fillMaxSize().padding(all = 14.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
                                                         Icon(
                                                             imageVector = card.second, contentDescription = null,
                                                             tint = Color.White,
-                                                            modifier = Modifier.size(44.dp)
+                                                            modifier = Modifier.size(42.dp)
                                                         )
                                                         Spacer(modifier = Modifier.height(8.dp))
                                                         Text(
@@ -1716,3 +1773,4 @@ object LegacyTheme : ThemeContract {
         TrackerScreenContent(nav)
     }
 }
+
