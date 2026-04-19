@@ -784,7 +784,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 selectedTiles.forEachIndexed { index, name ->
                                     val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
                                     val subtitle = context.translation.getOrNull("actions.${entry.id.substringAfter('.')}.description")
-                                        ?: "${translation["quick_actions_manage_button"] ?: "Manage"} ${entry.name}"
+                                        ?: entry.name
                                     val icon = actionCardIcon(entry.id)
                                     val startPadding = if (index % 2 == 0) 0.dp else 18.dp
                                     val endPadding = if (index % 2 == 0) 18.dp else 0.dp
