@@ -225,12 +225,16 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
             modifier = modifier
                 .fillMaxWidth()
                 .height(128.dp)
-                .clickable { haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove); onClick() },
+                .clickable { haptic.performHapticFeedback(HapticFeedbackType.LongPress); onClick() },
             shape = RoundedCornerShape(28.dp),
             color = Color(0xFF151E27),
             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
         ) {
-            Box(Modifier.fillMaxSize().padding(20.dp)) {
+            Box(
+                Modifier
+                    .fillMaxSize()
+                    .padding(20.dp)
+            ) {
                 Column(Modifier.align(Alignment.TopStart), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                     Text(title, color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
                     Text(subtitle, color = Color.White.copy(alpha = 0.62f), fontSize = 13.sp, maxLines = 2, overflow = TextOverflow.Ellipsis)
@@ -780,9 +784,16 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 selectedTiles.forEachIndexed { index, name ->
                                     val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
                                     val subtitle = context.translation.getOrNull("actions.${entry.id.substringAfter('.')}.description")
-                                        ?: "Open ${entry.name}"
+                                        ?: "${translation["quick_actions_manage_button"] ?: "Manage"} ${entry.name}"
                                     val icon = actionCardIcon(entry.id)
-                                    ActionCard(title = name, subtitle = subtitle, icon = icon, modifier = Modifier.padding(start = if (index % 2 == 0) 0.dp else 18.dp, end = if (index % 2 == 0) 18.dp else 0.dp)) { entry.action(routes) }
+                                    val startPadding = if (index % 2 == 0) 0.dp else 18.dp
+                                    val endPadding = if (index % 2 == 0) 18.dp else 0.dp
+                                    ActionCard(
+                                        title = name,
+                                        subtitle = subtitle,
+                                        icon = icon,
+                                        modifier = Modifier.padding(start = startPadding, end = endPadding)
+                                    ) { entry.action(routes) }
                                 }
                             }
                         }
