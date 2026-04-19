@@ -212,7 +212,7 @@ class Navigation(
         val shrinkThreshold = cock.crest.purrfectsnap.lite.ui.util.Motion.HEADER_MORPH_THRESHOLD
         val isAphelion = context.config.root.global.uiSettings.managerTheme.get() == "APHELION"
         val focusFactor = if (isAphelion) (globalScrollOffset / shrinkThreshold).coerceIn(0f, 1f) else 0f
-        val barHeight = lerp(78.dp, 62.dp, focusFactor)
+        val barHeight = lerp(60.dp, 46.dp, focusFactor)
         val labelAlpha = (1f - (focusFactor * 2.5f)).coerceIn(0f, 1f)
         val iconTranslationY = (10 * focusFactor).dp
 
@@ -242,7 +242,7 @@ class Navigation(
         }
         var selectedTabIds by remember { mutableStateOf(loadSelected()) }
         val selectedRoutes = remember(selectedTabIds) { selectedTabIds.mapNotNull { availableRouteMap[it] } }
-        val barShape = RoundedCornerShape(30.dp)
+        val barShape = RoundedCornerShape(22.dp)
         val barBorder = remember {
             Brush.linearGradient(
                 listOf(
@@ -272,17 +272,17 @@ class Navigation(
         Box(
             Modifier
                 .fillMaxWidth()
-                .padding(start = 16.dp, end = 16.dp, bottom = 8.dp)
+                .padding(start = 14.dp, end = 14.dp, bottom = 4.dp)
                 .navigationBarsPadding(),
             contentAlignment = Alignment.BottomCenter
         ) {
-            val baseItemWidth = 92.dp
-            val containerPadding = 24.dp
+            val baseItemWidth = 82.dp
+            val containerPadding = 16.dp
             val targetBarWidth = if (selectedRoutes.size < 5) baseItemWidth * selectedRoutes.size.toFloat() + containerPadding else null
             val animatedBarWidth by animateDpAsState(targetValue = targetBarWidth ?: 0.dp, label = "barWidth")
             Surface(
                 shape = barShape,
-                color = Color.White.copy(alpha = 0.06f),
+                color = Color.White.copy(alpha = 0.05f),
                 contentColor = MaterialTheme.colorScheme.onSurface,
                 border = BorderStroke(
                     1.dp,
@@ -312,7 +312,7 @@ class Navigation(
                         )
                     }
                     .shadow(
-                        elevation = 22.dp,
+                        elevation = 14.dp,
                         shape = barShape,
                         spotColor = Color.White.copy(alpha = 0.08f),
                         ambientColor = Color.White.copy(alpha = 0.04f)
@@ -338,7 +338,7 @@ class Navigation(
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(18.dp)
+                            .height(12.dp)
                             .align(Alignment.TopCenter)
                             .background(barSheen)
                             .graphicsLayer { alpha = 0.6f }
@@ -443,7 +443,7 @@ class Navigation(
                                             .fillMaxHeight()
                                             .width(indicatorWidth.coerceAtLeast(0.dp))
                                             .offset(x = offsetX)
-                                            .padding(vertical = lerp(10.dp, 8.dp, focusFactor), horizontal = 2.dp)
+                                            .padding(vertical = lerp(6.dp, 4.dp, focusFactor), horizontal = 2.dp)
                                             .graphicsLayer { scaleX = scaleXAnim; scaleY = scaleYAnim }
                                     ) {
                                         Box(
@@ -491,7 +491,7 @@ class Navigation(
                             tonalElevation = 0.dp,
                             modifier = Modifier
                                 .fillMaxSize()
-                                .padding(horizontal = 6.dp)
+                                .padding(horizontal = 4.dp)
                         ) {
                             selectedRoutes.forEach { route ->
                                 val isSelected = currentRoute == route
@@ -503,7 +503,7 @@ class Navigation(
                                             imageVector = route.routeInfo.icon,
                                             contentDescription = null,
                                             modifier = Modifier
-                                                .size(22.dp + 2.dp * selectionProgress)
+                                                .size(18.dp + 2.dp * selectionProgress)
                                                 .graphicsLayer { 
                                                     alpha = 0.65f + 0.35f * selectionProgress
                                                     translationY = iconTranslationY.toPx()
@@ -516,7 +516,7 @@ class Navigation(
                                         Text(
                                             text = label,
                                             textAlign = TextAlign.Center,
-                                            fontSize = 12.sp,
+                                            fontSize = 10.sp,
                                             fontWeight = FontWeight.SemiBold,
                                             color = Color(0xFFF4F9FF).copy(alpha = (0.56f + 0.44f * selectionProgress) * labelAlpha),
                                             maxLines = if (isLong) 2 else 1,
@@ -525,7 +525,7 @@ class Navigation(
                                             modifier = (if (isLong) Modifier.widthIn(max = 90.dp).wrapContentWidth(Alignment.CenterHorizontally) else Modifier.wrapContentWidth(Alignment.CenterHorizontally))
                                                 .graphicsLayer {
                                                     alpha = labelAlpha
-                                                    translationY = (-10 * focusFactor).dp.toPx()
+                                                    translationY = (-6 * focusFactor).dp.toPx()
                                                 }
                                         )
                                     },

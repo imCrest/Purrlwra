@@ -15,8 +15,9 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Chat
 import androidx.compose.material.icons.filled.*
-import androidx.compose.material.icons.outlined.Widgets
+import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -216,6 +217,19 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
             label = context.translation["manager.routes.home_settings"],
             shrinkFactor = shrinkFactor, haptic = haptic
         ) { routes.settings.navigate() }
+    }
+
+    @Composable
+    fun ActionCard(title: String, subtitle: String, icon: ImageVector, modifier: Modifier = Modifier, onClick: () -> Unit) {
+        Surface(modifier = modifier.fillMaxWidth().height(128.dp).clickable { haptic.performHapticFeedback(HapticFeedbackType.LongPress); onClick() }, shape = RoundedCornerShape(28.dp), color = Color(0xFF151E27), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))) {
+            Box(Modifier.fillMaxSize().padding(20.dp)) {
+                Column(Modifier.align(Alignment.TopStart), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text(title, color = Color.White, fontSize = 18.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(subtitle, color = Color.White.copy(alpha = 0.62f), fontSize = 13.sp, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                }
+                Icon(icon, contentDescription = null, tint = Color.White.copy(alpha = 0.2f), modifier = Modifier.align(Alignment.BottomEnd).size(56.dp))
+            }
+        }
     }
 
     @OptIn(ExperimentalLayoutApi::class)
@@ -433,7 +447,7 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
     val haptic = LocalHapticFeedback.current
     val avenirNext = remember { FontFamily(Font(R.font.avenir_next_medium, FontWeight.Medium)) }
     val prefs = remember { context.sharedPreferences }
-    val allQuickTileNames = remember(cards) { cards.keys.map { it.first } }
+    val allQuickTileNames = remember(cardEntries) { cardEntries.map { it.name } }
     val selectedTiles = rememberAsyncMutableStateList(defaultValue = allQuickTileNames) {
         val storedTiles = context.database.getQuickTiles().filter { it.isNotBlank() }
         val hasInitialized = prefs.getBoolean(HomeRootSection.QUICK_TILES_INITIALIZED_PREF, false)
@@ -744,58 +758,22 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                 }
                             }
 
-                            var gridIsVisible by remember { mutableStateOf(false) }
-                            var animationPhase by remember { mutableIntStateOf(1) }
-                            LaunchedEffect(gridIsVisible) {
-                                if (gridIsVisible) {
-                                    delay(600); animationPhase = 2
-                                    delay(1200); animationPhase = 3
-                                }
+                            // TODO: Replace placeholder subtitles with richer localized descriptions.
+                            fun actionCardMeta(id: String) = when (id) {
+                                "quick.file_imports" -> "Import critical documents" to Icons.Outlined.FolderOpen
+                                "quick.logger_history" -> "Review recent activity logs" to Icons.Outlined.History
+                                "action.export_chat_messages" -> "Archive key conversations" to Icons.AutoMirrored.Outlined.Chat
+                                "action.export_memories" -> "Backup saved snaps and memories" to Icons.Outlined.Image
+                                "action.bulk_messaging_action" -> "Manage bulk message operations" to Icons.Outlined.DeleteOutline
+                                "action.clean_snapchat_cache" -> "Clear cache to free device space" to Icons.Outlined.CleaningServices
+                                "action.manage_friend_list" -> "Organize and update friend access" to Icons.Outlined.PersonOutline
+                                else -> "Open this quick shortcut" to Icons.Outlined.Widgets
                             }
-
-                            BoxWithConstraints(
-                                modifier = Modifier.fillMaxWidth().onGloballyPositioned { coords ->
-                                    val windowHeight = context.androidContext.resources.displayMetrics.heightPixels
-                                    val posY = coords.localToWindow(Offset.Zero).y
-                                    if (posY > 0 && posY < windowHeight * 0.95f) gridIsVisible = true
-                                }
-                            ) {
-                                val columns = (maxWidth / 110.dp).toInt().coerceIn(2, 4)
-                                FlowRow(
-                                    modifier = Modifier.fillMaxWidth().padding(8.dp),
-                                    horizontalArrangement = Arrangement.SpaceEvenly,
-                                    verticalArrangement = Arrangement.spacedBy(12.dp),
-                                    maxItemsInEachRow = columns
-                                ) {
-                                    selectedTiles.forEach { name ->
-                                        val cardEntry = cards.entries.find { it.key.first == name } ?: return@forEach
-                                        val interactionSource = remember { MutableInteractionSource() }
-                                        val animatedIconSize by animateDpAsState(
-                                            targetValue = if (animationPhase >= 2) 28.dp else 44.dp,
-                                            animationSpec = spring(dampingRatio = Spring.DampingRatioLowBouncy, stiffness = Spring.StiffnessLow),
-                                            label = "iconShrink"
-                                        )
-                                        Surface(
-                                            modifier = Modifier.width(100.dp).aspectRatio(1.05f).scaleOnPress(interactionSource)
-                                                .clickable { haptic.performHapticFeedback(HapticFeedbackType.LongPress); cardEntry.value(routes) },
-                                            shape = RoundedCornerShape(18.dp),
-                                            color = Color.White.copy(alpha = 0.06f),
-                                            border = BorderStroke(1.dp, Color.White.copy(alpha = 0.16f))
-                                        ) {
-                                            Box(Modifier.fillMaxSize().background(Brush.linearGradient(listOf(PurrfectPalette.glowPrimary.copy(alpha = 0.3f), PurrfectPalette.glowSecondary.copy(alpha = 0.22f)))).clipToBounds()) {
-                                                Column(modifier = Modifier.fillMaxSize().padding(horizontal = 8.dp, vertical = 10.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
-                                                    Icon(cardEntry.key.second, contentDescription = null, tint = Color.White, modifier = Modifier.size(animatedIconSize))
-                                                    Spacer(Modifier.height(8.dp))
-                                                    PurrfectMarqueeText(
-                                                        text = cardEntry.key.first,
-                                                        style = TextStyle(fontSize = 12.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center),
-                                                        color = Color.White,
-                                                        modifier = Modifier.fillMaxWidth()
-                                                    )
-                                                }
-                                            }
-                                        }
-                                    }
+                            Column(modifier = Modifier.fillMaxWidth().padding(horizontal = 4.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                                selectedTiles.forEachIndexed { index, name ->
+                                    val entry = cardEntries.find { it.name == name } ?: return@forEachIndexed
+                                    val (subtitle, icon) = actionCardMeta(entry.id)
+                                    ActionCard(title = name, subtitle = subtitle, icon = icon, modifier = Modifier.padding(start = if (index % 2 == 0) 0.dp else 18.dp, end = if (index % 2 == 0) 18.dp else 0.dp)) { entry.action(routes) }
                                 }
                             }
                         }
