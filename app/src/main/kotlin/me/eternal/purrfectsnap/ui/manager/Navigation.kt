@@ -213,8 +213,9 @@ class Navigation(
         val isAphelion = context.config.root.global.uiSettings.managerTheme.get() == "APHELION"
         val focusFactor = if (isAphelion) (globalScrollOffset / shrinkThreshold).coerceIn(0f, 1f) else 0f
         val barHeight = lerp(60.dp, 46.dp, focusFactor)
+        val barHeight = lerp(62.dp, 50.dp, focusFactor)
         val labelAlpha = (1f - (focusFactor * 2.5f)).coerceIn(0f, 1f)
-        val iconTranslationY = (10 * focusFactor).dp
+        val iconTranslationY = (6 * focusFactor).dp
 
         val prefs = remember { context.sharedPreferences }
         val defaultOrder = remember { listOf("features", "home", "tasks") }
@@ -273,6 +274,7 @@ class Navigation(
             Modifier
                 .fillMaxWidth()
                 .padding(start = 14.dp, end = 14.dp, bottom = 4.dp)
+                .padding(start = 16.dp, end = 16.dp, bottom = 6.dp)
                 .navigationBarsPadding(),
             contentAlignment = Alignment.BottomCenter
         ) {
@@ -346,7 +348,7 @@ class Navigation(
                     Box(
                         modifier = Modifier
                             .matchParentSize()
-                            .blur(26.dp)
+                            .blur(20.dp)
                             .background(Color.White.copy(alpha = 0.05f))
                             .graphicsLayer { alpha = 0.45f }
                     )
@@ -444,6 +446,7 @@ class Navigation(
                                             .width(indicatorWidth.coerceAtLeast(0.dp))
                                             .offset(x = offsetX)
                                             .padding(vertical = lerp(6.dp, 4.dp, focusFactor), horizontal = 2.dp)
+                                            .padding(vertical = lerp(7.dp, 5.dp, focusFactor), horizontal = 2.dp)
                                             .graphicsLayer { scaleX = scaleXAnim; scaleY = scaleYAnim }
                                     ) {
                                         Box(

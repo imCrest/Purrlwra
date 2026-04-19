@@ -9,7 +9,6 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -24,7 +23,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
@@ -35,7 +33,6 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.hapticfeedback.HapticFeedback
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
-import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
@@ -70,7 +67,6 @@ import cock.crest.purrfectsnap.lite.ui.manager.theme.PurrfectPalette
 import cock.crest.purrfectsnap.lite.ui.util.Motion
 import cock.crest.purrfectsnap.lite.ui.util.PurrfectMarqueeText
 import cock.crest.purrfectsnap.lite.ui.util.headerHeightTracker
-import cock.crest.purrfectsnap.lite.ui.util.scaleOnPress
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
@@ -195,6 +191,25 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                             .widthIn(max = (75 * shrinkFactor).dp)
                     )
                 }
+            }
+        }
+    }
+
+    @Composable
+    fun ActionCard(
+        title: String,
+        subtitle: String,
+        icon: ImageVector,
+        modifier: Modifier = Modifier,
+        onClick: () -> Unit
+    ) {
+        Surface(modifier = modifier, shape = RoundedCornerShape(24.dp), color = Color(0xFF1F2A35), border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))) {
+            Box(Modifier.fillMaxSize().clickable(onClick = onClick).padding(16.dp)) {
+                Column(verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.align(Alignment.TopStart)) {
+                    Text(title, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 18.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text(subtitle, color = Color.White.copy(alpha = 0.62f), fontSize = 13.sp, lineHeight = 16.sp, maxLines = 2, overflow = TextOverflow.Ellipsis)
+                }
+                Icon(icon, contentDescription = null, tint = Color.White.copy(alpha = 0.20f), modifier = Modifier.align(Alignment.BottomEnd).size(52.dp))
             }
         }
     }
@@ -795,6 +810,31 @@ fun HomeRootSection.AphelionHomeScreen(nav: NavBackStackEntry) {
                                         icon = icon,
                                         modifier = Modifier.padding(start = startPadding, end = endPadding)
                                     ) { entry.action(routes) }
+                            val subtitleFor: (String) -> String = { label ->
+                                when {
+                                    label.contains("file", true) -> "Import critical documents"
+                                    label.contains("logger", true) -> "Open history and debug traces"
+                                    label.contains("chat", true) -> "Export chats in one tap"
+                                    label.contains("media", true) -> "Export memories and media"
+                                    label.contains("bulk", true) -> "Run bulk messaging actions"
+                                    label.contains("clean", true) -> "Clean Snapchat cache safely"
+                                    label.contains("friend", true) -> "Manage your friend list"
+                                    else -> "Fast shortcut for this action"
+                                }
+                            }
+                            BoxWithConstraints(Modifier.fillMaxWidth()) {
+                                val cardWidth = (maxWidth - 12.dp) / 2
+                                FlowRow(modifier = Modifier.fillMaxWidth().padding(top = 4.dp), horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp), maxItemsInEachRow = 2) {
+                                    selectedTiles.forEachIndexed { index, name ->
+                                        val cardEntry = cards.entries.find { it.key.first == name } ?: return@forEachIndexed
+                                        ActionCard(
+                                            title = cardEntry.key.first,
+                                            subtitle = subtitleFor(cardEntry.key.first),
+                                            icon = cardEntry.key.second, // Replace with per-action outlined icon map if needed.
+                                            modifier = Modifier.width(cardWidth).height(if (index % 3 == 1) 168.dp else 146.dp),
+                                            onClick = { haptic.performHapticFeedback(HapticFeedbackType.LongPress); cardEntry.value(routes) }
+                                        )
+                                    }
                                 }
                             }
                         }
