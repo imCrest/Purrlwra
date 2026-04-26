@@ -117,9 +117,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.action.EnumQuickActions
 import me.eternal.purrfectsnap.common.BuildConfig
-import me.eternal.purrfectsnap.common.action.EnumAction
 import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableState
 import me.eternal.purrfectsnap.common.ui.rememberAsyncMutableStateList
 import me.eternal.purrfectsnap.common.util.ktx.openLink
@@ -171,31 +169,7 @@ class HomeRootSection : Routes.Route() {
     )
     private lateinit var activityLauncherHelper: ActivityLauncherHelper
     data class QaCard(val id: String, val name: String, val icon: ImageVector, val action: (Routes) -> Unit)
-    internal val cardEntries by lazy {
-        val list = mutableListOf<QaCard>()
-        EnumQuickActions.entries.forEach { q ->
-            val name = context.translation["actions.${q.key}.name"]
-            list.add(QaCard(id = "quick.${q.key}", name = name, icon = q.icon, action = q.action))
-        }
-        EnumAction.entries.forEach { a ->
-            val name = context.translation["actions.${a.key}.name"]
-            list.add(QaCard(id = "action.${a.key}", name = name, icon = a.icon, action = { context.launchActionIntent(a) }))
-        }
-        list
-    }
-    internal val cards by lazy {
-        EnumQuickActions.entries.map {
-            (context.translation["actions.${it.key}.name"] to it.icon) to it.action
-        }.associate {
-            it.first to it.second
-        }.toMutableMap().apply {
-            EnumAction.entries.forEach { action ->
-                this[context.translation["actions.${action.key}.name"] to action.icon] = {
-                    context.launchActionIntent(action)
-                }
-            }
-        }
-    }
+    internal val cardEntries = emptyList<QaCard>()
 
     @Composable
     internal fun rememberPreferenceBool(key: String, default: Boolean = false): State<Boolean> {
@@ -787,8 +761,3 @@ class HomeRootSection : Routes.Route() {
     return collected.joinToString("\n").trim()
 }
 }
-
-
-
-
-

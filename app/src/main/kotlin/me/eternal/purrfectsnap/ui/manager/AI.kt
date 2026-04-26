@@ -63,8 +63,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.eternal.purrfectsnap.RemoteSideContext
-import me.eternal.purrfectsnap.action.EnumQuickActions
-import me.eternal.purrfectsnap.common.action.EnumAction
 import me.eternal.purrfectsnap.common.config.ConfigContainer
 import me.eternal.purrfectsnap.common.config.ConfigFlag
 import me.eternal.purrfectsnap.common.config.DataProcessors
@@ -1616,37 +1614,13 @@ private class ManagerAssistantEngine(
             route(routes.homeLogs.routeInfo.id, "Logs", "App log overview", "logs", "home logs", "logger") { routes.homeLogs.navigateReset() },
             route(routes.about.routeInfo.id, "About", "App overview and about", "about", "info") { routes.about.navigateReset() },
             route(routes.settings.routeInfo.id, "Settings", "Home settings", "settings", "preferences") { routes.settings.navigateReset() },
-            route(routes.features.routeInfo.id, "Features", "Feature configuration", "features", "feature settings") { routes.features.navigateReset() },
-            route(routes.social.routeInfo.id, "Social", "Social tools and insights", "social", "friends", "groups") { routes.social.navigateReset() },
-            route(routes.scripting.routeInfo.id, "Scripts", "Scripting tools", "scripts", "scripting") { routes.scripting.navigateReset() },
-            route(routes.friendTracker.routeInfo.id, "Friend Tracker", "Friend tracker management", "friend tracker", "tracker") { routes.friendTracker.navigateReset() },
-            route(routes.fileImports.routeInfo.id, "File Imports", "Imported files", "file imports", "imports") { routes.fileImports.navigateReset() },
-            route(routes.loggerHistory.routeInfo.id, "Logger History", "Historical logger entries", "logger history", "history") { routes.loggerHistory.navigateReset() }
+            route(routes.features.routeInfo.id, "Features", "Feature configuration", "features", "feature settings") { routes.features.navigateReset() }
         )
     }
 
     private fun buildActionCatalog(): List<AssistantAction> {
-        val quickActions = EnumQuickActions.entries.map { quick ->
-            val phrases = listOf(quick.key, humanize(quick.key))
-            AssistantAction(
-                id = quick.key,
-                name = humanize(quick.key),
-                searchPhrases = phrases,
-                searchTokens = phrases.flatMap { tokenize(it) }.distinct(),
-                execute = { quick.action(routes) }
-            )
-        }
-        val actions = EnumAction.entries.map { action ->
-            val phrases = listOf(action.key, humanize(action.key))
-            AssistantAction(
-                id = action.key,
-                name = humanize(action.key),
-                searchPhrases = phrases,
-                searchTokens = phrases.flatMap { tokenize(it) }.distinct(),
-                execute = { context.launchActionIntent(action) }
-            )
-        }
-        return quickActions + actions
+        // Intentionally empty for Lite/Core builds: quick actions and manager-triggered actions are removed.
+        return emptyList()
     }
 
     private fun bestDirectFeatureMatch(normalized: String): AssistantFeature? =

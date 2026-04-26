@@ -41,7 +41,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.eternal.purrfectsnap.R
-import me.eternal.purrfectsnap.common.action.EnumAction
 import me.eternal.purrfectsnap.common.bridge.InternalFileHandleType
 import me.eternal.purrfectsnap.common.bridge.wrapper.LoggerConversationExportTarget
 import me.eternal.purrfectsnap.common.bridge.wrapper.LoggedMessage
@@ -209,28 +208,8 @@ fun HomeSettings.AphelionSettingsScreen(nav: NavBackStackEntry) {
                     // ACTIONS
                     GlassCard {
                         RowTitle(title = translation["actions_title"])
-                        EnumAction.entries.forEach { enumAction -> RowAction(key = enumAction.key) { context.launchActionIntent(enumAction) } }
                         RowAction(key = "regen_mappings") { context.checkForRequirements(Requirements.MAPPINGS) }
                         RowAction(key = "change_language") { context.checkForRequirements(Requirements.LANGUAGE) }
-                    }
-
-                    // UI SETTINGS
-                    GlassCard {
-                        RowTitle(title = translation["ui_settings_title"])
-                        ShiftedRow {
-                            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                                Row(modifier = Modifier.fillMaxWidth().heightIn(min = 55.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
-                                    Text(text = translation["haptic_feedback_label"], fontSize = 14.sp)
-                                    var hapticEnabled by remember { mutableStateOf(context.config.root.global.uiSettings.hapticFeedback.getNullable() ?: true) }
-                                    Switch(checked = hapticEnabled, onCheckedChange = { if (it) hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress); hapticEnabled = it; context.config.root.global.uiSettings.hapticFeedback.set(it); context.config.writeConfig() }, modifier = Modifier.padding(end = 26.dp), colors = purrfectSwitchColors())
-                                }
-                                Row(modifier = Modifier.fillMaxWidth().heightIn(min = 55.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
-                                    Text(text = translation["use_system_toasts_label"], fontSize = 14.sp)
-                                    var useSystemToasts by remember { mutableStateOf(context.config.root.global.uiSettings.useSystemToasts.getNullable() ?: false) }
-                                    Switch(checked = useSystemToasts, onCheckedChange = { if (context.config.root.global.uiSettings.hapticFeedback.get()) hapticFeedback.performHapticFeedback(HapticFeedbackType.LongPress); useSystemToasts = it; context.config.root.global.uiSettings.useSystemToasts.set(it); context.config.writeConfig() }, modifier = Modifier.padding(end = 26.dp), colors = purrfectSwitchColors())
-                                }
-                            }
-                        }
                     }
 
                     // UPDATES

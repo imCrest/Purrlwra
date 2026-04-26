@@ -3,11 +3,7 @@ package me.eternal.purrfectsnap.core.action
 import android.content.Intent
 import me.eternal.purrfectsnap.common.action.EnumAction
 import me.eternal.purrfectsnap.core.ModContext
-import me.eternal.purrfectsnap.core.action.impl.BulkMessagingAction
 import me.eternal.purrfectsnap.core.action.impl.CleanCache
-import me.eternal.purrfectsnap.core.action.impl.ExportChatMessages
-import me.eternal.purrfectsnap.core.action.impl.ExportMemories
-import me.eternal.purrfectsnap.core.action.impl.ManageFriendList
 
 class ActionManager(
     private val modContext: ModContext,
@@ -16,10 +12,6 @@ class ActionManager(
     private val actions by lazy {
         mapOf(
             EnumAction.CLEAN_CACHE to CleanCache(),
-            EnumAction.EXPORT_CHAT_MESSAGES to ExportChatMessages(),
-            EnumAction.BULK_MESSAGING_ACTION to BulkMessagingAction(),
-            EnumAction.MANAGE_FRIEND_LIST to ManageFriendList(),
-            EnumAction.EXPORT_MEMORIES to ExportMemories(),
         ).map {
             it.key to it.value.apply {
                 this.context = modContext

@@ -204,7 +204,7 @@ class Navigation(
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = remember(navBackStackEntry) { routes.getCurrentRoute(navBackStackEntry) }
         val availableRoutes = remember {
-            listOf(routes.tasks, routes.features, routes.home, routes.social, routes.scripting, routes.friendTracker)
+            listOf(routes.tasks, routes.features, routes.home)
         }
         val availableRouteMap = remember(availableRoutes) { availableRoutes.associateBy { it.routeInfo.id } }
 
@@ -216,7 +216,7 @@ class Navigation(
         val iconTranslationY = (10 * focusFactor).dp
 
         val prefs = remember { context.sharedPreferences }
-        val defaultOrder = remember { listOf("tasks", "features", "home", "social", "scripts") }
+        val defaultOrder = remember(availableRoutes) { availableRoutes.map { it.routeInfo.id } }
         fun loadSelected(): List<String> {
             val raw = prefs.getString("manager_nav_tabs", null)?.split(',')?.map { it.trim() }?.filter { it.isNotEmpty() } ?: emptyList()
             val cleaned = raw.filter { availableRouteMap.containsKey(it) }
