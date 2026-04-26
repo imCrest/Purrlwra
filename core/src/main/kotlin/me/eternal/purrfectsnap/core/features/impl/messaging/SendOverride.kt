@@ -1000,8 +1000,22 @@ class SendOverride : Feature("Send Override") {
                 if (MediaFilePicker.hasPendingSplitCleanup() || MediaFilePicker.getQueuedOverrideType() != null || queuedOriginalItemRepeatCount > 0) {
                     attachQueuedRepeatCallbacks(event)
                 }
-                if (sendMedia(resolvedOverrideType, resolvedSnapDurationMs)) {
-                    if (event.canceled) invokeOriginalAndRestoreResult(event)
+                val multiMediaCount = messageProtoReader.followPath(3)?.getCount(3) ?: 0
+                if (multiMediaCount > 1 && resolvedOverrideType != "ORIGINAL") {
+                    val preparedContent = createMessageContentFromOriginal()
+                    val sentManually = sendMediaManual(
+                        preparedContent,
+                        resolvedOverrideType,
+                        resolvedSnapDurationMs,
+                        originalCallback
+                    )
+                    if (!sentManually && event.canceled) {
+                        invokeOriginalAndRestoreResult(event)
+                    }
+                } else {
+                    if (sendMedia(resolvedOverrideType, resolvedSnapDurationMs)) {
+                        if (event.canceled) invokeOriginalAndRestoreResult(event)
+                    }
                 }
                 return@subscribe
             }
@@ -1557,8 +1571,18 @@ class SendOverride : Feature("Send Override") {
                                     }
                                 } else {
                                     if (repeatCount == 1) {
-                                        if (sendMedia(finalSelectedType, selectedSnapDurationMs)) {
-                                            invokeOriginalAndRestoreResult(event)
+                                        if (mediaCount > 1 && finalSelectedType != "ORIGINAL") {
+                                            val preparedContent = createMessageContentFromOriginal()
+                                            if (!sendMediaManual(preparedContent, finalSelectedType, selectedSnapDurationMs, originalCallback)) {
+                                                context.inAppOverlay.showStatusToast(
+                                                    icon = Icons.Filled.Error,
+                                                    text = context.translation["failed_to_send"] ?: "Failed to send"
+                                                )
+                                            }
+                                        } else {
+                                            if (sendMedia(finalSelectedType, selectedSnapDurationMs)) {
+                                                invokeOriginalAndRestoreResult(event)
+                                            }
                                         }
                                     } else if (MediaFilePicker.hasReusableOriginalItem()) {
                                         totalRepeatCount = repeatCount
@@ -1587,7 +1611,18 @@ class SendOverride : Feature("Send Override") {
                                     }
                                 }
                             }) {
-                                Text(if (scheduledTime != null) mainTranslation["schedule"] else context.translation["button.send"])
+                                Text(
+                                    when {
+                                        scheduledTime != null -> mainTranslation["schedule"]
+                                        mediaCount > 1 && selectedType != "ORIGINAL" ->
+                                            if (mainTranslation["send_multiple"] == "send_multiple") {
+                                                "Send $mediaCount Snaps"
+                                            } else {
+                                                mainTranslation.format("send_multiple", "count" to mediaCount.toString())
+                                            }
+                                        else -> context.translation["button.send"]
+                                    }
+                                )
                             }
                         }
                     }
