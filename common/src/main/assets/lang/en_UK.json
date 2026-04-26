@@ -3366,7 +3366,8 @@
         "select_time": "Select time",
         "select": "Select",
         "select_date_first": "Please select a date",
-        "invalid_time": "Please select a future time"
+        "invalid_time": "Please select a future time",
+        "send_multiple": "Send {count} Snaps"
     },
     "spotlight_creator_info": {
         "title": "Creator Info",
